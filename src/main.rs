@@ -195,6 +195,11 @@ fn init() {
     view::ActionsButton::static_type();
     view::ActionsSidebar::static_type();
     view::ClientView::static_type();
+    view::ComposeEnvRow::static_type();
+    view::ComposeExtraFieldRow::static_type();
+    view::ComposePortRow::static_type();
+    view::ComposeServiceEditorPage::static_type();
+    view::ComposeServiceSummaryRow::static_type();
     view::ConnectionChooserPage::static_type();
     view::ConnectionCustomInfoDialog::static_type();
     view::ConnectionRow::static_type();
@@ -237,6 +242,7 @@ fn init() {
     view::PodSelectionRow::static_type();
     view::PodsPanel::static_type();
     view::PodsPrunePage::static_type();
+    view::PlanReviewPage::static_type();
     view::RepoTagAddDialog::static_type();
     view::RepoTagPushPage::static_type();
     view::RepoTagRow::static_type();
@@ -244,6 +250,7 @@ fn init() {
     view::ScalableTextViewPage::static_type();
     view::SearchPanel::static_type();
     view::StackDetailsPage::static_type();
+    view::StackEditorPage::static_type();
     view::StackRow::static_type();
     view::StackServiceRow::static_type();
     view::StacksPanel::static_type();

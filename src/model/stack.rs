@@ -15,7 +15,10 @@ mod imp {
     pub(crate) struct Stack {
         #[property(get, set)]
         pub(super) name: std::cell::RefCell<String>,
-        // Add root_path, layout, services, networks properties later
+        #[property(get, set, construct_only)]
+        pub(super) service_list: OnceCell<crate::model::ComposeServiceList>,
+        #[property(get, set, nullable)]
+        pub(super) root_path: std::cell::RefCell<Option<String>>,
     }
 
     #[glib::object_subclass]
@@ -45,8 +48,13 @@ glib::wrapper! {
 
 impl Stack {
     pub fn new(name: &str) -> Self {
-        glib::Object::builder()
+        let obj: Self = glib::Object::builder()
             .property("name", name)
-            .build()
+            .build();
+            
+        let service_list = crate::model::ComposeServiceList::new(&obj);
+        obj.imp().service_list.set(service_list).unwrap();
+        
+        obj
     }
 }

@@ -104,7 +104,12 @@ impl StackList {
         
         for dto in stacks {
             let stack_obj = crate::model::Stack::new(&dto.name);
-            // In a real implementation we would populate services list here
+            if let Some(path) = dto.root_path {
+                stack_obj.set_root_path(Some(path.to_string_lossy().to_string()));
+            }
+            if let Some(service_list) = stack_obj.service_list() {
+                service_list.update_from_dtos(dto.services);
+            }
             store.append(&stack_obj);
         }
     }

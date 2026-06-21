@@ -67,4 +67,15 @@ impl ComposeServiceList {
             .property("stack", stack)
             .build()
     }
+
+    pub fn update_from_dtos(&self, dtos: Vec<crate::compose::models::ComposeService>) {
+        let store = self.imp().store.clone();
+        store.remove_all();
+
+        for dto in dtos {
+            let image = dto.image.unwrap_or_default();
+            let svc = crate::model::ComposeService::new(&dto.name, &image);
+            store.append(&svc);
+        }
+    }
 }

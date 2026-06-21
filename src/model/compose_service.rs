@@ -10,6 +10,8 @@ mod imp {
     pub(crate) struct ComposeService {
         #[property(get, set)]
         pub(super) name: std::cell::RefCell<String>,
+        #[property(get, set)]
+        pub(super) image: std::cell::RefCell<String>,
         #[property(get, set, nullable)]
         pub(super) live_container: std::cell::RefCell<Option<crate::model::Container>>,
     }
@@ -40,9 +42,10 @@ glib::wrapper! {
 }
 
 impl ComposeService {
-    pub fn new(name: &str) -> Self {
+    pub fn new(name: &str, image: &str) -> Self {
         glib::Object::builder()
             .property("name", name)
+            .property("image", image)
             .build()
     }
 }
