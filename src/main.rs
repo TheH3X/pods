@@ -2,6 +2,7 @@
 #![allow(deprecated)]
 
 mod application;
+mod compose;
 #[rustfmt::skip]
 mod config;
 mod engine;

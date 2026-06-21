@@ -38,6 +38,8 @@ mod imp {
         pub(super) volume_list: OnceCell<model::VolumeList>,
         #[property(get = Self::info, set, nullable)]
         pub(super) info: OnceCell<Option<model::Info>>,
+        #[property(get = Self::stack_manager, nullable)]
+        pub(super) stack_manager: OnceCell<Option<model::StackManager>>,
         #[property(get = Self::action_list)]
         pub(super) action_list: OnceCell<model::ActionList>,
     }
@@ -241,6 +243,16 @@ mod imp {
 
         fn info(&self) -> Option<model::Info> {
             self.info.get().cloned().flatten()
+        }
+
+        fn stack_manager(&self) -> Option<model::StackManager> {
+            self.stack_manager
+                .get_or_init(|| {
+                    // Initialize stack list and manager
+                    let stack_list = model::StackList::new(&*self.obj());
+                    Some(model::StackManager::new(&stack_list))
+                })
+                .to_owned()
         }
 
         fn action_list(&self) -> model::ActionList {
