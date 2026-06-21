@@ -243,6 +243,10 @@ fn init() {
     view::RepoTagSimpleRow::static_type();
     view::ScalableTextViewPage::static_type();
     view::SearchPanel::static_type();
+    view::StackDetailsPage::static_type();
+    view::StackRow::static_type();
+    view::StackServiceRow::static_type();
+    view::StacksPanel::static_type();
     view::VolumeRow::static_type();
     view::VolumeSelectionPage::static_type();
     view::VolumeSelectionRow::static_type();

@@ -52,6 +52,8 @@ mod imp {
         #[template_child]
         pub(super) pods_panel: TemplateChild<view::PodsPanel>,
         #[template_child]
+        pub(super) stacks_panel: TemplateChild<view::StacksPanel>,
+        #[template_child]
         pub(super) images_panel: TemplateChild<view::ImagesPanel>,
         #[template_child]
         pub(super) volumes_panel: TemplateChild<view::VolumesPanel>,
@@ -224,9 +226,10 @@ mod imp {
             self.panels_stack.set_visible_child_name(match index {
                 0 => "containers",
                 1 => "pods",
-                2 => "images",
-                3 => "volumes",
-                4 => "info",
+                2 => "stacks",
+                3 => "images",
+                4 => "volumes",
+                5 => "info",
                 _ => unreachable!(),
             });
 
@@ -253,6 +256,7 @@ mod imp {
             {
                 "containers" => gettext("Containers"),
                 "pods" => gettext("Pods"),
+                "stacks" => gettext("Stacks"),
                 "images" => gettext("Images"),
                 "volumes" => gettext("Volumes"),
                 "info" => gettext("Info"),
@@ -269,9 +273,10 @@ mod imp {
                     match self.panels_stack.visible_child_name().unwrap().as_str() {
                         "containers" => 0,
                         "pods" => 1,
-                        "images" => 2,
-                        "volumes" => 3,
-                        "info" => 4,
+                        "stacks" => 2,
+                        "images" => 3,
+                        "volumes" => 4,
+                        "info" => 5,
                         _ => unreachable!(),
                     },
                 ),
