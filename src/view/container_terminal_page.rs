@@ -20,7 +20,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerTerminalPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_terminal_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_terminal_page.ui")]
     pub(crate) struct ContainerTerminalPage {
         #[property(get, set, construct, nullable)]
         pub(super) container: glib::WeakRef<model::Container>,

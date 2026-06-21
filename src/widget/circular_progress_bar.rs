@@ -21,7 +21,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/circular_progress_bar.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/circular_progress_bar.ui")]
     pub(crate) struct CircularProgressBar {
         pub(super) percentage: Cell<f64>,
         #[template_child]

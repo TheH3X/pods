@@ -16,7 +16,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerRenamer)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_renamer.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_renamer.ui")]
     pub(crate) struct ContainerRenamer {
         #[property(get, set, construct_only, nullable)]
         pub(super) container: glib::WeakRef<model::Container>,

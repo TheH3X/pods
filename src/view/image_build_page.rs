@@ -26,7 +26,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageBuildPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_build_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_build_page.ui")]
     pub(crate) struct ImageBuildPage {
         pub(super) settings: utils::PodsSettings,
         pub(super) labels: OnceCell<gio::ListStore>,

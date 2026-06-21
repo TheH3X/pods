@@ -54,7 +54,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerLogPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_log_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_log_page.ui")]
     pub(crate) struct ContainerLogPage {
         pub(super) settings: utils::PodsSettings,
         pub(super) log_timestamps: RefCell<VecDeque<String>>,

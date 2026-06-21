@@ -13,7 +13,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainersGridView)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/containers_grid_view.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/containers_grid_view.ui")]
     pub(crate) struct ContainersGridView {
         #[property(get, set = Self::set_model, nullable, construct)]
         pub(super) model: glib::WeakRef<gio::ListModel>,

@@ -30,7 +30,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageSelectionComboRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_selection_combo_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_selection_combo_row.ui")]
     pub(crate) struct ImageSelectionComboRow {
         #[property(get, set, nullable)]
         pub(super) client: glib::WeakRef<model::Client>,

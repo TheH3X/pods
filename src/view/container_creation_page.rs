@@ -31,7 +31,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerCreationPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_creation_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_creation_page.ui")]
     pub(crate) struct ContainerCreationPage {
         pub(super) cmd_args: OnceCell<gio::ListStore>,
         pub(super) port_mappings: OnceCell<gio::ListStore>,

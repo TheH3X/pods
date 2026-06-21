@@ -29,7 +29,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::PodCreationPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/pod_creation_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/pod_creation_page.ui")]
     pub(crate) struct PodCreationPage {
         pub(super) labels: OnceCell<gio::ListStore>,
         pub(super) hosts: OnceCell<gio::ListStore>,

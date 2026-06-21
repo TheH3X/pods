@@ -16,7 +16,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::InfoPanel)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/info_panel.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/info_panel.ui")]
     pub(crate) struct InfoPanel {
         #[property(get, set, nullable)]
         pub(super) client: glib::WeakRef<model::Client>,

@@ -78,7 +78,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImagesPanel)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/images_panel.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/images_panel.ui")]
     pub(crate) struct ImagesPanel {
         pub(super) settings: Settings,
         pub(super) filter: OnceCell<gtk::Filter>,

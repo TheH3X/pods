@@ -115,7 +115,7 @@ impl Default for Application {
         glib::Object::builder()
             .property("application-id", Some(config::APP_ID))
             .property("flags", gio::ApplicationFlags::empty())
-            .property("resource-base-path", Some("/com/github/marhkb/Pods/"))
+            .property("resource-base-path", Some("/com/github/TheH3X/Stacks/"))
             .build()
     }
 }
@@ -166,7 +166,7 @@ impl Application {
     fn show_about_dialog(&self) {
         let dialog = adw::AboutDialog::from_appdata(
             &format!(
-                "/com/github/marhkb/Pods/appdata/{}.metainfo.xml",
+                "/com/github/TheH3X/Stacks/appdata/{}.metainfo.xml",
                 config::APP_ID
             ),
             Some(&if config::PROFILE == "Devel" {
@@ -177,18 +177,16 @@ impl Application {
             }),
         );
         dialog.set_version(config::VERSION);
-        dialog.set_copyright("© 2022 Marcus Behrendt");
+        dialog.set_copyright("© 2026 TheH3X");
         dialog.set_developers(&[
+            "TheH3X https://github.com/TheH3X",
+            // Upstream Pods contributors
             "Marcus Behrendt https://github.com/marhkb",
             "Wojciech Kępka https://github.com/vv9k",
         ]);
-        dialog.set_designers(&["Marcus Behrendt https://github.com/marhkb"]);
-        dialog.set_artists(&[
-            "Marcus Behrendt https://github.com/marhkb",
-            "Allaeddine Boulefaat https://github.com/allaeddineomc",
-            "David Lapshin https://github.com/daudix-UFO",
-        ]);
-        dialog.set_translator_credits(gettext("translator-credits").as_str());
+        dialog.set_designers(&["TheH3X https://github.com/TheH3X"]);
+        dialog.set_artists(&[]);
+        dialog.set_translator_credits("");
         dialog.add_credit_section(
             Some(&gettext("Translators")),
             &[
@@ -225,7 +223,7 @@ impl Application {
     }
 
     pub(crate) fn run(&self) {
-        log::info!("Pods ({})", config::APP_ID);
+        log::info!("Stacks ({})", config::APP_ID);
         log::info!("Version: {} ({})", config::VERSION, config::PROFILE);
         log::info!("Datadir: {}", config::PKGDATADIR);
 

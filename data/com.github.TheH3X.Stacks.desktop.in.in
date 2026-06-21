@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Stacks
+Comment=Manage your Docker Compose stacks
+Type=Application
+Exec=stacks
+Terminal=false
+Categories=GNOME;GTK;Development;System;Network;Monitor;
+Keywords=Gnome;GTK;libadwaita;Docker;Compose;Containers;Stacks;
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=@icon@
+StartupNotify=true

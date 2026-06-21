@@ -19,7 +19,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::SearchPanel)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/search_panel.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/search_panel.ui")]
     pub(crate) struct SearchPanel {
         pub(super) filter: OnceCell<gtk::Filter>,
         pub(super) sorter: OnceCell<gtk::Sorter>,

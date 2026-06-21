@@ -22,7 +22,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ActionPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/action_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/action_page.ui")]
     pub(crate) struct ActionPage {
         #[property(get, set, construct_only, nullable)]
         pub(super) action: glib::WeakRef<model::Action>,

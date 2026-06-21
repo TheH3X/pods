@@ -19,61 +19,61 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15.1-dev\n"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:3
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:7 src/main.rs:112
+#: data/com.github.TheH3X.Stacks.desktop.in.in:3
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:7 src/main.rs:112
 #: src/view/client_view.rs:253 src/view/pods_panel.ui:67
 #: src/view/pods_panel.ui:138 src/view/pods_panel.ui:432
 #: src/view/pods_row.ui:22 src/view/search_panel.ui:81
 msgid "Pods"
 msgstr "Pods"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:4
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:8
+#: data/com.github.TheH3X.Stacks.desktop.in.in:4
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:8
 msgid "Manage your Podman containers"
 msgstr "Quản lý vùng chứa Podman của bạn"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:9
+#: data/com.github.TheH3X.Stacks.desktop.in.in:9
 msgid "Gnome;GTK;libadwaita;Podman;Containerization;"
 msgstr "Gnome;GTK;libadwaita;Podman;Containerization;"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:6
-#: data/com.github.marhkb.Pods.gschema.xml.in:7
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:6
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:7
 msgid "Default window width"
 msgstr "Chiều rộng cửa sổ mặc định"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:11
-#: data/com.github.marhkb.Pods.gschema.xml.in:12
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:11
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:12
 msgid "Default window height"
 msgstr "Chiều cao cửa sổ mặc định"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:16
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:16
 msgid "Default window maximized behaviour"
 msgstr "Hành vi tối đa hóa cửa sổ mặc định"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:21
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:21
 msgid "The uuid of the connection that was used the last time"
 msgstr "Uid của kết nối được sử dụng lần trước"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:26
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:26
 msgid "The last used view"
 msgstr "Xem được sử dụng lần cuối"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:31
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:31
 msgid "Whether to hide intermediate images"
 msgstr "Có ẩn hình ảnh trung gian hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:36
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:36
 msgid "The last used container file path"
 msgstr "Đường dẫn tệp vùng chứa được sử dụng lần cuối"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:41
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:41
 #: src/view/images_prune_page.ui:70
 msgid "Remove all images not in use by containers, not just dangling ones"
 msgstr ""
 "Xóa tất cả hình ảnh không được vùng chứa sử dụng, không chỉ những hình ảnh "
 "treo lủng lẳng"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:46
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:46
 #: src/view/images_prune_page.ui:77
 msgid ""
 "Remove images even when they are used by external containers (e.g, by build "
@@ -82,44 +82,44 @@ msgstr ""
 "Xóa hình ảnh ngay cả khi chúng được sử dụng bởi các vùng chứa bên ngoài (ví "
 "dụ: bằng các vùng chứa bản dựng)"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:51
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:51
 msgid "Whether to show only running containers"
 msgstr "Có chỉ hiển thị các container đang chạy hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:56
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:56
 msgid "Whether to show only running pods"
 msgstr "Có chỉ hiển thị các nhóm đang chạy hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:61
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:61
 msgid "Whether to show only used volumes"
 msgstr "Có chỉ hiển thị các tập đã sử dụng hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:66
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:66
 msgid "Whether to show a timestamp for each log line"
 msgstr "Có hiển thị dấu thời gian cho từng dòng nhật ký hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:71
-#: data/com.github.marhkb.Pods.gschema.xml.in:76
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:71
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:76
 msgid "Whether to use a regex for search"
 msgstr "Có nên sử dụng biểu thức chính quy để tìm kiếm hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:81
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:81
 msgid "Whether search should be case-sensitive"
 msgstr "Liệu tìm kiếm có phân biệt chữ hoa chữ thường hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:86
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:86
 msgid "Whether to match whole words when searching"
 msgstr "Có khớp toàn bộ từ khi tìm kiếm hay không"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:91
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:91
 msgid "The font scale of all text views"
 msgstr "Tỷ lệ phông chữ của tất cả các chế độ xem văn bản"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:96
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:96
 msgid "The font scale for terminals"
 msgstr "Tỷ lệ phông chữ cho thiết bị đầu cuối"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:10
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:10
 msgid ""
 "Pods is a frontend for podman. It uses libadwaita for its user interface and "
 "strives to meet the design principles of GNOME."
@@ -127,44 +127,44 @@ msgstr ""
 "Pods là giao diện người dùng dành cho podman. Nó sử dụng libadwaita cho giao "
 "diện người dùng và cố gắng đáp ứng các nguyên tắc thiết kế của Gnome."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:11
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:11
 msgid "With Pods you can, among other things:"
 msgstr "Với Pods, bạn có thể, trong số những thứ khác:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:13
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:13
 msgid "Connect to local and remote Podman instances."
 msgstr "Kết nối với các phiên bản Podman cục bộ và từ xa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:14
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:14
 msgid "Easily overview images, containers and pods."
 msgstr "Dễ dàng tổng quan về hình ảnh, vùng chứa và nhóm."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:15
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:15
 msgid "View prepared information about images, containers, and pods."
 msgstr ""
 "Xem giới thiệu về đã chuẩn bị giới thiệu về hình ảnh, vùng chứa và nhóm."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:16
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:16
 msgid "Inspect images, containers and pods."
 msgstr "Kiểm tra hình ảnh, thùng chứa và nhóm."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:17
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:17
 msgid "View and search container logs."
 msgstr "Xem và tìm kiếm nhật ký vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:18
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:18
 msgid "Monitor processes of containers and pods."
 msgstr "Giám sát quá trình của container và pod."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:19
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:19
 msgid "Download images and build them using Dockerfiles."
 msgstr "Tải xuống hình ảnh và xây dựng chúng bằng Dockerfiles."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:20
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:20
 msgid "Create pods and containers."
 msgstr "Tạo nhóm và thùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:21
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:21
 msgid ""
 "Control the lifecycle of containers and pods (in bulk) (start, stop, pause, "
 "etc.)."
@@ -172,54 +172,54 @@ msgstr ""
 "Kiểm soát vòng đời của vùng chứa và nhóm (với số lượng lớn) (bắt đầu, dừng, "
 "tạm dừng, v.v.)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:22
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:22
 msgid "Delete images, containers, and pods (in bulk)."
 msgstr "Xóa hình ảnh, vùng chứa và nhóm (với số lượng lớn)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:23
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:23
 msgid "Prune images."
 msgstr "Cắt tỉa hình ảnh."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:24
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:24
 msgid "Rename containers."
 msgstr "Đổi tên vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:30
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:30
 msgid "Container Overview"
 msgstr "Tổng quan về vùng chứa"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:34
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:34
 msgid "Containers Details in Compact Mode"
 msgstr "Chi tiết về vùng chứa ở Chế độ nhỏ gọn"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:38
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:38
 msgid "Search Results"
 msgstr "Kết quả tìm kiếm"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:47
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:47
 msgid "Pods 2.1.0 contains the following changes:"
 msgstr "Nhóm 2.1.0 có những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:48
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:48
 msgid "Features"
 msgstr "Đặc trưng"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:50
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:50
 msgid "Accent colors are now properly supported. (#804, #807, #809, #811)"
 msgstr "Màu nhấn hiện đã được hỗ trợ đúng cách. (#804, #807, #809, #811)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:51
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:51
 msgid "All dialogs have been ported to AdwDialog to be more adaptive. (#810)"
 msgstr ""
 "Tất cả các hộp thoại đã được chuyển sang AdwDialog để thích ứng hơn. (#810)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:52
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:52
 msgid "Containers are now represented by cards in the container panel. (#778)"
 msgstr ""
 "Các vùng chứa hiện được thể hiện bằng các thẻ trong bảng điều khiển vùng "
 "chứa. (#778)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:53
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:53
 msgid ""
 "The image search has been completely revised and is now much more "
 "streamlined. In addition, the tags of an image are suggested. (#758)"
@@ -227,19 +227,19 @@ msgstr ""
 "Việc tìm kiếm hình ảnh đã được sửa đổi hoàn toàn và hiện được sắp xếp hợp lý "
 "hơn nhiều. Ngoài ra, các thẻ của một hình ảnh được đề xuất. (#758)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:57
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:57
 msgid "Port mappings can now be configured when creating pods. (#772)"
 msgstr "Ánh xạ cổng hiện có thể được định cấu hình khi tạo nhóm. (#772)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:58
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:58
 msgid "Enable searching for container and pod processes. (#747)"
 msgstr "Bật tìm kiếm các quy trình vùng chứa và nhóm. (#747)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:59
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:59
 msgid "Killing container processes is now supported. (#748)"
 msgstr "Quá trình tiêu diệt vùng chứa hiện được hỗ trợ. (#748)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:60
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:60
 msgid ""
 "The image search results now have an \"verified\" icon if an image is "
 "official. (#761)"
@@ -247,15 +247,15 @@ msgstr ""
 "Kết quả tìm kiếm hình ảnh hiện có biểu tượng \"đã xác minh\" nếu hình ảnh là "
 "chính thức. (#761)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:61
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:61
 msgid "Logs are now sent to both std and syslog. (#763)"
 msgstr "Nhật ký hiện được gửi đến cả std và syslog. (#763)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:62
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:62
 msgid "Make it possible to create privileged containers. (#753)"
 msgstr "Làm cho nó có thể tạo các thùng chứa đặc quyền. (#753)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:63
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:63
 msgid ""
 "Better handling of empty states when selecting images, pods and volumes for "
 "a container to be created. (#769)"
@@ -263,12 +263,12 @@ msgstr ""
 "Xử lý tốt hơn các trạng thái trống khi chọn hình ảnh, nhóm và khối lượng cho "
 "vùng chứa sẽ được tạo. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:64
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:64
 msgid "Unification of status and health status in the container row. (#774)"
 msgstr ""
 "Thống nhất tình trạng và tình trạng sức khỏe trong hàng container. (#774)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:65
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:65
 msgid ""
 "The recently introduced libadwaita Spinner now replaces all gtk Spinners. "
 "(#802)"
@@ -276,11 +276,11 @@ msgstr ""
 "Libadwaita Spinner được giới thiệu gần đây hiện thay thế tất cả các Spinner "
 "gtk. (#802)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:67
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:67
 msgid "Fixes"
 msgstr "Sửa lỗi"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:69
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:69
 msgid ""
 "All remaining processes are now closed after a container terminal exits. "
 "(#744)"
@@ -288,7 +288,7 @@ msgstr ""
 "Tất cả các quy trình còn lại hiện đã bị đóng sau khi thoát khỏi thiết bị đầu "
 "cuối container. (#744)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:70
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:70
 msgid ""
 "Streams are now closed correctly so that they do not run forever when the "
 "user changes the connection. (#764)"
@@ -296,7 +296,7 @@ msgstr ""
 "Các luồng hiện đã được đóng chính xác để chúng không chạy mãi khi người dùng "
 "thay đổi kết nối. (#764)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:71
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:71
 msgid ""
 "A bug was fixed where the content of the container log page was initially "
 "too large. (#769)"
@@ -304,21 +304,21 @@ msgstr ""
 "Đã sửa lỗi trong đó nội dung của trang nhật ký vùng chứa ban đầu quá lớn. "
 "(#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:72
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:72
 msgid "Stop filtering out containers, pods and volumes by default. (#770)"
 msgstr "Dừng lọc các vùng chứa, nhóm và khối lượng theo mặc định. (#770)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:74
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:74
 msgid "Improvements"
 msgstr "Cải tiến"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:76
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:76
 msgid "We now use appdata to construct the about dialog. (#743)"
 msgstr ""
 "Bây giờ chúng tôi sử dụng dữ liệu ứng dụng để xây dựng hộp thoại giới thiệu "
 "về giới thiệu về. (#743)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:77
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:77
 msgid ""
 "Improve performance by utilizing the <em>SignalListItemFactory::setup</em> "
 "signal. (#745)"
@@ -326,11 +326,11 @@ msgstr ""
 "Cải thiện hiệu suất bằng cách sử dụng tín hiệu <em>"
 "SignalListItemFactory::setup</em>. (#745)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:78
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:78
 msgid "Port <em>GtkTreeView</em> to <em>GtkColumnView</em>. (#746)"
 msgstr "Chuyển <em>GtkTreeView</em> sang <em>GtkColumnView</em>. (#746)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:79
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:79
 msgid ""
 "After the last connection has been removed from the page with the connection "
 "selection, the home page is displayed again. (#760)"
@@ -338,7 +338,7 @@ msgstr ""
 "Sau khi kết nối cuối cùng bị xóa khỏi trang có lựa chọn kết nối, trang chủ "
 "sẽ được hiển thị lại. (#760)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:83
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:83
 msgid ""
 "The same background color is now used for list views as for the window. "
 "(#769)"
@@ -346,7 +346,7 @@ msgstr ""
 "Màu nền tương tự hiện được sử dụng cho chế độ xem danh sách cũng như cho cửa "
 "sổ. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:84
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:84
 msgid ""
 "We have moved the banner from the bottom to the top in the container log "
 "page. (#769)"
@@ -354,29 +354,29 @@ msgstr ""
 "Chúng tôi đã di chuyển banner từ dưới lên trên trong trang nhật ký vùng "
 "chứa. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:85
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:85
 msgid "Some titles have been shortened. (#769)"
 msgstr "Một số tiêu đề đã được rút ngắn. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:86
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:86
 msgid "We now use AboutDialog instead of AboutWindow. (803)"
 msgstr "Bây giờ chúng tôi sử dụng AboutDialog thay vì AboutWindow. (803)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:87
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:87
 msgid "Various style improvements (#741, #757)"
 msgstr "Nhiều cải tiến về phong cách (#741, #757)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:93
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:93
 msgid "Pods 1.2.1 contains the following bugfixes and improvements:"
 msgstr "Nhóm 1.2.1 chứa các bản sửa lỗi và cải tiến sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:95
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:95
 msgid ""
 "Fixed a bug that caused the application to crash when the keyring could not "
 "be accessed."
 msgstr "Đã sửa lỗi khiến ứng dụng bị treo khi không thể truy cập vào khóa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:96
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:96
 msgid ""
 "Some languages like Romanian were not correctly included. This should be "
 "fixed now."
@@ -384,7 +384,7 @@ msgstr ""
 "Một số ngôn ngữ như tiếng Rumani không được đưa vào chính xác. Điều này cần "
 "được khắc phục ngay bây giờ."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:97
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:97
 msgid ""
 "Fixed a regression where the container list was not re-sorted once a "
 "container was renamed."
@@ -392,39 +392,39 @@ msgstr ""
 "Đã sửa lỗi hồi quy trong đó danh sách vùng chứa không được sắp xếp lại sau "
 "khi vùng chứa được đổi tên."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:98
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:98
 msgid "Minor cleanup work has been done in the code."
 msgstr "Công việc dọn dẹp nhỏ đã được thực hiện trong mã."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:104
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:104
 msgid "Pods 1.2.0 contains the following new features:"
 msgstr "Pods 1.2.0 chứa các tính năng mới sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:106
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:106
 msgid "Usabilty and UX has been improved in many places."
 msgstr "Khả năng sử dụng và UX đã được cải thiện ở nhiều nơi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:107
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:107
 msgid "Pruning of containers and pods is now possible."
 msgstr "Bây giờ có thể cắt tỉa các thùng chứa và vỏ quả."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:108
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:108
 msgid "Container terminals are now detachable and can be used in parallel."
 msgstr "Bến container hiện nay có thể tháo rời và sử dụng song song."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:109
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:109
 msgid "Images can be pushed to a registry."
 msgstr "Hình ảnh có thể được đẩy vào sổ đăng ký."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:110
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:110
 msgid "The CPU utilization now takes the number of cores into account."
 msgstr "Việc sử dụng CPU bây giờ tính đến số lượng lõi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:116
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:116
 msgid "Pods 1.1.0 contains the following features, bug fixes and improvements:"
 msgstr "Pods 1.1.0 chứa các tính năng, sửa lỗi và cải tiến sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:118
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:118
 msgid ""
 "Dependencies have been updated. This includes the update to GNOME 44 "
 "libraries."
@@ -432,24 +432,24 @@ msgstr ""
 "Các phần phụ thuộc đã được cập nhật. Điều này bao gồm bản cập nhật cho thư "
 "viện Gnome 44."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:119
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:119
 msgid "AdwBanner is now used in the container log page instead of GtkInfoBar."
 msgstr ""
 "AdwBanner hiện được sử dụng trong trang nhật ký vùng chứa thay vì GtkInfoBar."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:120
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:120
 msgid "The GNOME Coc is acknowledged in the README.md."
 msgstr "Gnome Coc được xác nhận trong README.md."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:121
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:121
 msgid "The main window and all dialogs can now be closed with Ctrl+W."
 msgstr "Cửa sổ chính và tất cả các hộp thoại hiện có thể được đóng bằng Ctrl+W."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:122
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:122
 msgid "The memory icon has been improved, thanks to @daudix-UFO."
 msgstr "Biểu tượng bộ nhớ đã được cải thiện nhờ @daudix-UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:123
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:123
 msgid ""
 "Internal code improvements have landed, like the port to glib-rs' new "
 "properties proc macro."
@@ -457,23 +457,23 @@ msgstr ""
 "Các cải tiến về mã nội bộ đã được triển khai, chẳng hạn như chuyển sang "
 "macro Proc thuộc tính mới của glib-rs."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:124
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:143
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:161
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:177
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:193
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:204
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:218
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:124
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:143
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:161
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:177
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:193
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:204
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:218
 msgid "Translations have been updated."
 msgstr "Các bản dịch đã được cập nhật."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:130
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:130
 msgid ""
 "Pods 1.1.0-beta.4 contains the following features, bug fixes and "
 "improvements:"
 msgstr "Nhóm 1.1.0-beta.4 chứa các tính năng, sửa lỗi và cải tiến sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:132
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:132
 msgid ""
 "The connection color is now displayed by means of a colored dot in front of "
 "the connection name in the connection overview, instead of a vertical bar at "
@@ -482,7 +482,7 @@ msgstr ""
 "Màu kết nối hiện được hiển thị bằng dấu chấm màu phía trước tên kết nối "
 "trong phần tổng quan về kết nối, thay vì thanh dọc ở đầu."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:133
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:133
 msgid ""
 "The penguin icon to the left of the Podman version has been removed from the "
 "status bar."
@@ -490,7 +490,7 @@ msgstr ""
 "Biểu tượng chim cánh cụt bên trái phiên bản Podman đã bị loại bỏ khỏi thanh "
 "trạng thái."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:134
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:134
 msgid ""
 "The Podman menu button in the status bar now shows a loading indicator until "
 "the Podman version is determined."
@@ -498,7 +498,7 @@ msgstr ""
 "Nút menu Podman trên thanh trạng thái hiện hiển thị chỉ báo tải cho đến khi "
 "phiên bản Podman được xác định."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:135
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:135
 msgid ""
 "The label to show the version of the Podman menu button in the status bar "
 "now uses the <em>numeric</em> style class, which looks more harmonious."
@@ -506,7 +506,7 @@ msgstr ""
 "Nhãn hiển thị phiên bản của nút menu Podman trên thanh trạng thái hiện sử "
 "dụng lớp kiểu <em>số</em> trông hài hòa hơn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:136
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:136
 msgid ""
 "To eliminate the blur, the icons in the status bar now all have a size of 16 "
 "pixels instead of 12 pixels."
@@ -514,17 +514,17 @@ msgstr ""
 "Để loại bỏ hiện tượng mờ, các biểu tượng trên thanh trạng thái giờ đây đều "
 "có kích thước 16 pixel thay vì 12 pixel."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:137
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:137
 msgid "The desktop entry now uses the updated short description as comment."
 msgstr ""
 "Mục nhập trên máy tính để bàn hiện sử dụng mô tả ngắn được cập nhật làm nhận "
 "xét."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:138
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:138
 msgid "Some appropriate categories have been added to the desktop entry."
 msgstr "Một số danh mục thích hợp đã được thêm vào mục trên máy tính để bàn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:139
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:139
 msgid ""
 "Fixed a bug where the Id of a container was replaced by the name once the "
 "name of the container was changed."
@@ -532,7 +532,7 @@ msgstr ""
 "Đã khắc phục lỗi trong đó Id của vùng chứa được thay thế bằng tên sau khi "
 "tên của vùng chứa được thay đổi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:140
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:140
 msgid ""
 "The container status <em>configured</em> was not handled before. This is now "
 "fixed."
@@ -540,7 +540,7 @@ msgstr ""
 "Trạng thái vùng chứa <em>được định cấu hình</em> chưa được xử lý trước đây. "
 "Điều này hiện đã được sửa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:141
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:141
 msgid ""
 "The spinner within the container log page did not disappear earlier if the "
 "log was empty. This is fixed now."
@@ -548,36 +548,36 @@ msgstr ""
 "Công cụ quay vòng trong trang nhật ký vùng chứa không biến mất sớm hơn nếu "
 "nhật ký trống. Điều này đã được sửa ngay bây giờ."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:142
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:142
 msgid "The code has been improved in some places."
 msgstr "Mã đã được cải thiện ở một số nơi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:144
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:162
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:178
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:194
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:219
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:144
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:162
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:178
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:194
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:219
 msgid "Dependencies have been updated."
 msgstr "Các phần phụ thuộc đã được cập nhật."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:150
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:150
 msgid ""
 "Pods 1.1.0-beta.3 contains the following features, bug fixes and "
 "improvements:"
 msgstr "Nhóm 1.1.0-beta.3 chứa các tính năng, bản sửa lỗi và cải tiến sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:152
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:152
 msgid ""
 "The connection menu has received an entry for disconnecting the current "
 "Podman connection."
 msgstr "Menu kết nối đã nhận được mục ngắt kết nối Podman hiện tại."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:153
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:153
 msgid ""
 "The status bar now has a menu button that shows the current Podman version."
 msgstr "Thanh trạng thái hiện có nút menu hiển thị phiên bản Podman hiện tại."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:154
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:154
 msgid ""
 "The menu item to open the Podman information window has been moved from the "
 "main menu to the Podman menu in the status bar."
@@ -585,7 +585,7 @@ msgstr ""
 "Mục menu để mở cửa sổ thông tin Podman đã được chuyển từ menu chính sang "
 "menu Podman trên thanh trạng thái."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:155
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:155
 msgid ""
 "A new widget has been implemented that allows you to control the zoom level "
 "of text."
@@ -593,7 +593,7 @@ msgstr ""
 "Một tiện ích mới đã được triển khai cho phép bạn kiểm soát mức độ zoom của "
 "văn bản."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:156
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:156
 msgid ""
 "On all pages with text, such as the inspection page, the download button has "
 "been moved to a menu in the header bar together with the zoom control widget."
@@ -602,7 +602,7 @@ msgstr ""
 "xuống đã được chuyển đến menu trong thanh tiêu đề cùng với tiện ích điều "
 "khiển zoom."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:157
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:157
 msgid ""
 "On the container log page some buttons together with zoom control widget are "
 "moved to a menu in the header bar."
@@ -610,11 +610,11 @@ msgstr ""
 "Trên trang nhật ký vùng chứa, một số nút cùng với tiện ích điều khiển zoom "
 "được chuyển đến menu trên thanh tiêu đề."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:158
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:158
 msgid "The text in the container terminal can now be zoomed."
 msgstr "Văn bản trong thiết bị đầu cuối container bây giờ có thể được zoom."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:159
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:159
 msgid ""
 "Fixed a bug in the container log page where an explicit color was set for "
 "the default ANSI escape sequence. This resulted in text not being readable "
@@ -624,7 +624,7 @@ msgstr ""
 "cho chuỗi thoát ANSI mặc định. Điều này khiến văn bản không thể đọc được ở "
 "giao diện sáng trong một số trường hợp."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:160
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:160
 msgid ""
 "The text views, like the Inspection page, are now closed immediately if "
 "there is an error. For example, this would be the case if the cube YAML "
@@ -633,13 +633,13 @@ msgstr ""
 "Các chế độ xem văn bản, như trang Kiểm tra, hiện sẽ bị đóng ngay lập tức nếu "
 "có lỗi. Ví dụ: đây sẽ là trường hợp nếu không thể tạo khối YAML."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:168
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:168
 msgid ""
 "Pods 1.1.0-beta.2 contains the following features, bug fixes and "
 "improvements:"
 msgstr "Nhóm 1.1.0-beta.2 chứa các tính năng, sửa lỗi và cải tiến sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:170
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:170
 msgid ""
 "It is now possible to assign colors to connections. Then, when the "
 "connection is active, the status bar is colored accordingly."
@@ -647,27 +647,27 @@ msgstr ""
 "Bây giờ có thể gán màu cho các kết nối. Sau đó, khi kết nối được kích hoạt, "
 "thanh trạng thái sẽ có màu tương ứng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:171
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:171
 msgid "The progress bar in the status bar has been replaced by a label."
 msgstr "Thanh tiến trình trên thanh trạng thái đã được thay thế bằng nhãn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:172
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:172
 msgid "The formatting of the container log is now correctly kept across lines."
 msgstr ""
 "Định dạng của nhật ký vùng chứa hiện được lưu giữ chính xác trên các dòng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:173
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:173
 msgid ""
 "Some strings has been marked as translatable that where previously forgotten."
 msgstr ""
 "Một số chuỗi đã được đánh dấu là có thể dịch được mà trước đó đã bị lãng "
 "quên."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:174
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:174
 msgid "Some strings has been changed to be more accurate."
 msgstr "Một số chuỗi đã được thay đổi để chính xác hơn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:175
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:175
 msgid ""
 "A workaround and a fix have been implemented specifically for crashes that "
 "led to crashes when using podman 3.0."
@@ -675,20 +675,20 @@ msgstr ""
 "Một giải pháp thay thế và sửa lỗi đã được triển khai cụ thể cho các sự cố "
 "dẫn đến sự cố khi sử dụng podman 3.0."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:176
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:176
 msgid ""
 "Fixed a style bug that caused the inner scrollbar on the connection "
 "selection page to have an offset."
 msgstr ""
 "Đã sửa lỗi kiểu khiến thanh cuộn bên trong trên trang chọn kết nối bị lệch."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:184
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:184
 msgid ""
 "Pods 1.1.0-beta.1 contains the following features, bug fixes and "
 "improvements:"
 msgstr "Nhóm 1.1.0-beta.1 chứa các tính năng, bản sửa lỗi và cải tiến sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:186
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:186
 msgid ""
 "The fonts in all text views, such as those in the inspection pages, are now "
 "scalable using typical shortcuts."
@@ -697,7 +697,7 @@ msgstr ""
 "các trang kiểm tra, hiện có thể mở rộng bằng cách sử dụng các phím tắt thông "
 "thường."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:187
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:187
 msgid ""
 "It is now prevented that actions in subpages like the container inspection "
 "subpage can be triggered via shortcuts (e.g. the action to download files)."
@@ -706,7 +706,7 @@ msgstr ""
 "trang con kiểm tra vùng chứa có thể được kích hoạt thông qua các phím tắt "
 "(ví dụ: hành động tải xuống tệp)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:188
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:188
 msgid ""
 "More ANSI escape sequences like background colors and bright colors has been "
 "added to the container log page."
@@ -714,12 +714,12 @@ msgstr ""
 "Nhiều chuỗi thoát ANSI khác như màu nền và màu sáng đã được thêm vào trang "
 "nhật ký vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:189
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:189
 msgid "Fixed a bug that caused some containers to not display most log lines."
 msgstr ""
 "Đã sửa lỗi khiến một số vùng chứa không màn hình hầu hết các dòng nhật ký."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:190
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:190
 msgid ""
 "The name of the container is now also displayed as a subtitle in the health "
 "check page."
@@ -727,19 +727,19 @@ msgstr ""
 "Tên của vùng chứa giờ đây cũng được hiển thị dưới dạng phụ đề trong trang "
 "kiểm tra tình trạng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:191
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:191
 msgid "The README file has been updated and improved."
 msgstr "Tệp README đã được cập nhật và cải tiến."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:192
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:192
 msgid "There were a lot of internal improvements to the code."
 msgstr "Có rất nhiều cải tiến nội bộ đối với mã."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:200
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:200
 msgid "Pods 1.0.2 contains the following changes:"
 msgstr "Nhóm 1.0.2 chứa những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:202
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:202
 msgid ""
 "The search behavior has been adjusted so that pressing <em>Ctrl+F</em> again "
 "resets the search and that <em>Escape</em> closes it."
@@ -747,7 +747,7 @@ msgstr ""
 "Hành vi tìm kiếm đã được điều chỉnh để việc nhấn lại <em>Ctrl+F</em> sẽ đặt "
 "lại tìm kiếm và <em>Escape</em> sẽ đóng nó."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:203
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:203
 msgid ""
 "The application icon and symbolic icons have been further improved, thanks "
 "to @daudix-UFO."
@@ -755,7 +755,7 @@ msgstr ""
 "Biểu tượng ứng dụng và biểu tượng trưng đã được cải thiện hơn nữa nhờ "
 "@daudix-UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:210
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:210
 msgid ""
 "The stable 1.0 release of Pods includes the following changes since the last "
 "RC:"
@@ -763,7 +763,7 @@ msgstr ""
 "Bản phát hành 1.0 ổn định của Pod bao gồm những thay đổi sau kể từ RC cuối "
 "cùng:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:212
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:212
 msgid ""
 "The welcome page now has a very attractive, colorful illustration, thanks to "
 "@daudix-UFO."
@@ -771,11 +771,11 @@ msgstr ""
 "Trang chào mừng hiện có hình minh họa rất hấp dẫn, đầy màu sắc nhờ @daudix-"
 "UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:213
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:213
 msgid "Switching the Podman connection now no longer blocks the GUI."
 msgstr "Việc chuyển đổi kết nối Podman giờ đây không còn chặn GUI nữa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:214
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:214
 msgid ""
 "Creating new Podman connections can now be canceled during the connection "
 "attempt."
@@ -783,7 +783,7 @@ msgstr ""
 "Giờ đây, việc tạo kết nối Podman mới có thể bị hủy trong quá trình thử kết "
 "nối."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:215
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:215
 msgid ""
 "Copying and pasting text from/to the container terminal now works with "
 "<em>Ctrl+Shift+C</em> and <em>Ctrl+Shift+V</em>, respectively."
@@ -791,26 +791,26 @@ msgstr ""
 "Giờ đây, việc sao chép và dán văn bản từ/đến thiết bị đầu cuối vùng chứa "
 "hoạt động tương ứng với <em>Ctrl+Shift+C</em> và <em>Ctrl+Shift+V</em>."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:216
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:216
 msgid "The container terminal now has a simple context menu."
 msgstr "Thiết bị đầu cuối container hiện có menu ngữ cảnh đơn giản."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:217
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:217
 msgid "The animation of the internal spinner widget has been beautified."
 msgstr "Hoạt ảnh của tiện ích con quay bên trong đã được làm đẹp."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:225
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:225
 msgid "The third 1.0 release candidate of Pods contains the following changes:"
 msgstr "Bản phát hành 1.0 thứ ba của Pods có những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:227
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:227
 msgid ""
 "The application icon and symbolic icons have been improved, thanks to "
 "@daudix-UFO"
 msgstr ""
 "Biểu tượng ứng dụng và biểu tượng trưng đã được cải thiện nhờ @daudix-UFO"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:228
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:228
 msgid ""
 "Actions, such as creating a container, can now be repeated initially if they "
 "fail."
@@ -818,7 +818,7 @@ msgstr ""
 "Các hành động, chẳng hạn như tạo vùng chứa, giờ đây có thể được lặp lại ban "
 "đầu nếu không thành công."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:229
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:229
 msgid ""
 "Fixed a bug that prevented the label displaying the id of an image from "
 "being striked through if the image was being deleted."
@@ -826,15 +826,15 @@ msgstr ""
 "Đã sửa lỗi khiến nhãn hiển thị id của hình ảnh không bị gạch bỏ nếu hình ảnh "
 "đó bị xóa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:230
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:230
 msgid "Repository tags are now selectable within the image details page."
 msgstr "Thẻ kho lưu trữ hiện có thể được chọn trong trang chi tiết hình ảnh."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:231
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:231
 msgid "Translations have been updated. Thanks to all who contributed."
 msgstr "Các bản dịch đã được cập nhật. Cảm ơn tất cả những người đã đóng góp."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:232
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:232
 msgid ""
 "Internal code improvements have been made, such as reducing dependencies and "
 "enabling LTO for release builds."
@@ -842,7 +842,7 @@ msgstr ""
 "Các cải tiến mã nội bộ đã được thực hiện, chẳng hạn như giảm sự phụ thuộc và "
 "bật LTO cho các bản dựng phát hành."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:238
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:238
 msgid ""
 "This is a hotfix release that prevents the application from crashing when "
 "disconnected from Podman."
@@ -850,7 +850,7 @@ msgstr ""
 "Đây là bản phát hành hotfix giúp ngăn ứng dụng gặp sự cố khi ngắt kết nối "
 "với Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:243
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:243
 msgid ""
 "All features for version 1.0 are now implemented and Pods is thus in the "
 "release candidate phase. Among the changes since the last release are:"
@@ -859,7 +859,7 @@ msgstr ""
 "đang trong giai đoạn thử nghiệm phát hành. Trong số những thay đổi kể từ lần "
 "phát hành cuối cùng là:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:245
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:245
 msgid ""
 "Actions such as downloading an image or creating a container now take place "
 "in dialogs instead of in the main window."
@@ -867,7 +867,7 @@ msgstr ""
 "Các hành động như tải xuống hình ảnh hoặc tạo vùng chứa hiện diễn ra trong "
 "hộp thoại thay vì trong cửa sổ chính."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:246
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:246
 msgid ""
 "Image Rows have been revised to better reflect the presence of multiple repo "
 "tags."
@@ -875,11 +875,11 @@ msgstr ""
 "Hàng hình ảnh đã được sửa đổi để phản ánh tốt hơn sự hiện diện của nhiều thẻ "
 "repo."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:247
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:247
 msgid "Repo tags can now be removed and added within the image details page."
 msgstr "Thẻ Repo hiện có thể được xóa và thêm vào trang chi tiết hình ảnh."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:248
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:248
 msgid ""
 "The subtitle property of the header bars is now used to display the image "
 "id, or the name of the container or pod."
@@ -887,7 +887,7 @@ msgstr ""
 "Thuộc tính phụ đề của thanh tiêu đề hiện được sử dụng để màn hình id hình "
 "ảnh hoặc tên của vùng chứa hoặc nhóm."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:249
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:249
 msgid ""
 "The style of the container details page has been adjusted. Thus, some action "
 "rows have been moved to the properties."
@@ -895,15 +895,15 @@ msgstr ""
 "Kiểu của trang chi tiết vùng chứa đã được điều chỉnh. Vì vậy, một số hàng "
 "hành động đã được chuyển đến thuộc tính."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:250
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:250
 msgid "Shortcuts have been added to the container details page."
 msgstr "Các phím tắt đã được thêm vào trang chi tiết vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:251
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:251
 msgid "Small improvements in the spirit of the GNOME HIG took place."
 msgstr "Những cải tiến nhỏ theo tinh thần của Gnome HIG đã diễn ra."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:252
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:252
 msgid ""
 "The usual changes such as improving the source code and updating the "
 "dependencies."
@@ -911,7 +911,7 @@ msgstr ""
 "Những thay đổi thông thường như cải thiện mã nguồn và cập nhật các phần phụ "
 "thuộc."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:253
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:253
 msgid ""
 "Translations have been updated and all translatable strings are now "
 "considered frozen."
@@ -919,7 +919,7 @@ msgstr ""
 "Các bản dịch đã được cập nhật và tất cả các chuỗi có thể dịch hiện được coi "
 "là bị đóng băng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:259
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:259
 msgid ""
 "The ninth beta of Pods in an important step towards the stable first "
 "version. It contains the following changes:"
@@ -927,37 +927,37 @@ msgstr ""
 "Bản beta thứ chín của Pods là một bước quan trọng hướng tới phiên bản đầu "
 "tiên ổn định. Nó chứa những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:261
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:261
 msgid "It is now possible to have a terminal in a container."
 msgstr "Bây giờ có thể có một thiết bị đầu cuối trong một container."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:262
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:274
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:262
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:274
 msgid "libpanel"
 msgstr "libpanel"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:263
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:263
 msgid "AdwMessageDialog"
 msgstr "AdwMessageDialog"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:264
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:264
 msgid "The style of the container series was tweaked in many ways."
 msgstr "Phong cách của loạt container đã được điều chỉnh theo nhiều cách."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:265
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:265
 msgid "Some minor internal code improvements have landed."
 msgstr "Một số cải tiến mã nội bộ nhỏ đã được tung ra."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:266
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:286
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:266
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:286
 msgid "Dependencies and translations have been updated."
 msgstr "Phụ thuộc và bản dịch đã được cập nhật."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:272
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:272
 msgid "The eight beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Bản phát hành beta thứ tám của Pods 1.0.0 bao gồm những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:275
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:275
 msgid ""
 "When creating a new connection, there is now a hint on how to enable the "
 "Podman UNIX socket and a small example on how to use the Podman root "
@@ -966,11 +966,11 @@ msgstr ""
 "Khi tạo kết nối mới, hiện có gợi ý về cách bật ổ cắm Podman UNIX và một ví "
 "dụ nhỏ về cách sử dụng phiên bản gốc Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:276
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:276
 msgid "The history of an image can now be inspected."
 msgstr "Lịch sử của một hình ảnh bây giờ có thể được kiểm tra."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:277
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:277
 msgid ""
 "The design of the port bindings in the container details page has been "
 "revised."
@@ -978,13 +978,13 @@ msgstr ""
 "Thiết kế của các ràng buộc cổng trong trang chi tiết về container đã được "
 "sửa đổi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:278
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:278
 msgid "Kubernetes YAML files can now be generated for containers and pods."
 msgstr ""
 "Giờ đây, các tệp YAML của Kubernetes có thể được tạo cho các vùng chứa và "
 "nhóm."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:279
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:279
 msgid ""
 "Files can now be downloaded from a container as well as uploaded to a "
 "container."
@@ -992,7 +992,7 @@ msgstr ""
 "Giờ đây, các tệp có thể được tải xuống từ vùng chứa cũng như tải lên vùng "
 "chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:280
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:280
 msgid ""
 "The design of the circular progress bar for displaying container resources "
 "has been adjusted to be more consistent with the rest of the application."
@@ -1000,7 +1000,7 @@ msgstr ""
 "Thiết kế của thanh tiến trình hình tròn để hiển thị tài nguyên vùng chứa đã "
 "được điều chỉnh để phù hợp hơn với phần còn lại của ứng dụng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:281
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:281
 msgid ""
 "There is now a rotating animation when a container or pod is in a state "
 "transition (start, stop, pause)."
@@ -1008,7 +1008,7 @@ msgstr ""
 "Hiện có hoạt ảnh xoay khi vùng chứa hoặc nhóm đang ở trạng thái chuyển đổi "
 "(bắt đầu, dừng, tạm dừng)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:282
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:282
 msgid ""
 "If a container is in a pod, it will now get a badge with the pod name in the "
 "container list."
@@ -1016,7 +1016,7 @@ msgstr ""
 "Nếu một vùng chứa nằm trong một nhóm thì bây giờ nó sẽ nhận được huy hiệu có "
 "tên nhóm trong danh sách vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:283
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:283
 msgid ""
 "Logs, the result of the inspection of images, containers, and pods, and the "
 "result Kubernetes YAML generation can now be saved directly as a file."
@@ -1024,19 +1024,19 @@ msgstr ""
 "Nhật ký, kết quả kiểm tra hình ảnh, vùng chứa và nhóm cũng như kết quả tạo "
 "Kubernetes YAML giờ đây có thể được lưu trực tiếp dưới dạng tệp."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:284
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:284
 msgid "Headerbar titles were adjusted to be shorter and more concise"
 msgstr "Tiêu đề headerbar được điều chỉnh ngắn gọn, súc tích hơn"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:285
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:285
 msgid "Many minor internal code improvements have landed"
 msgstr "Nhiều cải tiến mã nội bộ nhỏ đã có mặt"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:292
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:292
 msgid "The seventh beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Bản phát hành beta thứ bảy của Pods 1.0.0 bao gồm những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:294
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:294
 msgid ""
 "Relative times are now used everywhere in the application. For example, you "
 "can quickly see how long a container has been running or how many days ago "
@@ -1046,7 +1046,7 @@ msgstr ""
 "có thể nhanh chóng xem vùng chứa đã chạy được bao lâu hoặc hình ảnh đã được "
 "tạo cách đây bao nhiêu ngày."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:295
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:295
 msgid ""
 "For the circular progress bar in the container row, icons are now used "
 "instead of text. Icons have also been added to the resource monitor in the "
@@ -1056,7 +1056,7 @@ msgstr ""
 "được sử dụng thay vì văn bản. Các biểu tượng cũng đã được thêm vào trình "
 "giám sát tài nguyên trong trang chi tiết vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:296
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:296
 msgid ""
 "The text field for searching in the container logs and the inspection page "
 "has been completely redesigned visually."
@@ -1064,7 +1064,7 @@ msgstr ""
 "Trường văn bản để tìm kiếm trong nhật ký vùng chứa và trang kiểm tra đã được "
 "thiết kế lại hoàn toàn về mặt trực quan."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:297
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:297
 msgid ""
 "The container log page now displays an info bar if the container is not "
 "running. The info bar also offers the possibility to start or resume the "
@@ -1073,11 +1073,11 @@ msgstr ""
 "Trang nhật ký vùng chứa hiện hiển thị thanh thông tin nếu vùng chứa không "
 "chạy. Thanh thông tin cũng cung cấp khả năng bắt đầu hoặc tiếp tục vùng chứa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:298
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:298
 msgid "Desktop notifications are now triggered on actions."
 msgstr "Thông báo trên màn hình hiện được kích hoạt trên các hành động."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:299
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:299
 msgid ""
 "The selection of an image in the container creation page has been improved. "
 "For example, the list of images is sorted and image names are no longer "
@@ -1086,7 +1086,7 @@ msgstr ""
 "Việc lựa chọn hình ảnh trong trang tạo vùng chứa đã được cải thiện. Ví dụ: "
 "danh sách hình ảnh được sắp xếp và tên hình ảnh không còn có hình elip nữa."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:300
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:300
 msgid ""
 "Also the selection of a pod in the container creation page has been improved "
 "similarly to the image selection."
@@ -1094,7 +1094,7 @@ msgstr ""
 "Ngoài ra, việc lựa chọn nhóm trong trang tạo vùng chứa cũng đã được cải "
 "thiện tương tự như việc lựa chọn hình ảnh."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:301
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:301
 msgid ""
 "The image row now shows the tag of an image in the accent color to the right "
 "of the image id."
@@ -1102,7 +1102,7 @@ msgstr ""
 "Hàng hình ảnh hiện hiển thị thẻ của hình ảnh bằng màu nhấn ở bên phải id "
 "hình ảnh."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:302
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:302
 msgid ""
 "The container row now displays the mapped host port of a container next to "
 "the container name, if there is one."
@@ -1110,7 +1110,7 @@ msgstr ""
 "Hàng vùng chứa hiện hiển thị cổng máy chủ được ánh xạ của vùng chứa bên cạnh "
 "tên vùng chứa, nếu có."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:303
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:303
 msgid ""
 "Port Bindings in the container details page are now shown inside an "
 "AdwExpanderRow"
@@ -1118,7 +1118,7 @@ msgstr ""
 "Ràng buộc cổng trong trang chi tiết vùng chứa hiện được hiển thị bên trong "
 "AdwExpanderRow"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:304
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:304
 msgid ""
 "The multi-selection mode of images, containers and pods is now animated a "
 "bit more nicely."
@@ -1126,14 +1126,14 @@ msgstr ""
 "Chế độ đa lựa chọn của hình ảnh, vùng chứa và nhóm giờ đây đã hoạt hình độc "
 "đáo hơn một chút."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:305
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:305
 msgid ""
 "The sizes of all GtkSpinners have been standardized throughout the "
 "application."
 msgstr ""
 "Kích thước của tất cả GtkSpinners đã được chuẩn hóa trong tất cả ứng dụng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:306
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:306
 msgid ""
 "The gtk-rs library was updated to version 0.5, which made many internal code "
 "improvements possible."
@@ -1141,7 +1141,7 @@ msgstr ""
 "Thư viện gtk-rs đã được cập nhật lên phiên bản 0.5, giúp cải thiện nhiều mã "
 "nội bộ."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:307
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:307
 msgid ""
 "As always, there were a number of minor bug fixes, visual improvements, "
 "internal code improvements, and translation updates that have not been "
@@ -1150,11 +1150,11 @@ msgstr ""
 "Như mọi khi, có một số sửa lỗi nhỏ, cải tiến hình ảnh, cải tiến mã nội bộ và "
 "cập nhật bản dịch chưa được đề cập ở đây."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:313
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:313
 msgid "The sixth beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Bản phát hành beta thứ sáu của Pods 1.0.0 bao gồm những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:315
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:315
 msgid ""
 "The duration for individual actions such as downloading an image is now "
 "displayed."
@@ -1162,7 +1162,7 @@ msgstr ""
 "Thời lượng cho các hành động riêng lẻ như tải xuống hình ảnh hiện được hiển "
 "thị."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:316
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:316
 msgid ""
 "In the overview for all images, individual images can now be updated via the "
 "context menu."
@@ -1170,11 +1170,11 @@ msgstr ""
 "Trong phần tổng quan cho tất cả hình ảnh, giờ đây bạn có thể cập nhật từng "
 "hình ảnh thông qua menu ngữ cảnh."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:317
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:317
 msgid "Missing settings for creating pods have been added, thanks to @vv9k."
 msgstr "Các cài đặt còn thiếu để tạo nhóm đã được thêm vào, nhờ @vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:318
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:318
 msgid ""
 "A simple progress bar is now displayed in the action menu button under the "
 "bell icon to indicate how many actions are currently running."
@@ -1182,7 +1182,7 @@ msgstr ""
 "Một thanh tiến trình đơn giản hiện được hiển thị trong nút menu hành động "
 "bên dưới biểu tượng chuông để cho biết có bao nhiêu hành động hiện đang chạy."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:319
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:319
 msgid ""
 "The icon of the button to return to the main view has been changed to a home "
 "symbol, thanks to @vv9k."
@@ -1190,7 +1190,7 @@ msgstr ""
 "Biểu tượng của nút quay lại xem chính đã được thay đổi thành biểu tượng màn "
 "hình chính, nhờ @vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:320
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:320
 msgid ""
 "The container details page and pod details page have been revised: The menus "
 "have been removed and instead there is now a control bar."
@@ -1198,7 +1198,7 @@ msgstr ""
 "Trang chi tiết vùng chứa và trang chi tiết nhóm đã được sửa đổi: Các menu đã "
 "bị xóa và thay vào đó là thanh điều khiển."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:321
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:321
 msgid ""
 "Renaming a container within a container detail page must now be done via a "
 "button in the name row."
@@ -1206,7 +1206,7 @@ msgstr ""
 "Giờ đây, việc đổi tên vùng chứa trong trang chi tiết vùng chứa phải được "
 "thực hiện thông qua một nút trong hàng tên."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:322
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:322
 msgid ""
 "Fixed a bug in the container log page that caused that no more than 512 log "
 "lines could be loaded and date were truncated."
@@ -1214,7 +1214,7 @@ msgstr ""
 "Đã khắc phục lỗi trong trang nhật ký vùng chứa khiến không thể tải quá 512 "
 "dòng nhật ký và ngày bị cắt bớt."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:323
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:323
 msgid ""
 "The progress bars for CPU and memory in the container details page are now "
 "animated."
@@ -1222,7 +1222,7 @@ msgstr ""
 "Các thanh tiến trình cho CPU và bộ nhớ trong trang chi tiết vùng chứa hiện "
 "có hình động."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:324
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:324
 msgid ""
 "The animations of the circular progress bars for CPU and memory in the "
 "overview of all containers now use better easing."
@@ -1230,7 +1230,7 @@ msgstr ""
 "Hoạt ảnh của các thanh tiến trình hình tròn cho CPU và bộ nhớ trong phần "
 "tổng quan của tất cả các vùng chứa giờ đây sử dụng khả năng nới lỏng tốt hơn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:325
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:325
 msgid ""
 "The icons and descriptions for actions like downloading an image have been "
 "made clearer."
@@ -1238,7 +1238,7 @@ msgstr ""
 "Các biểu tượng và mô tả cho các hành động như tải hình ảnh đã được làm rõ "
 "ràng hơn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:326
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:326
 msgid ""
 "Committing a new image from a container can now be done in a fine-grained "
 "way, in a dedicated page."
@@ -1246,7 +1246,7 @@ msgstr ""
 "Giờ đây, việc gửi hình ảnh mới từ vùng chứa có thể được thực hiện theo cách "
 "chi tiết hơn trong một trang chuyên dụng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:327
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:327
 msgid ""
 "As always, there were a number of minor bug fixes, visual improvements, "
 "internal code improvements and translation updates."
@@ -1254,15 +1254,15 @@ msgstr ""
 "Như mọi khi, có một số sửa lỗi nhỏ, cải tiến hình ảnh, cải tiến mã nội bộ và "
 "cập nhật bản dịch."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:333
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:333
 msgid "The fifth beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Bản phát hành beta thứ năm của Pods 1.0.0 bao gồm những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:335
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:335
 msgid "Some typos were fixed, thanks to @kianmeng."
 msgstr "Một số lỗi chính tả đã được sửa nhờ @kianmeng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:336
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:336
 msgid ""
 "A tab to specify infra settings were added to the pod creation page, thanks "
 "to @vv9k."
@@ -1270,7 +1270,7 @@ msgstr ""
 "Một tab để chỉ định cài đặt hạ tầng đã được thêm vào trang tạo nhóm nhờ "
 "@vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:337
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:337
 msgid ""
 "There is now a widget that provides an overview of actions, such as building "
 "an image. Thus, the state of most actions can now be tracked."
@@ -1279,49 +1279,49 @@ msgstr ""
 "hạn như xây dựng hình ảnh. Do đó, trạng thái của hầu hết các hành động hiện "
 "có thể được theo dõi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:338
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:338
 msgid ""
 "The local search for images, containers and pods is now case-insensitive."
 msgstr ""
 "Tìm kiếm cục bộ cho hình ảnh, vùng chứa và nhóm hiện không phân biệt chữ hoa "
 "chữ thường."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:339
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:339
 msgid "There were small visual adjustments all over the place."
 msgstr "Có những điều chỉnh nhỏ về hình ảnh ở khắp mọi nơi."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:340
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:340
 msgid "Minor bug fixes"
 msgstr "Sửa lỗi nhỏ"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:341
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:341
 msgid "Internal code improvements"
 msgstr "Cải tiến mã nội bộ"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:342
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:360
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:373
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:342
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:360
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:373
 msgid "Translation updates"
 msgstr "Cập nhật bản dịch"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:348
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:348
 msgid ""
 "Here comes the fourth beta release of Pods 1.0.0 with the following changes:"
 msgstr "Đây là bản phát hành beta thứ tư của Pods 1.0.0 với những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:350
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:350
 msgid ""
 "The blurry symbolic application icon has been fixed, thanks to "
 "@allaeddineomc."
 msgstr "Biểu tượng ứng dụng tượng trưng bị mờ đã được sửa nhờ @allaeddineomc."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:351
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:351
 msgid ""
 "A status page is now displayed if there are no images, containers or pods."
 msgstr ""
 "Trang trạng thái hiện được hiển thị nếu không hình ảnh, vùng chứa hoặc nhóm."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:352
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:352
 msgid ""
 "The style has been improved, in particular, there is now better "
 "differentiation between light, dark and high contrast modes."
@@ -1329,7 +1329,7 @@ msgstr ""
 "Phong cách đã được cải tiến, đặc biệt giờ đây có sự phân biệt tốt hơn giữa "
 "các chế độ sáng, tối và độ tương phản cao."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:353
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:353
 msgid ""
 "The feature for coloring the header bar has been removed. It will hopefully "
 "come back when there is API support for it."
@@ -1337,7 +1337,7 @@ msgstr ""
 "Tính năng tô màu cho thanh tiêu đề đã bị loại bỏ. Hy vọng nó sẽ quay trở lại "
 "khi có hỗ trợ API cho nó."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:354
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:354
 msgid ""
 "A lot of smaller UI improvements have been implemented to give Pods a more "
 "polished look."
@@ -1345,37 +1345,37 @@ msgstr ""
 "Rất nhiều cải tiến nhỏ hơn về giao diện người dùng đã được triển khai để "
 "mang lại cho Pod giao diện bóng bẩy hơn."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:355
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:355
 msgid "The flatpak runtime has been updated to version 43"
 msgstr "Runtime Flatpak đã được cập nhật lên phiên bản 43"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:356
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:356
 msgid ""
 "Improvements in infrastructure like an issue template have landed, thanks to "
 "@vv9k."
 msgstr ""
 "Những cải tiến về cơ sở hạ tầng như mẫu sự cố đã được thực hiện nhờ @vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:357
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:357
 msgid "Image downloads can now be aborted."
 msgstr "Tải xuống hình ảnh bây giờ có thể bị hủy bỏ."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:358
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:358
 msgid "Arguments can now be added to a container command, thanks to @vvk9."
 msgstr "Giờ đây, các đối số có thể được thêm vào lệnh chứa nhờ @vvk9."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:359
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:359
 msgid ""
 "It's now possible to set labels on images, containers and pods, thanks to "
 "@vv9k."
 msgstr ""
 "Giờ đây, bạn có thể đặt nhãn trên hình ảnh, vùng chứa và nhóm nhờ @vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:366
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:366
 msgid "The third beta release of Pods 1.0.0 contains the following changes:"
 msgstr "Bản phát hành beta thứ ba của Pods 1.0.0 có những thay đổi sau:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:368
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:368
 msgid ""
 "A periodic refresh interval to track entities which were created outside of "
 "podman (e.g. with buildah)"
@@ -1383,7 +1383,7 @@ msgstr ""
 "Khoảng thời gian làm mới định kỳ để theo dõi các thực thể được tạo bên ngoài "
 "podman (ví dụ: với buildah)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:369
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:369
 msgid ""
 "Containers now provide a detailed view of health configuration and health "
 "status"
@@ -1391,35 +1391,35 @@ msgstr ""
 "Các vùng chứa hiện cung cấp xem chi tiết về cấu hình sức khỏe và trạng thái "
 "sức khỏe"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:370
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:370
 msgid "Several smaller UI improvements"
 msgstr "Một số cải tiến giao diện người dùng nhỏ hơn"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:371
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:371
 msgid "Several smaller bugfixes and internal code improvements"
 msgstr "Một số sửa lỗi nhỏ hơn và cải tiến mã nội bộ"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:372
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:372
 msgid "Updated screenshots"
 msgstr "Ảnh chụp màn hình được cập nhật"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:379
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:379
 msgid "A small update with app data fixes:"
 msgstr "Một bản cập nhật nhỏ sửa lỗi dữ liệu ứng dụng:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:381
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:381
 msgid "Updated app data content rating"
 msgstr "Đã cập nhật xếp hạng nội dung dữ liệu ứng dụng"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:382
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:382
 msgid "Added releases in app data"
 msgstr "Đã thêm bản phát hành trong dữ liệu ứng dụng"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:388
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:388
 msgid "This is the first 1.0.0 beta release of Pods."
 msgstr "Đây là bản phát hành beta 1.0.0 đầu tiên của Pods."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:400
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:400
 msgid "Marcus Behrendt"
 msgstr "Marcus Behrendt"
 

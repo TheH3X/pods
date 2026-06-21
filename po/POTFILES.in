@@ -1,6 +1,6 @@
-data/com.github.marhkb.Pods.desktop.in.in
-data/com.github.marhkb.Pods.gschema.xml.in
-data/com.github.marhkb.Pods.metainfo.xml.in.in
+data/com.github.TheH3X.Stacks.desktop.in.in
+data/com.github.TheH3X.Stacks.gschema.xml.in
+data/com.github.TheH3X.Stacks.metainfo.xml.in.in
 
 src/engine/auth.rs
 src/engine/conn.rs

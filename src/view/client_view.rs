@@ -21,7 +21,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ClientView)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/client_view.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/client_view.ui")]
     pub(crate) struct ClientView {
         pub(super) settings: utils::PodsSettings,
         pub(super) css_provider: gtk::CssProvider,

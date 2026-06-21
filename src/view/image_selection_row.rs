@@ -13,7 +13,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageSelectionRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_selection_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_selection_row.ui")]
     pub(crate) struct ImageSelectionRow {
         #[property(get, set, nullable)]
         pub(super) image: glib::WeakRef<model::Image>,

@@ -79,7 +79,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::VolumesPanel)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/volumes_panel.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/volumes_panel.ui")]
     pub(crate) struct VolumesPanel {
         pub(super) settings: Settings,
         pub(super) filter: OnceCell<gtk::Filter>,

@@ -21,7 +21,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::RepoTagRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/repo_tag_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/repo_tag_row.ui")]
     pub(crate) struct RepoTagRow {
         #[property(get, set, construct_only, nullable)]
         pub(super) repo_tag: glib::WeakRef<model::RepoTag>,

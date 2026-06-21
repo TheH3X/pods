@@ -44,7 +44,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerTerminal)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_terminal.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_terminal.ui")]
     pub(crate) struct ContainerTerminal {
         pub(super) settings: utils::PodsSettings,
         pub(super) tx_input: RefCell<Option<tokio::sync::mpsc::UnboundedSender<ExecInput>>>,

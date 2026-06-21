@@ -40,7 +40,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerDetailsPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_details_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_details_page.ui")]
     pub(crate) struct ContainerDetailsPage {
         pub(super) handler_id: RefCell<Option<glib::SignalHandlerId>>,
         #[property(get, set = Self::set_container, construct, nullable)]

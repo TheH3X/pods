@@ -20,55 +20,55 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.16.1-dev\n"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:2
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:7
+#: data/com.github.TheH3X.Stacks.desktop.in.in:2
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:7
 #: src/view/client_view.blp:139 src/view/client_view.rs:255
 #: src/view/pods_panel.blp:81 src/view/pods_panel.blp:127
 #: src/view/pods_panel.blp:385 src/view/search_panel.blp:56
 msgid "Pods"
 msgstr "Капсулы"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:3
+#: data/com.github.TheH3X.Stacks.desktop.in.in:3
 msgid "Manage your Podman containers"
 msgstr "Управляйте контейнерами Podman"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:8
+#: data/com.github.TheH3X.Stacks.desktop.in.in:8
 msgid "Gnome;GTK;libadwaita;Podman;Containerization;"
 msgstr "Gnome;GTK;libadwaita;Podman;Containerization;Контейнеры;"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:6
-#: data/com.github.marhkb.Pods.gschema.xml.in:7
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:6
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:7
 msgid "Default window width"
 msgstr "Ширина окна по умолчанию"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:11
-#: data/com.github.marhkb.Pods.gschema.xml.in:12
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:11
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:12
 msgid "Default window height"
 msgstr "Высота окна по умолчанию"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:16
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:16
 msgid "Default window maximized behaviour"
 msgstr "Поведение развернутого окна по умолчанию"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:21
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:21
 msgid "The uuid of the connection that was used the last time"
 msgstr "UUID подключения, использованного в последний раз"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:26
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:26
 msgid "The last used view"
 msgstr "Последний использованный вид"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:31
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:31
 msgid "The last used container file path"
 msgstr "Последний использованный путь к файлу контейнера"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:36
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:36
 #: src/view/images_prune_page.blp:56
 msgid "Remove all images not in use by containers, not just dangling ones"
 msgstr ""
 "Удалить все образы, не используемые контейнерами, а не только ожидающие"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:41
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:41
 #: src/view/images_prune_page.blp:61
 msgid ""
 "Remove images even when they are used by external containers (e.g, by build "
@@ -77,87 +77,87 @@ msgstr ""
 "Удалять образы, даже если они используются внешними контейнерами (например, "
 "контейнерами сборки)"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:46
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:46
 msgid "Whether to show a timestamp for each log line"
 msgstr "Показывать ли временную метку для каждой строки журнала"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:51
-#: data/com.github.marhkb.Pods.gschema.xml.in:56
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:51
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:56
 msgid "Whether to use a regex for search"
 msgstr "Использовать ли регулярное выражение для поиска"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:61
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:61
 msgid "Whether search should be case-sensitive"
 msgstr "Должен ли поиск учитывать регистр"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:66
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:66
 msgid "Whether to match whole words when searching"
 msgstr "Сопоставлять ли целые слова при поиске"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:71
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:71
 msgid "The font scale of all text views"
 msgstr "Масштаб шрифта для всех текстовых представлений"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:76
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:76
 msgid "The font scale for terminals"
 msgstr "Масштаб шрифта для всех терминалов"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:88
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:88
 #, fuzzy
 msgid "Containers representation"
 msgstr "Генерация контейнера Kube"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:97
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:97
 #, fuzzy
 msgid "Sort direction for containers"
 msgstr "Ошибка загрузки контейнеров"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:106
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:106
 #, fuzzy
 msgid "sort attribute for containers"
 msgstr "Создавать капсулы и контейнеры."
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:111
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:111
 #, fuzzy
 msgid "Whether to show running containers first"
 msgstr "Показывать ли только запущенные контейнеры"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:123
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:123
 msgid "Sort direction for pods"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:132
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:132
 msgid "Sort attribute for pods"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:137
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:137
 #, fuzzy
 msgid "Whether to show running pods first"
 msgstr "Показывать ли только запущенные капсулы"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:149
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:149
 msgid "Sort direction for images"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:159
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:159
 msgid "Sort attribute for images"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:171
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:171
 #, fuzzy
 msgid "Sort direction for volumes"
 msgstr "Ошибка загрузки томов"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:181
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:181
 msgid "Sort attribute for volumes"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:8
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:8
 #, fuzzy
 msgid "Manage your containers"
 msgstr "Управляйте контейнерами Podman"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:10
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:10
 #, fuzzy
 msgid ""
 "Pods is a frontend for Podman/Docker. It uses libadwaita for its user "
@@ -167,45 +167,45 @@ msgstr ""
 "своего пользовательского интерфейса и стремится соответствовать принципам "
 "дизайна GNOME."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:11
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:11
 msgid "With Pods you can, among other things:"
 msgstr "С помощью приложения «Капсулы» вы можете, помимо прочего:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:13
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:13
 #, fuzzy
 msgid "Connect to local and remote Podman/Docker instances."
 msgstr "Подключаться к локальным и удалённым экземплярам Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:14
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:14
 msgid "Easily overview images, containers and pods."
 msgstr "С лёгкостью просматривать образы, контейнеры и капсулы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:15
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:15
 msgid "View prepared information about images, containers, and pods."
 msgstr ""
 "Просматривать подготовленную информацию об образах, контейнерах и капсулах."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:16
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:16
 msgid "Inspect images, containers and pods."
 msgstr "Инспектировать образы, контейнеры и капсулы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:17
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:17
 msgid "View and search container logs."
 msgstr "Просматривать и искать в журналах контейнеров."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:18
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:18
 msgid "Monitor processes of containers and pods."
 msgstr "Отслеживать процессы в контейнерах и капсулах."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:19
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:19
 msgid "Download images and build them using Dockerfiles."
 msgstr "Загружать образы и собирать их с помощью Dockerfiles."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:20
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:20
 msgid "Create pods and containers."
 msgstr "Создавать капсулы и контейнеры."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:21
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:21
 msgid ""
 "Control the lifecycle of containers and pods (in bulk) (start, stop, pause, "
 "etc.)."
@@ -213,46 +213,46 @@ msgstr ""
 "Управлять жизненным циклом контейнеров и капсул (в массовом порядке) "
 "(запуск, остановка, пауза и т. д.)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:22
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:22
 msgid "Delete images, containers, and pods (in bulk)."
 msgstr "Удалять образы, контейнеры и капсулы (в массовом порядке)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:23
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:23
 msgid "Prune images."
 msgstr "Очищать образы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:24
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:24
 msgid "Rename containers."
 msgstr "Переименовывать контейнеры."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:34
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:34
 #, fuzzy
 msgid "Pods main window"
 msgstr "Закрыть окно"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:43
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:43
 #, fuzzy
 msgid "Pods 3.0.0 contains the following changes:"
 msgstr "«Капсулы» 2.1.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:45
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:45
 msgid "Implemented support for Docker (#927)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:51
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:51
 #, fuzzy
 msgid "Pods 2.4.0 contains the following changes:"
 msgstr "«Капсулы» 2.1.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:53
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:53
 msgid "Updated to GNOME 50. (#916)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:54
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:54
 msgid "Sidebar ported to Adw.Sidebar. (#919)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:55
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:55
 #, fuzzy
 msgid ""
 "Fixed a bug that prevented scrolling up in the container log page. (#920)"
@@ -260,98 +260,98 @@ msgstr ""
 "Мы переместили баннер из нижней части в верхнюю на странице журнала "
 "контейнера. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:61
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:61
 #, fuzzy
 msgid "Pods 2.3.0 contains the following changes:"
 msgstr "«Капсулы» 2.1.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:63
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:63
 msgid ""
 "Replaced numerous mismatched or outdated widgets with modern alternatives "
 "from libadwaita 1.8. (#890, #899, #909, #910)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:64
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:64
 msgid ""
 "Actions such as container creation can now be retried in case of failure; "
 "thanks to @iamanaws. (#899)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:65
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:65
 msgid "CVE-2025-62518 has been fixed; thanks to @bengsparks. (#895)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:66
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:66
 msgid ""
 "Various fixes and improvements throughout the app; thanks to @iamanaws, "
 "@jardon and @Kekun. (#874, #879, #848, #880, #894, #899, #908, #904)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:67
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:67
 #, fuzzy
 msgid "Updated translations."
 msgstr "Обновлены снимки экрана."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:73
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:73
 #, fuzzy
 msgid "Pods 2.2.0 contains the following changes:"
 msgstr "«Капсулы» 2.1.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:74
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:88
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:74
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:88
 msgid "Features"
 msgstr "Возможности"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:76
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:76
 msgid "Add more powerful sorting options. (#848)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:77
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:77
 msgid ""
 "The search entry has been transformed into a toggle button in the headerbar. "
 "(#830)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:78
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:78
 msgid "Search is now possible in the connection chooser page. (#830)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:79
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:79
 msgid ""
 "The control elements of the header bar are now moved to a lower bar if space "
 "becomes too tight. (#837)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:80
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:80
 #, fuzzy
 msgid ""
 "Allow switching between grid and list view in the containers panel. (#838)"
 msgstr "Контейнеры представлены карточками на панели контейнеров. (#778)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:81
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:81
 msgid "Various widgets have been updated to libadwaita 1.7. (#870)"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:87
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:87
 msgid "Pods 2.1.0 contains the following changes:"
 msgstr "«Капсулы» 2.1.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:90
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:90
 msgid "Accent colors are now properly supported. (#804, #807, #809, #811)"
 msgstr ""
 "Теперь правильно поддерживаются акцентные цвета. (#804, #807, #809, #811)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:91
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:91
 msgid "All dialogs have been ported to AdwDialog to be more adaptive. (#810)"
 msgstr ""
 "Все диалоговые окна были перенесены в AdwDialog для улучшения адаптивности. "
 "(#810)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:92
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:92
 msgid "Containers are now represented by cards in the container panel. (#778)"
 msgstr "Контейнеры представлены карточками на панели контейнеров. (#778)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:93
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:93
 msgid ""
 "The image search has been completely revised and is now much more "
 "streamlined. In addition, the tags of an image are suggested. (#758)"
@@ -359,19 +359,19 @@ msgstr ""
 "Поиск образов был полностью переработан и стал намного более "
 "оптимизированным. Кроме того, предлагаются метки образа. (#758)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:97
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:97
 msgid "Port mappings can now be configured when creating pods. (#772)"
 msgstr "При создании капсул можно настраивать сопоставление портов. (#772)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:98
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:98
 msgid "Enable searching for container and pod processes. (#747)"
 msgstr "Включена возможность поиска процессов контейнеров и капсул. (#747)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:99
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:99
 msgid "Killing container processes is now supported. (#748)"
 msgstr "Поддерживается завершение процессов контейнеров. (#748)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:100
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:100
 msgid ""
 "The image search results now have an \"verified\" icon if an image is "
 "official. (#761)"
@@ -379,15 +379,15 @@ msgstr ""
 "В результатах поиска образов теперь отображается значок «подтверждено», если "
 "образ является официальным. (#761)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:101
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:101
 msgid "Logs are now sent to both std and syslog. (#763)"
 msgstr "Журналы теперь отправляются как в std, так и в syslog. (#763)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:102
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:102
 msgid "Make it possible to create privileged containers. (#753)"
 msgstr "Добавлена возможность создавать привилегированные контейнеры. (#753)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:103
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:103
 msgid ""
 "Better handling of empty states when selecting images, pods and volumes for "
 "a container to be created. (#769)"
@@ -395,23 +395,23 @@ msgstr ""
 "Улучшена обработка пустых состояний при выборе образов, капсул и томов для "
 "создаваемого контейнера. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:104
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:104
 msgid "Unification of status and health status in the container row. (#774)"
 msgstr ""
 "Объединение статуса и состояния работоспособности в строке контейнера. (#774)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:105
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:105
 msgid ""
 "The recently introduced libadwaita Spinner now replaces all gtk Spinners. "
 "(#802)"
 msgstr ""
 "Недавно введённый спиннер libadwaita теперь заменяет все спиннеры gtk. (#802)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:107
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:107
 msgid "Fixes"
 msgstr "Исправления"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:109
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:109
 msgid ""
 "All remaining processes are now closed after a container terminal exits. "
 "(#744)"
@@ -419,7 +419,7 @@ msgstr ""
 "Все оставшиеся процессы закрываются после выхода из терминала контейнера. "
 "(#744)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:110
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:110
 msgid ""
 "Streams are now closed correctly so that they do not run forever when the "
 "user changes the connection. (#764)"
@@ -427,7 +427,7 @@ msgstr ""
 "Потоки закрываются правильно, чтобы они не работали бесконечно, когда "
 "пользователь меняет соединение. (#764)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:111
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:111
 msgid ""
 "A bug was fixed where the content of the container log page was initially "
 "too large. (#769)"
@@ -435,21 +435,21 @@ msgstr ""
 "Исправлена ошибка, из-за которой содержимое журнала контейнера изначально "
 "было слишком большим. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:112
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:112
 msgid "Stop filtering out containers, pods and volumes by default. (#770)"
 msgstr "Прекращена фильтрация контейнеров, капсул и томов по умолчанию. (#770)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:114
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:114
 msgid "Improvements"
 msgstr "Улучшения"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:116
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:116
 msgid "We now use appdata to construct the about dialog. (#743)"
 msgstr ""
 "Для построения диалогового окна «О программе» теперь используется appdata. "
 "(#743)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:117
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:117
 msgid ""
 "Improve performance by utilizing the <em>SignalListItemFactory::setup</em> "
 "signal. (#745)"
@@ -457,11 +457,11 @@ msgstr ""
 "Улучшение производительности за счёт использования сигнала "
 "<em>SignalListItemFactory::setup</em>. (#745)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:118
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:118
 msgid "Port <em>GtkTreeView</em> to <em>GtkColumnView</em>. (#746)"
 msgstr "Перенос <em>GtkTreeView</em> в <em>GtkColumnView</em>. (#746)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:119
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:119
 msgid ""
 "After the last connection has been removed from the page with the connection "
 "selection, the home page is displayed again. (#760)"
@@ -469,14 +469,14 @@ msgstr ""
 "После удаления последнего соединения со страницы с выбором соединений снова "
 "отображается домашняя страница. (#760)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:123
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:123
 msgid ""
 "The same background color is now used for list views as for the window. "
 "(#769)"
 msgstr ""
 "Теперь для списков используется тот же цвет фона, что и для окна. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:124
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:124
 msgid ""
 "We have moved the banner from the bottom to the top in the container log "
 "page. (#769)"
@@ -484,23 +484,23 @@ msgstr ""
 "Мы переместили баннер из нижней части в верхнюю на странице журнала "
 "контейнера. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:125
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:125
 msgid "Some titles have been shortened. (#769)"
 msgstr "Некоторые заголовки были сокращены. (#769)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:126
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:126
 msgid "We now use AboutDialog instead of AboutWindow. (803)"
 msgstr "AboutDialog используется вместо AboutWindow. (803)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:127
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:127
 msgid "Various style improvements (#741, #757)"
 msgstr "Различные улучшения оформления (#741, #757)"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:133
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:133
 msgid "Pods 1.2.1 contains the following bugfixes and improvements:"
 msgstr "«Капсулы» 1.2.1 содержит следующие исправления ошибок и улучшения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:135
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:135
 msgid ""
 "Fixed a bug that caused the application to crash when the keyring could not "
 "be accessed."
@@ -508,7 +508,7 @@ msgstr ""
 "Исправлена ошибка, которая приводила к сбою приложения, когда набор ключей "
 "не мог быть доступен."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:136
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:136
 msgid ""
 "Some languages like Romanian were not correctly included. This should be "
 "fixed now."
@@ -516,7 +516,7 @@ msgstr ""
 "Некоторые языки, такие как румынский, были включены некорректно. Теперь это "
 "должно быть исправлено."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:137
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:137
 msgid ""
 "Fixed a regression where the container list was not re-sorted once a "
 "container was renamed."
@@ -524,66 +524,66 @@ msgstr ""
 "Исправлена регрессия, при которой не выполняется пересортировка списка "
 "контейнеров после переименования контейнера."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:138
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:138
 msgid "Minor cleanup work has been done in the code."
 msgstr "В коде была проведена небольшая очистка."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:144
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:144
 msgid "Pods 1.2.0 contains the following new features:"
 msgstr "«Капсулы» 1.2.0 содержит следующие новые возможности:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:146
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:146
 msgid "Usabilty and UX has been improved in many places."
 msgstr "Во многих местах было улучшено удобство использования и UX."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:147
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:147
 msgid "Pruning of containers and pods is now possible."
 msgstr "Теперь возможно удаление контейнеров и капсул."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:148
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:148
 msgid "Container terminals are now detachable and can be used in parallel."
 msgstr ""
 "Терминалы контейнеров теперь можно отсоединять и использовать параллельно."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:149
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:149
 msgid "Images can be pushed to a registry."
 msgstr "Образы могут быть отправлены в реестр."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:150
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:150
 msgid "The CPU utilization now takes the number of cores into account."
 msgstr "Использование ЦП теперь учитывает количество ядер."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:156
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:156
 msgid "Pods 1.1.0 contains the following features, bug fixes and improvements:"
 msgstr ""
 "«Капсулы» 1.1.0 содержит следующие возможности, исправления ошибок и "
 "улучшения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:158
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:158
 msgid ""
 "Dependencies have been updated. This includes the update to GNOME 44 "
 "libraries."
 msgstr ""
 "Зависимости были обновлены. Это включает обновление до библиотек GNOME 44."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:159
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:159
 msgid "AdwBanner is now used in the container log page instead of GtkInfoBar."
 msgstr ""
 "AdwBanner используется на странице журнала контейнера вместо GtkInfoBar."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:160
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:160
 msgid "The GNOME Coc is acknowledged in the README.md."
 msgstr "Правила поведения GNOME упоминаются в README.md."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:161
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:161
 msgid "The main window and all dialogs can now be closed with Ctrl+W."
 msgstr "Главное окно и все диалоговые окна можно закрыть с помощью Ctrl+W."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:162
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:162
 msgid "The memory icon has been improved, thanks to @daudix-UFO."
 msgstr "Значок памяти был улучшен благодаря @daudix-UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:163
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:163
 msgid ""
 "Internal code improvements have landed, like the port to glib-rs' new "
 "properties proc macro."
@@ -591,17 +591,17 @@ msgstr ""
 "Реализованы внутренние улучшения кода, такие как перенос в новый proc-макрос "
 "glib-rs."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:164
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:183
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:201
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:217
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:233
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:244
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:258
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:164
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:183
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:201
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:217
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:233
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:244
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:258
 msgid "Translations have been updated."
 msgstr "Обновлены переводы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:170
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:170
 msgid ""
 "Pods 1.1.0-beta.4 contains the following features, bug fixes and "
 "improvements:"
@@ -609,7 +609,7 @@ msgstr ""
 "«Капсулы» 1.1.0-beta.4 содержит следующие возможности, исправления ошибок и "
 "улучшения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:172
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:172
 msgid ""
 "The connection color is now displayed by means of a colored dot in front of "
 "the connection name in the connection overview, instead of a vertical bar at "
@@ -618,13 +618,13 @@ msgstr ""
 "Цвет соединения теперь отображается с помощью цветной точки перед названием "
 "соединения в обзоре соединений, а не вертикальной полосы в начале."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:173
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:173
 msgid ""
 "The penguin icon to the left of the Podman version has been removed from the "
 "status bar."
 msgstr "Значок пингвина слева от версии Podman был удалён из строки состояния."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:174
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:174
 msgid ""
 "The Podman menu button in the status bar now shows a loading indicator until "
 "the Podman version is determined."
@@ -632,7 +632,7 @@ msgstr ""
 "Кнопка меню Podman в строке состояния теперь отображает индикатор загрузки "
 "до тех пор, пока не будет определена версия Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:175
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:175
 msgid ""
 "The label to show the version of the Podman menu button in the status bar "
 "now uses the <em>numeric</em> style class, which looks more harmonious."
@@ -641,7 +641,7 @@ msgstr ""
 "использует стилевой класс <em>numeric</em>, который выглядит более "
 "гармонично."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:176
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:176
 msgid ""
 "To eliminate the blur, the icons in the status bar now all have a size of 16 "
 "pixels instead of 12 pixels."
@@ -649,17 +649,17 @@ msgstr ""
 "Чтобы устранить размытие, все значки в строке состояния теперь имеют размер "
 "16, а не 12 пикселей."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:177
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:177
 msgid "The desktop entry now uses the updated short description as comment."
 msgstr ""
 "Desktop-файл теперь использует обновлённое краткое описание в качестве "
 "комментария."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:178
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:178
 msgid "Some appropriate categories have been added to the desktop entry."
 msgstr "В desktop-файл были добавлены некоторые соответствующие категории."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:179
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:179
 msgid ""
 "Fixed a bug where the Id of a container was replaced by the name once the "
 "name of the container was changed."
@@ -667,7 +667,7 @@ msgstr ""
 "Исправлена ошибка, при которой идентификатор контейнера заменялся на имя "
 "после изменения имени контейнера."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:180
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:180
 msgid ""
 "The container status <em>configured</em> was not handled before. This is now "
 "fixed."
@@ -675,7 +675,7 @@ msgstr ""
 "Состояние контейнера <em>настроен</em> ранее не обрабатывалось. Теперь это "
 "исправлено."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:181
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:181
 msgid ""
 "The spinner within the container log page did not disappear earlier if the "
 "log was empty. This is fixed now."
@@ -683,19 +683,19 @@ msgstr ""
 "Ранее спиннер на странице журнала контейнера не исчезал, если журнал был "
 "пустым. Теперь эта проблема устранена."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:182
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:182
 msgid "The code has been improved in some places."
 msgstr "Код был улучшен в некоторых местах."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:184
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:202
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:218
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:234
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:259
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:184
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:202
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:218
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:234
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:259
 msgid "Dependencies have been updated."
 msgstr "Зависимости были обновлены."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:190
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:190
 msgid ""
 "Pods 1.1.0-beta.3 contains the following features, bug fixes and "
 "improvements:"
@@ -703,7 +703,7 @@ msgstr ""
 "«Капсулы» 1.1.0-beta.3 содержит следующие возможности, исправления ошибок и "
 "улучшения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:192
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:192
 msgid ""
 "The connection menu has received an entry for disconnecting the current "
 "Podman connection."
@@ -711,14 +711,14 @@ msgstr ""
 "В меню подключения появилась опция для отключения текущего подключения "
 "Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:193
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:193
 msgid ""
 "The status bar now has a menu button that shows the current Podman version."
 msgstr ""
 "В строке состояния теперь есть кнопка меню, которая теперь показывает "
 "текущую версию Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:194
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:194
 msgid ""
 "The menu item to open the Podman information window has been moved from the "
 "main menu to the Podman menu in the status bar."
@@ -726,7 +726,7 @@ msgstr ""
 "Пункт меню для открытия информационного окна Podman был перемещён из "
 "главного меню в меню Podman в строке состояния."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:195
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:195
 msgid ""
 "A new widget has been implemented that allows you to control the zoom level "
 "of text."
@@ -734,7 +734,7 @@ msgstr ""
 "Реализован новый виджет, позволяющий контролировать уровень масштабирования "
 "текста."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:196
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:196
 msgid ""
 "On all pages with text, such as the inspection page, the download button has "
 "been moved to a menu in the header bar together with the zoom control widget."
@@ -743,7 +743,7 @@ msgstr ""
 "загрузки была перемещена в меню в строке заголовка вместе с виджетом "
 "управления масштабом."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:197
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:197
 msgid ""
 "On the container log page some buttons together with zoom control widget are "
 "moved to a menu in the header bar."
@@ -751,11 +751,11 @@ msgstr ""
 "На странице журнала контейнера некоторые кнопки вместе с виджетом управления "
 "масштабом перемещены в меню в строке заголовка."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:198
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:198
 msgid "The text in the container terminal can now be zoomed."
 msgstr "Теперь можно масштабировать текст в терминале контейнера."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:199
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:199
 msgid ""
 "Fixed a bug in the container log page where an explicit color was set for "
 "the default ANSI escape sequence. This resulted in text not being readable "
@@ -765,7 +765,7 @@ msgstr ""
 "последовательности ANSI был установлен явный цвет. Это приводило к тому, что "
 "текст был нечитаемым в светлой теме при определённых обстоятельствах."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:200
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:200
 msgid ""
 "The text views, like the Inspection page, are now closed immediately if "
 "there is an error. For example, this would be the case if the cube YAML "
@@ -775,7 +775,7 @@ msgstr ""
 "закрываются, если возникает ошибка. Например, это может произойти, если YAML "
 "куба не может быть сгенерирован."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:208
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:208
 msgid ""
 "Pods 1.1.0-beta.2 contains the following features, bug fixes and "
 "improvements:"
@@ -783,7 +783,7 @@ msgstr ""
 "«Капсулы» 1.1.0-beta.2 содержит следующие возможности, исправления ошибок и "
 "улучшения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:210
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:210
 msgid ""
 "It is now possible to assign colors to connections. Then, when the "
 "connection is active, the status bar is colored accordingly."
@@ -791,25 +791,25 @@ msgstr ""
 "Теперь можно назначать цвета соединениям. Затем, когда соединение активно, "
 "строка состояния окрашивается соответствующим цветом."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:211
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:211
 msgid "The progress bar in the status bar has been replaced by a label."
 msgstr "Индикатор выполнения в строке состояния был заменён меткой."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:212
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:212
 msgid "The formatting of the container log is now correctly kept across lines."
 msgstr ""
 "Форматирование журнала контейнера теперь правильно сохраняется по строкам."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:213
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:213
 msgid ""
 "Some strings has been marked as translatable that where previously forgotten."
 msgstr "Некоторые строки, которые были забыты, были помечены как переводимые."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:214
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:214
 msgid "Some strings has been changed to be more accurate."
 msgstr "Некоторые строки были изменены для большей точности."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:215
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:215
 msgid ""
 "A workaround and a fix have been implemented specifically for crashes that "
 "led to crashes when using podman 3.0."
@@ -817,7 +817,7 @@ msgstr ""
 "Были реализованы обходной путь и исправление специально для сбоев, которые "
 "приводили к сбоям при использовании Podman 3.0."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:216
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:216
 msgid ""
 "Fixed a style bug that caused the inner scrollbar on the connection "
 "selection page to have an offset."
@@ -825,7 +825,7 @@ msgstr ""
 "Исправлена ошибка оформления, которая приводила к смещению внутренней полосы "
 "прокрутки на странице выбора соединения."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:224
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:224
 msgid ""
 "Pods 1.1.0-beta.1 contains the following features, bug fixes and "
 "improvements:"
@@ -833,7 +833,7 @@ msgstr ""
 "«Капсулы» 1.1.0-beta.1 содержит следующие возможности, исправления ошибок и "
 "улучшения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:226
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:226
 msgid ""
 "The fonts in all text views, such as those in the inspection pages, are now "
 "scalable using typical shortcuts."
@@ -841,7 +841,7 @@ msgstr ""
 "Шрифты во всех текстовых представлениях, таких как страницы инспектирования, "
 "теперь масштабируются с помощью стандартных быстрых клавиш."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:227
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:227
 msgid ""
 "It is now prevented that actions in subpages like the container inspection "
 "subpage can be triggered via shortcuts (e.g. the action to download files)."
@@ -850,7 +850,7 @@ msgstr ""
 "инспектирования контейнера, с помощью быстрых клавиш (например, действие по "
 "загрузке файлов)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:228
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:228
 msgid ""
 "More ANSI escape sequences like background colors and bright colors has been "
 "added to the container log page."
@@ -858,13 +858,13 @@ msgstr ""
 "На страницу журнала контейнера добавлено больше управляющих "
 "последовательностей ANSI, таких как цвета фона и яркие цвета."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:229
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:229
 msgid "Fixed a bug that caused some containers to not display most log lines."
 msgstr ""
 "Исправлена ошибка, из-за которой некоторые контейнеры не отображали "
 "большинство строк журнала."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:230
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:230
 msgid ""
 "The name of the container is now also displayed as a subtitle in the health "
 "check page."
@@ -872,19 +872,19 @@ msgstr ""
 "Название контейнера теперь также отображается в качестве подзаголовка на "
 "странице проверки работоспособности."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:231
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:231
 msgid "The README file has been updated and improved."
 msgstr "Файл README был обновлён и улучшен."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:232
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:232
 msgid "There were a lot of internal improvements to the code."
 msgstr "Было внесено много внутренних улучшений в код."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:240
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:240
 msgid "Pods 1.0.2 contains the following changes:"
 msgstr "«Капсулы» 1.0.2 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:242
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:242
 msgid ""
 "The search behavior has been adjusted so that pressing <em>Ctrl+F</em> again "
 "resets the search and that <em>Escape</em> closes it."
@@ -892,7 +892,7 @@ msgstr ""
 "Поведение поиска было скорректировано таким образом, что повторное нажатие "
 "<em>Ctrl+F</em> сбрасывает поиск, а <em>Escape</em> закрывает его."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:243
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:243
 msgid ""
 "The application icon and symbolic icons have been further improved, thanks "
 "to @daudix-UFO."
@@ -900,7 +900,7 @@ msgstr ""
 "Значок приложения и символические значки были дополнительно улучшены "
 "благодаря @daudix-UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:250
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:250
 msgid ""
 "The stable 1.0 release of Pods includes the following changes since the last "
 "RC:"
@@ -908,7 +908,7 @@ msgstr ""
 "Стабильная версия 1.0 приложения «Капсулы» включает следующие изменения с "
 "момента выпуска последней RC-версии:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:252
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:252
 msgid ""
 "The welcome page now has a very attractive, colorful illustration, thanks to "
 "@daudix-UFO."
@@ -916,18 +916,18 @@ msgstr ""
 "Страница приветствия теперь имеет очень привлекательную, красочную "
 "иллюстрацию благодаря @daudix-UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:253
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:253
 msgid "Switching the Podman connection now no longer blocks the GUI."
 msgstr "Переключение соединения Podman не блокирует графический интерфейс."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:254
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:254
 msgid ""
 "Creating new Podman connections can now be canceled during the connection "
 "attempt."
 msgstr ""
 "Создание новых соединений Podman можно отменить во время попытки подключения."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:255
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:255
 msgid ""
 "Copying and pasting text from/to the container terminal now works with "
 "<em>Ctrl+Shift+C</em> and <em>Ctrl+Shift+V</em>, respectively."
@@ -935,26 +935,26 @@ msgstr ""
 "Копирование и вставка текста из/в терминал контейнера теперь работает с "
 "помощью<em>Ctrl+Shift+C</em> и <em>Ctrl+Shift+V</em> соответственно."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:256
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:256
 msgid "The container terminal now has a simple context menu."
 msgstr "Терминал контейнера теперь имеет простое контекстное меню."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:257
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:257
 msgid "The animation of the internal spinner widget has been beautified."
 msgstr "Анимация внутреннего виджета спиннера была улучшена."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:265
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:265
 msgid "The third 1.0 release candidate of Pods contains the following changes:"
 msgstr "Третья кандидатская версия «Капсул» 1.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:267
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:267
 msgid ""
 "The application icon and symbolic icons have been improved, thanks to "
 "@daudix-UFO"
 msgstr ""
 "Значок приложения и символические значки были улучшены благодаря @daudix-UFO."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:268
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:268
 msgid ""
 "Actions, such as creating a container, can now be repeated initially if they "
 "fail."
@@ -962,7 +962,7 @@ msgstr ""
 "Действия, такие как создание контейнера, теперь могут повторяться вначале, "
 "если произошла ошибка."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:269
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:269
 msgid ""
 "Fixed a bug that prevented the label displaying the id of an image from "
 "being striked through if the image was being deleted."
@@ -970,15 +970,15 @@ msgstr ""
 "Исправлена ошибка, из-за которой метка, отображающая идентификатор образа, "
 "не зачёркивалась при удалении образа."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:270
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:270
 msgid "Repository tags are now selectable within the image details page."
 msgstr "Ярлыки репозитория можно выбирать на странице сведений об образе."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:271
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:271
 msgid "Translations have been updated. Thanks to all who contributed."
 msgstr "Обновлены переводы. Спасибо всем, кто участвовал в этой работе."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:272
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:272
 msgid ""
 "Internal code improvements have been made, such as reducing dependencies and "
 "enabling LTO for release builds."
@@ -986,14 +986,14 @@ msgstr ""
 "Были внесены внутренние улучшения кода, такие как уменьшение зависимостей и "
 "включение LTO для релизных сборок."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:278
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:278
 msgid ""
 "This is a hotfix release that prevents the application from crashing when "
 "disconnected from Podman."
 msgstr ""
 "Это исправление предотвращает сбой приложения при отключении от Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:283
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:283
 msgid ""
 "All features for version 1.0 are now implemented and Pods is thus in the "
 "release candidate phase. Among the changes since the last release are:"
@@ -1001,7 +1001,7 @@ msgstr ""
 "Все функции версии 1.0 теперь реализованы, и «Капсулы» находится в фазе "
 "релиз-кандидата. Среди изменений с момента последнего выпуска:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:285
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:285
 msgid ""
 "Actions such as downloading an image or creating a container now take place "
 "in dialogs instead of in the main window."
@@ -1009,7 +1009,7 @@ msgstr ""
 "Такие действия, как загрузка образа или создание контейнера выполняются в "
 "диалоговых окнах, а не в главном окне."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:286
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:286
 msgid ""
 "Image Rows have been revised to better reflect the presence of multiple repo "
 "tags."
@@ -1017,12 +1017,12 @@ msgstr ""
 "Строки образов были переработаны, чтобы лучше отображать наличие нескольких "
 "ярлыков репозитория."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:287
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:287
 msgid "Repo tags can now be removed and added within the image details page."
 msgstr ""
 "Ярлыки репозитория можно удалять и добавлять на странице сведений об образе."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:288
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:288
 msgid ""
 "The subtitle property of the header bars is now used to display the image "
 "id, or the name of the container or pod."
@@ -1030,7 +1030,7 @@ msgstr ""
 "Свойство подзаголовка панелей заголовка теперь используется для отображения "
 "идентификатора образа или имени контейнера или капсулы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:289
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:289
 msgid ""
 "The style of the container details page has been adjusted. Thus, some action "
 "rows have been moved to the properties."
@@ -1038,15 +1038,15 @@ msgstr ""
 "Оформление страницы сведений о контейнере было изменено. Таким образом, "
 "некоторые строки действий были перемещены в свойства."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:290
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:290
 msgid "Shortcuts have been added to the container details page."
 msgstr "На страницу сведений о контейнере были добавлены быстрые клавиши."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:291
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:291
 msgid "Small improvements in the spirit of the GNOME HIG took place."
 msgstr "Были внесены небольшие улучшения в духе GNOME HIG."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:292
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:292
 msgid ""
 "The usual changes such as improving the source code and updating the "
 "dependencies."
@@ -1054,7 +1054,7 @@ msgstr ""
 "Обычные изменения, такие как улучшение исходного кода и обновление "
 "зависимостей."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:293
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:293
 msgid ""
 "Translations have been updated and all translatable strings are now "
 "considered frozen."
@@ -1062,7 +1062,7 @@ msgstr ""
 "Переводы были обновлены, и все переводимые строки теперь считаются "
 "замороженными."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:299
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:299
 msgid ""
 "The ninth beta of Pods in an important step towards the stable first "
 "version. It contains the following changes:"
@@ -1070,47 +1070,47 @@ msgstr ""
 "Девятая бета-версия «Капсул» — важный шаг на пути к стабильной первой "
 "версии. Она содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:301
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:301
 msgid "It is now possible to have a terminal in a container."
 msgstr "Теперь контейнер может содержать терминал."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:302
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:302
 msgid ""
 "As one works with the terminal and views text in the form of logs or "
 "inspection data, the theme selector has been reintroduced. This is provided "
 "by <em>libpanel</em>, which should simplify maintenance."
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:303
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:303
 msgid ""
 "The dialog for renaming a container is now based on <em>AdwMessageDialog</"
 "em>."
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:304
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:304
 msgid "The style of the container series was tweaked in many ways."
 msgstr "Оформление серии контейнеров было изменено во многих отношениях."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:305
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:305
 msgid "Some minor internal code improvements have landed."
 msgstr "Реализованы незначительные внутренние улучшения кода."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:306
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:326
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:306
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:326
 msgid "Dependencies and translations have been updated."
 msgstr "Обновлены зависимости и переводы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:312
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:312
 msgid "The eight beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Восьмая бета-версия «Капсул» 1.0.0 включает следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:314
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:314
 msgid ""
 "Pods now uses the <em>libpanel</em> library to display a status bar. Thus, "
 "notifications and the name of the Podman connection are always visible."
 msgstr ""
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:315
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:315
 msgid ""
 "When creating a new connection, there is now a hint on how to enable the "
 "Podman UNIX socket and a small example on how to use the Podman root "
@@ -1120,28 +1120,28 @@ msgstr ""
 "включить сокет UNIX в Podman, а также небольшой пример использования "
 "корневого экземпляра Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:316
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:316
 msgid "The history of an image can now be inspected."
 msgstr "Теперь можно просматривать историю образа."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:317
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:317
 msgid ""
 "The design of the port bindings in the container details page has been "
 "revised."
 msgstr ""
 "Был переработан дизайн привязок портов на странице сведений о контейнере."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:318
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:318
 msgid "Kubernetes YAML files can now be generated for containers and pods."
 msgstr "Для контейнеров и капсул можно генерировать YAML-файлы Kubernetes."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:319
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:319
 msgid ""
 "Files can now be downloaded from a container as well as uploaded to a "
 "container."
 msgstr "Файлы можно не только загружать в контейнер, но и скачивать из него."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:320
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:320
 msgid ""
 "The design of the circular progress bar for displaying container resources "
 "has been adjusted to be more consistent with the rest of the application."
@@ -1149,7 +1149,7 @@ msgstr ""
 "Дизайн кругового индикатора выполнения для отображения ресурсов контейнера "
 "был изменён для лучшего соответствия остальной части приложения."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:321
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:321
 msgid ""
 "There is now a rotating animation when a container or pod is in a state "
 "transition (start, stop, pause)."
@@ -1157,7 +1157,7 @@ msgstr ""
 "Теперь при переходе контейнера или капсулы в другое состояние (запуск, "
 "остановка, пауза) отображается вращающаяся анимация."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:322
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:322
 msgid ""
 "If a container is in a pod, it will now get a badge with the pod name in the "
 "container list."
@@ -1165,7 +1165,7 @@ msgstr ""
 "Если контейнер находится в капсуле, он получает метку с именем капсулы в "
 "списке контейнеров."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:323
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:323
 msgid ""
 "Logs, the result of the inspection of images, containers, and pods, and the "
 "result Kubernetes YAML generation can now be saved directly as a file."
@@ -1174,19 +1174,19 @@ msgstr ""
 "результаты генерации YAML-файлов Kubernetes теперь можно сохранять "
 "непосредственно в виде файла."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:324
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:324
 msgid "Headerbar titles were adjusted to be shorter and more concise"
 msgstr "Заголовки были сокращены и сделаны более лаконичными."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:325
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:325
 msgid "Many minor internal code improvements have landed"
 msgstr "Было внесено множество незначительных внутренних улучшений."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:332
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:332
 msgid "The seventh beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Седьмая бета-версия «Капсул» 1.0.0 включает следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:334
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:334
 msgid ""
 "Relative times are now used everywhere in the application. For example, you "
 "can quickly see how long a container has been running or how many days ago "
@@ -1196,7 +1196,7 @@ msgstr ""
 "вы можете быстро увидеть, как долго работает контейнер или сколько дней "
 "назад был создан образ."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:335
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:335
 msgid ""
 "For the circular progress bar in the container row, icons are now used "
 "instead of text. Icons have also been added to the resource monitor in the "
@@ -1206,7 +1206,7 @@ msgstr ""
 "значки вместо текста. Значки также были добавлены в монитор ресурсов на "
 "странице сведений о контейнере."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:336
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:336
 msgid ""
 "The text field for searching in the container logs and the inspection page "
 "has been completely redesigned visually."
@@ -1214,7 +1214,7 @@ msgstr ""
 "Текстовое поле для поиска в журналах контейнера и страница инспектирования "
 "были полностью переработаны визуально."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:337
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:337
 msgid ""
 "The container log page now displays an info bar if the container is not "
 "running. The info bar also offers the possibility to start or resume the "
@@ -1224,12 +1224,12 @@ msgstr ""
 "если контейнер не работает. Информационная панель также предлагает "
 "возможность запустить или возобновить работу контейнера."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:338
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:338
 msgid "Desktop notifications are now triggered on actions."
 msgstr ""
 "Теперь при выполнении действий срабатывают уведомления на рабочем столе."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:339
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:339
 msgid ""
 "The selection of an image in the container creation page has been improved. "
 "For example, the list of images is sorted and image names are no longer "
@@ -1238,7 +1238,7 @@ msgstr ""
 "Улучшен выбор образа на странице создания контейнера. Например, список "
 "образов отсортирован, а имена образов больше не сокращаются."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:340
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:340
 msgid ""
 "Also the selection of a pod in the container creation page has been improved "
 "similarly to the image selection."
@@ -1246,7 +1246,7 @@ msgstr ""
 "Также улучшен выбор капсулы на странице создания контейнера аналогично "
 "выбору образа."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:341
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:341
 msgid ""
 "The image row now shows the tag of an image in the accent color to the right "
 "of the image id."
@@ -1254,7 +1254,7 @@ msgstr ""
 "В строке образа справа от идентификатора образа отображается метка образа "
 "акцентным цветом."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:342
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:342
 msgid ""
 "The container row now displays the mapped host port of a container next to "
 "the container name, if there is one."
@@ -1262,7 +1262,7 @@ msgstr ""
 "В строке контейнера теперь рядом с именем контейнера отображается "
 "сопоставленный порт хоста, если он есть."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:343
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:343
 msgid ""
 "Port Bindings in the container details page are now shown inside an "
 "AdwExpanderRow"
@@ -1270,7 +1270,7 @@ msgstr ""
 "Привязки портов на странице сведений о контейнере теперь отображаются внутри "
 "AdwExpanderRow."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:344
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:344
 msgid ""
 "The multi-selection mode of images, containers and pods is now animated a "
 "bit more nicely."
@@ -1278,13 +1278,13 @@ msgstr ""
 "Режим множественного выбора образов, контейнеров и капсул теперь анимирован "
 "немного лучше."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:345
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:345
 msgid ""
 "The sizes of all GtkSpinners have been standardized throughout the "
 "application."
 msgstr "Размеры всех спиннеров Gtk были стандартизированы во всём приложении."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:346
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:346
 msgid ""
 "The gtk-rs library was updated to version 0.5, which made many internal code "
 "improvements possible."
@@ -1292,7 +1292,7 @@ msgstr ""
 "Библиотека gtk-rs была обновлена до версии 0.5, что позволило внести "
 "множество внутренних улучшений в код."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:347
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:347
 msgid ""
 "As always, there were a number of minor bug fixes, visual improvements, "
 "internal code improvements, and translation updates that have not been "
@@ -1302,11 +1302,11 @@ msgstr ""
 "улучшения, внутренние улучшения кода и обновления переводов, которые не были "
 "упомянуты здесь."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:353
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:353
 msgid "The sixth beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Шестая бета-версия «Капсул» 1.0.0 включает следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:355
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:355
 msgid ""
 "The duration for individual actions such as downloading an image is now "
 "displayed."
@@ -1314,7 +1314,7 @@ msgstr ""
 "Теперь отображается продолжительность отдельных действий, таких как загрузка "
 "образа."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:356
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:356
 msgid ""
 "In the overview for all images, individual images can now be updated via the "
 "context menu."
@@ -1322,12 +1322,12 @@ msgstr ""
 "В обзоре всех образов отдельные образы теперь можно обновлять через "
 "контекстное меню."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:357
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:357
 msgid "Missing settings for creating pods have been added, thanks to @vv9k."
 msgstr ""
 "Благодаря @vv9k были добавлены недостающие параметры для создания капсул."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:358
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:358
 msgid ""
 "A simple progress bar is now displayed in the action menu button under the "
 "bell icon to indicate how many actions are currently running."
@@ -1336,7 +1336,7 @@ msgstr ""
 "индикатор выполнения, показывающий, сколько действий выполняется в данный "
 "момент."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:359
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:359
 msgid ""
 "The icon of the button to return to the main view has been changed to a home "
 "symbol, thanks to @vv9k."
@@ -1344,7 +1344,7 @@ msgstr ""
 "Значок кнопки для возврата к главному виду был изменён на символ дома "
 "благодаря @vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:360
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:360
 msgid ""
 "The container details page and pod details page have been revised: The menus "
 "have been removed and instead there is now a control bar."
@@ -1352,7 +1352,7 @@ msgstr ""
 "Страница сведений о контейнере и страница сведений о капсуле были "
 "переработаны: меню были удалены, и вместо них теперь есть панель управления."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:361
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:361
 msgid ""
 "Renaming a container within a container detail page must now be done via a "
 "button in the name row."
@@ -1360,7 +1360,7 @@ msgstr ""
 "Переименование контейнера на странице сведений о контейнере теперь "
 "необходимо выполнять с помощью кнопки в строке имени."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:362
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:362
 msgid ""
 "Fixed a bug in the container log page that caused that no more than 512 log "
 "lines could be loaded and date were truncated."
@@ -1368,7 +1368,7 @@ msgstr ""
 "Исправлена ошибка на странице журнала контейнера, из-за которой можно было "
 "загрузить не более 512 строк журнала, а даты были усечены."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:363
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:363
 msgid ""
 "The progress bars for CPU and memory in the container details page are now "
 "animated."
@@ -1376,7 +1376,7 @@ msgstr ""
 "Индикаторы выполнения для ЦП и памяти на странице сведений о контейнере "
 "теперь анимированы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:364
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:364
 msgid ""
 "The animations of the circular progress bars for CPU and memory in the "
 "overview of all containers now use better easing."
@@ -1384,14 +1384,14 @@ msgstr ""
 "Анимация круговых индикаторов выполнения для ЦП и памяти в обзоре всех "
 "контейнеров теперь использует более плавную динамику."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:365
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:365
 msgid ""
 "The icons and descriptions for actions like downloading an image have been "
 "made clearer."
 msgstr ""
 "Значки и описания действий, таких как загрузка образа, стали более понятными."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:366
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:366
 msgid ""
 "Committing a new image from a container can now be done in a fine-grained "
 "way, in a dedicated page."
@@ -1399,7 +1399,7 @@ msgstr ""
 "Сохранение нового образа из контейнера теперь можно выполнять более точнона "
 "специальной странице."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:367
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:367
 msgid ""
 "As always, there were a number of minor bug fixes, visual improvements, "
 "internal code improvements and translation updates."
@@ -1407,15 +1407,15 @@ msgstr ""
 "Как всегда, было исправлено несколько мелких ошибок, улучшен внешний "
 "вид,выполнены внутренние улучшения кода и обновлены переводы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:373
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:373
 msgid "The fifth beta release of Pods 1.0.0 includes the following changes:"
 msgstr "Пятая бета-версия «Капсул» 1.0.0 включает следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:375
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:375
 msgid "Some typos were fixed, thanks to @kianmeng."
 msgstr "Исправлены опечатки благодаря @kianmeng."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:376
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:376
 msgid ""
 "A tab to specify infra settings were added to the pod creation page, thanks "
 "to @vv9k."
@@ -1423,7 +1423,7 @@ msgstr ""
 "На страницу создания капсулы добавлена вкладка для указания параметров "
 "инфраструктуры благодаря @vv9k."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:377
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:377
 msgid ""
 "There is now a widget that provides an overview of actions, such as building "
 "an image. Thus, the state of most actions can now be tracked."
@@ -1431,51 +1431,51 @@ msgstr ""
 "Теперь есть виджет, который предоставляет обзор действий, таких как создание "
 "образа. Таким образом, можно отслеживать состояние большинства действий."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:378
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:378
 msgid ""
 "The local search for images, containers and pods is now case-insensitive."
 msgstr ""
 "Локальный поиск образов, контейнеров и капсул теперь нечувствителен к "
 "регистру."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:379
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:379
 msgid "There were small visual adjustments all over the place."
 msgstr "Были внесены небольшие визуальные изменения по всему интерфейсу."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:380
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:380
 msgid "Minor bug fixes"
 msgstr "Исправления мелких ошибок"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:381
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:381
 msgid "Internal code improvements"
 msgstr "Внутренние исправления кода"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:382
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:400
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:413
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:382
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:400
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:413
 msgid "Translation updates"
 msgstr "Обновления перевода"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:388
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:388
 msgid ""
 "Here comes the fourth beta release of Pods 1.0.0 with the following changes:"
 msgstr ""
 "Представляем четвёртую бета-версию «Капсул» 1.0.0 со следующими изменениями:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:390
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:390
 msgid ""
 "The blurry symbolic application icon has been fixed, thanks to "
 "@allaeddineomc."
 msgstr "Размытый значок приложения был исправлен благодаря @allaeddineomc."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:391
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:391
 msgid ""
 "A status page is now displayed if there are no images, containers or pods."
 msgstr ""
 "Теперь отображается страница состояния, если нет образов, контейнеров или "
 "капсул."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:392
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:392
 msgid ""
 "The style has been improved, in particular, there is now better "
 "differentiation between light, dark and high contrast modes."
@@ -1483,7 +1483,7 @@ msgstr ""
 "Улучшено оформление, в частности, теперь лучше различаются светлый, тёмный и "
 "высококонтрастный режимы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:393
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:393
 msgid ""
 "The feature for coloring the header bar has been removed. It will hopefully "
 "come back when there is API support for it."
@@ -1491,7 +1491,7 @@ msgstr ""
 "Функция окрашивания панели заголовка была удалена. Надеемся, что она "
 "вернётся, когда появится поддержка для неё."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:394
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:394
 msgid ""
 "A lot of smaller UI improvements have been implemented to give Pods a more "
 "polished look."
@@ -1499,11 +1499,11 @@ msgstr ""
 "Реализовано множество мелких улучшений пользовательского интерфейса, чтобы "
 "придать «Капсулам» более утончённый вид."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:395
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:395
 msgid "The flatpak runtime has been updated to version 43"
 msgstr "Среда выполнения flatpack обновлена до версии 43."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:396
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:396
 msgid ""
 "Improvements in infrastructure like an issue template have landed, thanks to "
 "@vv9k."
@@ -1511,26 +1511,26 @@ msgstr ""
 "Благодаря @vv9k были внедрены улучшения в инфраструктуре, такие как шаблон "
 "проблемы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:397
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:397
 msgid "Image downloads can now be aborted."
 msgstr "Теперь можно прерывать загрузку образа."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:398
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:398
 msgid "Arguments can now be added to a container command, thanks to @vvk9."
 msgstr "Благодаря @vvk9 можно добавлять аргументы к команде контейнера."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:399
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:399
 msgid ""
 "It's now possible to set labels on images, containers and pods, thanks to "
 "@vv9k."
 msgstr ""
 "Благодаря @vvk9 можно устанавливать метки на образы, контейнеры и капсулы."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:406
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:406
 msgid "The third beta release of Pods 1.0.0 contains the following changes:"
 msgstr "Третья бета-версия «Капсул» 1.0.0 содержит следующие изменения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:408
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:408
 msgid ""
 "A periodic refresh interval to track entities which were created outside of "
 "podman (e.g. with buildah)"
@@ -1538,7 +1538,7 @@ msgstr ""
 "Интервал периодического обновления для отслеживания объектов, которые были "
 "созданы вне Podman (например, с помощью Buildah)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:409
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:409
 msgid ""
 "Containers now provide a detailed view of health configuration and health "
 "status"
@@ -1546,35 +1546,35 @@ msgstr ""
 "Контейнеры теперь предоставляют подробный обзор конфигурации и состояния "
 "работоспособности."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:410
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:410
 msgid "Several smaller UI improvements"
 msgstr "Несколько небольших улучшений пользовательского интерфейса."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:411
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:411
 msgid "Several smaller bugfixes and internal code improvements"
 msgstr "Несколько небольших исправлений ошибок и внутренних улучшений кода."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:412
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:412
 msgid "Updated screenshots"
 msgstr "Обновлены снимки экрана."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:419
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:419
 msgid "A small update with app data fixes:"
 msgstr "Небольшое обновление с исправлениями данных приложения:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:421
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:421
 msgid "Updated app data content rating"
 msgstr "Обновлена оценка содержимого данных приложения"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:422
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:422
 msgid "Added releases in app data"
 msgstr "Добавлены выпуски в данные приложения"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:428
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:428
 msgid "This is the first 1.0.0 beta release of Pods."
 msgstr "Это первая бета-версия «Капсул» 1.0.0."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:441
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:441
 msgid "Marcus Behrendt"
 msgstr "Маркус Берендт"
 

@@ -91,7 +91,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::PodsPanel)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/pods_panel.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/pods_panel.ui")]
     pub(crate) struct PodsPanel {
         pub(super) settings: Settings,
         pub(super) filter: OnceCell<gtk::Filter>,

@@ -23,7 +23,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::VolumeRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/volume_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/volume_row.ui")]
     pub(crate) struct VolumeRow {
         #[property(get, set = Self::set_volume, construct, nullable)]
         pub(super) volume: RefCell<Option<model::Volume>>,

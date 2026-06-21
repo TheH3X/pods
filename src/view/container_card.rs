@@ -32,7 +32,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerCard)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_card.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_card.ui")]
     pub(crate) struct ContainerCard {
         pub(super) bindings: RefCell<Vec<glib::Binding>>,
         #[property(get, set, construct, nullable)]

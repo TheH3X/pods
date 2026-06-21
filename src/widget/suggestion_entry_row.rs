@@ -85,7 +85,7 @@ mod imp {
 
     #[derive(Default, CompositeTemplate, Properties)]
     #[properties(wrapper_type = super::SuggestionEntryRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/suggestion_entry_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/suggestion_entry_row.ui")]
     pub(crate) struct SuggestionEntryRow {
         pub(super) changed_handler_id: OnceCell<glib::SignalHandlerId>,
 

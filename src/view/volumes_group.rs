@@ -15,7 +15,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::VolumesGroup)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/volumes_group.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/volumes_group.ui")]
     pub(crate) struct VolumesGroup {
         pub(super) sorter: OnceCell<gtk::Sorter>,
         #[property(get, set = Self::set_volume_list, explicit_notify, nullable)]

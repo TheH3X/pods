@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TheH3X <https://github.com/TheH3X> -->
+<component type="desktop-application">
+  <id>@app-id@</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Stacks</name>
+  <summary>Manage your Docker Compose stacks</summary>
+  <description>
+    <p>Stacks is a Docker Compose stack manager with a stack-first, everything-is-a-stack philosophy. It uses libadwaita for its user interface and strives to meet the design principles of GNOME.</p>
+    <p>With Stacks you can:</p>
+    <ul>
+      <li>Discover and browse all your Docker Compose stacks in one place.</li>
+      <li>Edit services with a full plan/deploy workflow — all changes are in-memory until you deploy.</li>
+      <li>View live container status for each service in your stacks.</li>
+      <li>Manage per-service bind mounts with portability in mind.</li>
+      <li>Browse images from Docker Hub and GHCR and auto-populate service configuration from OCI metadata.</li>
+      <li>Visualize Docker network topology between services and to the outside world.</li>
+      <li>View a YAML diff of planned changes before writing to disk.</li>
+      <li>Run docker compose up/down/pull/logs with streamed terminal output.</li>
+      <li>Browse and manage images and volumes.</li>
+    </ul>
+  </description>
+  <branding>
+    <color type="primary" scheme_preference="light">#3584e4</color>
+    <color type="primary" scheme_preference="dark">#1c71d8</color>
+  </branding>
+  <url type="homepage">https://github.com/TheH3X/pods</url>
+  <url type="bugtracker">https://github.com/TheH3X/pods/issues</url>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.1.0" date="2026-06-21">
+      <description translatable="no">
+        <p>Initial release of Stacks — forked from Pods and extended with Docker Compose stack management.</p>
+      </description>
+    </release>
+  </releases>
+  <kudos>
+    <kudo>ModernToolkit</kudo>
+    <kudo>HiDpiIcon</kudo>
+  </kudos>
+  <developer id="com.github.TheH3X">
+    <name>TheH3X</name>
+  </developer>
+  <translation type="gettext">@gettext-package@</translation>
+  <launchable type="desktop-id">@app-id@.desktop</launchable>
+</component>

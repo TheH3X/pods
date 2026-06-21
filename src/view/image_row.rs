@@ -20,7 +20,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_row.ui")]
     pub(crate) struct ImageRow {
         pub(super) bindings: RefCell<Vec<glib::Binding>>,
         #[property(get, set = Self::set_image, construct, nullable)]

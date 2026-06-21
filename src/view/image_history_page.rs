@@ -16,7 +16,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_history_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_history_page.ui")]
     pub(crate) struct ImageHistoryPage {
         #[template_child]
         pub(super) window_title: TemplateChild<adw::WindowTitle>,

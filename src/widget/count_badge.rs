@@ -16,7 +16,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::CountBadge)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/count_badge.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/count_badge.ui")]
     pub(crate) struct CountBadge {
         #[property(get, set = Self::set_count, explicit_notify)]
         pub(super) count: Cell<u32>,

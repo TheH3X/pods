@@ -25,7 +25,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::MountRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/mount_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/mount_row.ui")]
     pub(crate) struct MountRow {
         #[property(get, set = Self::set_mount, construct, nullable)]
         pub(super) mount: RefCell<Option<model::Mount>>,

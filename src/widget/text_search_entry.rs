@@ -13,7 +13,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/text_search_entry.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/text_search_entry.ui")]
     pub(crate) struct TextSearchEntry {
         #[template_child]
         pub(super) image: TemplateChild<gtk::Image>,

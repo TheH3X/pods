@@ -12,7 +12,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/spinner.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/spinner.ui")]
     pub(crate) struct Spinner {
         pub(super) spinning: Cell<bool>,
         #[template_child]

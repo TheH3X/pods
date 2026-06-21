@@ -18,7 +18,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ConnectionChooserPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/connection_chooser_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/connection_chooser_page.ui")]
     pub(crate) struct ConnectionChooserPage {
         pub(super) filter: OnceCell<gtk::Filter>,
         #[property(get, set, nullable)]

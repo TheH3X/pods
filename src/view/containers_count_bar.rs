@@ -12,7 +12,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainersCountBar)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/containers_count_bar.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/containers_count_bar.ui")]
     pub(crate) struct ContainersCountBar {
         #[property(get, set, construct, nullable)]
         pub(super) container_list: glib::WeakRef<model::AbstractContainerList>,

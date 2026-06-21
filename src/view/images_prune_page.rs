@@ -17,7 +17,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImagesPrunePage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/images_prune_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/images_prune_page.ui")]
     pub(crate) struct ImagesPrunePage {
         pub(super) pods_settings: utils::PodsSettings,
         #[property(get, set, construct_only, nullable)]

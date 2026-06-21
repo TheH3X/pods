@@ -29,7 +29,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ConnectionCreationPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/connection_creation_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/connection_creation_page.ui")]
     pub(crate) struct ConnectionCreationPage {
         #[property(get, set, construct_only)]
         pub(super) connection_manager: OnceCell<model::ConnectionManager>,

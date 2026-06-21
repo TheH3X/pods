@@ -19,7 +19,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::VolumeCreationPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/volume_creation_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/volume_creation_page.ui")]
     pub(crate) struct VolumeCreationPage {
         #[property(get, set, construct_only)]
         pub(super) client: glib::WeakRef<model::Client>,

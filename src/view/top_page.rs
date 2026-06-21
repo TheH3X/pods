@@ -28,7 +28,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::TopPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/top_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/top_page.ui")]
     pub(crate) struct TopPage {
         pub(super) filter: OnceCell<gtk::Filter>,
         pub(super) search_term: RefCell<String>,
@@ -357,7 +357,7 @@ mod imp {
             match obj.top_source().and_downcast_ref::<model::Container>() {
                 Some(_) => {
                     let action_bar = gtk::Builder::from_resource(
-                        "/com/github/marhkb/Pods/ui/view/top_page_action_bar.ui",
+                        "/com/github/TheH3X/Stacks/ui/view/top_page_action_bar.ui",
                     )
                     .object::<gtk::ActionBar>("action_bar")
                     .unwrap();

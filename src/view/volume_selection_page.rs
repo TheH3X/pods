@@ -24,7 +24,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::VolumeSelectionPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/volume_selection_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/volume_selection_page.ui")]
     pub(crate) struct VolumeSelectionPage {
         pub(super) filter: OnceCell<gtk::Filter>,
         #[property(get, set = Self::set_volume_list, nullable)]

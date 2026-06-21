@@ -1,7 +1,7 @@
 project(
-  'pods',
+  'stacks',
   'rust',
-  version: '3.0.0',
+  version: '0.1.0',
   meson_version: '>= 0.59',
   license: 'GPL-3.0-or-later',
 )
@@ -9,7 +9,7 @@ project(
 i18n = import('i18n')
 gnome = import('gnome')
 
-base_id = 'com.github.marhkb.Pods'
+base_id = 'com.github.TheH3X.Stacks'
 
 dependency('glib-2.0', version: '>= 2.66')
 dependency('gio-2.0', version: '>= 2.66')

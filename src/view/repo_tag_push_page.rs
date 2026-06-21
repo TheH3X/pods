@@ -29,7 +29,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::RepoTagPushPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/repo_tag_push_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/repo_tag_push_page.ui")]
     pub(crate) struct RepoTagPushPage {
         #[property(get, set, construct_only, nullable)]
         pub(super) repo_tag: glib::WeakRef<model::RepoTag>,

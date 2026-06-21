@@ -21,7 +21,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ActionsSidebar)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/actions_sidebar.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/actions_sidebar.ui")]
     pub(crate) struct ActionsSidebar {
         #[property(get, set = Self::set_action_list, nullable)]
         pub(super) action_list: glib::WeakRef<model::ActionList>,

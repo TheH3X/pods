@@ -12,7 +12,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::PodSelectionRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/pod_selection_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/pod_selection_row.ui")]
     pub(crate) struct PodSelectionRow {
         #[property(get, set, nullable)]
         pub(super) pod: glib::WeakRef<model::Pod>,

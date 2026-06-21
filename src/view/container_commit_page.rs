@@ -26,7 +26,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerCommitPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_commit_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_commit_page.ui")]
     pub(crate) struct ContainerCommitPage {
         pub(super) changes: OnceCell<gio::ListStore>,
         #[property(get, set = Self::set_container, construct, nullable)]

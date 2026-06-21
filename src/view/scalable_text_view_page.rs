@@ -80,7 +80,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/scalable_text_view_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/scalable_text_view_page.ui")]
     pub(crate) struct ScalableTextViewPage {
         pub(super) entity: OnceCell<Entity>,
         #[template_child]

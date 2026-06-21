@@ -19,7 +19,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerPropertiesGroup)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_properties_group.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_properties_group.ui")]
     pub(crate) struct ContainerPropertiesGroup {
         #[property(get, set, construct, nullable)]
         pub(super) container: glib::WeakRef<model::Container>,

@@ -12,7 +12,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::RepoTagAddDialog)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/repo_tag_add_dialog.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/repo_tag_add_dialog.ui")]
     pub(crate) struct RepoTagAddDialog {
         #[property(get)]
         pub(super) repo: RefCell<String>,

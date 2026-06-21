@@ -21,7 +21,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/connection_custom_info_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/connection_custom_info_page.ui")]
     pub(crate) struct ConnectionCustomInfoDialog {
         #[template_child]
         pub(super) root_systemd_unit_path_label: TemplateChild<gtk::Label>,

@@ -8,7 +8,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/main_menu_button.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/main_menu_button.ui")]
     pub(crate) struct MainMenuButton;
 
     #[glib::object_subclass]

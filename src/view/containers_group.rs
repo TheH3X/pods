@@ -17,7 +17,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainersGroup)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/containers_group.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/containers_group.ui")]
     pub(crate) struct ContainersGroup {
         pub(super) sorter: OnceCell<gtk::Sorter>,
         #[property(get, set = Self::set_container_list, nullable)]

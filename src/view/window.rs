@@ -26,7 +26,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/window.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/window.ui")]
     pub(crate) struct Window {
         pub(super) settings: utils::PodsSettings,
         pub(super) connection_manager: model::ConnectionManager,

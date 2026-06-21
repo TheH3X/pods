@@ -122,7 +122,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainersPanel)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/containers_panel.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/containers_panel.ui")]
     pub(crate) struct ContainersPanel {
         pub(super) settings: Settings,
         pub(super) containers_view: RefCell<Option<ContainersView>>,

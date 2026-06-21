@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/marhkb/Pods/appdata">
+  <gresource prefix="/com/github/TheH3X/Stacks/appdata">
     <file preprocess="xml-stripblanks">@app-id@.metainfo.xml</file>
   </gresource>
 </gresources>

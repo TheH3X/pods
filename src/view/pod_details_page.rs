@@ -30,7 +30,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::PodDetailsPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/pod_details_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/pod_details_page.ui")]
     pub(crate) struct PodDetailsPage {
         pub(super) handler_id: RefCell<Option<glib::SignalHandlerId>>,
         #[property(get, set = Self::set_pod, construct, nullable)]

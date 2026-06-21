@@ -1,7 +1,7 @@
 [package]
-name = "pods"
-version = "3.0.0"
-authors = ["Marcus Behrendt <marcus.behrendt.86@gmail.com>"]
+name = "stacks"
+version = "0.1.0"
+authors = ["TheH3X <https://github.com/TheH3X>"]
 edition = "2024"
 license = "GPL-3.0-or-later"
 

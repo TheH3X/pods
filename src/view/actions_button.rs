@@ -15,7 +15,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ActionsButton)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/actions_button.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/actions_button.ui")]
     pub(crate) struct ActionsButton {
         #[property(get, set)]
         pub(super) action_list: glib::WeakRef<model::ActionList>,

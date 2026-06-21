@@ -18,66 +18,66 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 5.17-dev\n"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:3
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:7 src/main.rs:56
+#: data/com.github.TheH3X.Stacks.desktop.in.in:3
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:7 src/main.rs:56
 #: src/view/client_view.rs:240 src/view/pods_panel.ui:67
 #: src/view/pods_panel.ui:138 src/view/pods_panel.ui:433
 #: src/view/pods_row.ui:22 src/view/search_panel.ui:81
 msgid "Pods"
 msgstr "Pody"
 
-#: data/com.github.marhkb.Pods.desktop.in.in:4
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:8
+#: data/com.github.TheH3X.Stacks.desktop.in.in:4
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:8
 msgid "Keep track of your podman containers"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.desktop.in.in:9
+#: data/com.github.TheH3X.Stacks.desktop.in.in:9
 msgid "Gnome;GTK;libadwaita;Podman;Containerization;"
 msgstr "Gnome;GTK;libadwaita;Podman;kontejnerizace;"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:6
-#: data/com.github.marhkb.Pods.gschema.xml.in:7
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:6
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:7
 msgid "Default window width"
 msgstr "Výchozí šířka okna"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:11
-#: data/com.github.marhkb.Pods.gschema.xml.in:12
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:11
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:12
 msgid "Default window height"
 msgstr "Výchozí výška okna"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:16
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:16
 msgid "Default window maximized behaviour"
 msgstr "Výchozí chování maximalizovaného okna"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:26
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:26
 msgid "Color Scheme"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:27
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:27
 msgid "Use the light or dark variant of the GTK theme"
 msgstr ""
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:31
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:31
 msgid "The uuid of the connection that was used the last time"
 msgstr "Uuid připojení, které bylo použito naposledy"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:36
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:36
 msgid "The last used view"
 msgstr "Naposledy použité zobrazení"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:41
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:41
 msgid "Whether to hide intermediate images"
 msgstr "Zda skrýt mezilehlé obrazy"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:46
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:46
 msgid "The last used container file path"
 msgstr "Popis umístění naposledy použitého kontejnerového souboru"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:51
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:51
 msgid "Remove all images not in use by containers, not just dangling ones"
 msgstr "Odebrat všechny obrazy nepoužívané kontejnery, nikoli jen ty visící"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:56
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:56
 msgid ""
 "Remove images even when they are used by external containers (e.g, by build "
 "containers)"
@@ -85,44 +85,44 @@ msgstr ""
 "Odebrat obrazy i když jsou používány externími kontejnery (např. "
 "sestavovacími kontejnery)"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:61
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:61
 msgid "Whether to show only running containers"
 msgstr "Zda zobrazovat pouze spuštěné kontejnery"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:66
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:66
 msgid "Whether to show only running pods"
 msgstr "Zda zobrazovat pouze spuštěné pody"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:71
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:71
 msgid "Whether to show only used volumes"
 msgstr "Zda zobrazovat pouze použité svazky"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:76
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:76
 msgid "Whether to show a timestamp for each log line"
 msgstr "Zda zobrazovat časové razítko pro každý řádek záznamu událostí"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:81
-#: data/com.github.marhkb.Pods.gschema.xml.in:86
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:81
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:86
 msgid "Whether to use a regex for search"
 msgstr "Zda pro vyhledávání použít regulární výraz"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:91
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:91
 msgid "Whether search should be case-sensitive"
 msgstr "Zda má vyhledávání rozlišovat malá-VELKÁ písmena"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:96
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:96
 msgid "Whether to match whole words when searching"
 msgstr "Zda při vyhledávání hledat shodu v celých slovech"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:101
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:101
 msgid "The font scale of all text views"
 msgstr "Měřítko písma pro všechny textové pohledy"
 
-#: data/com.github.marhkb.Pods.gschema.xml.in:106
+#: data/com.github.TheH3X.Stacks.gschema.xml.in:106
 msgid "The font scale for terminals"
 msgstr "Měřítko písma pro terminály"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:10
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:10
 msgid ""
 "Pods is a frontend for podman. It uses libadwaita for its user interface and "
 "strives to meet the design principles of GNOME."
@@ -130,43 +130,43 @@ msgstr ""
 "Pody je nadstavba pro podman. Pro své uživatelské rozhraní používá knihovnu "
 "libadwaita a usiluje o to, splňovat návrhové principy GNOME."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:11
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:11
 msgid "With Pods you can, among other things:"
 msgstr "Pomocí podů je (mimo jiné) možné:"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:13
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:13
 msgid "Connect to local and remote Podman instances."
 msgstr "Připojit se k lokálním a vzdáleným instancím Podman."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:14
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:14
 msgid "Easily overview images, containers and pods."
 msgstr "Snadný přehled o obrazech, kontejnerech a podech."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:15
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:15
 msgid "View prepared information about images, containers, and pods."
 msgstr "Zobrazit připravené informace o obrazech, kontejnerech a podech."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:16
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:16
 msgid "Inspect images, containers and pods."
 msgstr "Provádět inspekci obrazů, kontejnerů a podů."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:17
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:17
 msgid "View and search container logs."
 msgstr "Zobrazit a prohledávat záznamy událostí v kontejnerech."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:18
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:18
 msgid "Monitor processes of containers and pods."
 msgstr "Monitorujte procesy kontejnerů a podů."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:19
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:19
 msgid "Download images and build them using Dockerfiles."
 msgstr "Stahovat obrazy s sestavovat je pomocí Dockerfile souborů."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:20
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:20
 msgid "Create pods and containers."
 msgstr "Vytvořit pody a kontejnery."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:21
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:21
 msgid ""
 "Control the lifecycle of containers and pods (in bulk) (start, stop, pause, "
 "etc.)."
@@ -174,31 +174,31 @@ msgstr ""
 "Ovládejte životní cyklus kontejnerů a podů (hromadně)(spustit, zastavit, "
 "pozastavit, atd.)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:22
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:22
 msgid "Delete images, containers, and pods (in bulk)."
 msgstr "Mazat obrazy, kontejnery a pody (dávkově)."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:23
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:23
 msgid "Prune images."
 msgstr "Prořezat obrazy."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:24
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:24
 msgid "Rename containers."
 msgstr "Přejmenovat kontejnery."
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:30
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:30
 msgid "Container Overview"
 msgstr "Přehled kontejneru"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:34
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:34
 msgid "Containers Details in Compact Mode"
 msgstr "Podrobnosti kontejnerů ve zhuštěném režimu"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:38
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:38
 msgid "Search Results"
 msgstr "Výsledky hledání"
 
-#: data/com.github.marhkb.Pods.metainfo.xml.in.in:367
+#: data/com.github.TheH3X.Stacks.metainfo.xml.in.in:367
 msgid "Marcus Behrendt"
 msgstr "Marcus Behrendt"
 

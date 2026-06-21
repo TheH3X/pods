@@ -20,7 +20,7 @@ mod imp {
 
     #[derive(Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageSuggestionEntryRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_suggestion_entry_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_suggestion_entry_row.ui")]
     pub(crate) struct ImageSuggestionEntryRow {
         pub(super) search_abort_handle: RefCell<Option<future::AbortHandle>>,
 

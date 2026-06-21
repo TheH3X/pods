@@ -23,7 +23,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageSelectionPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_selection_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_selection_page.ui")]
     pub(crate) struct ImageSelectionPage {
         pub(super) filter: OnceCell<gtk::Filter>,
         #[property(get, set = Self::set_image_list, nullable)]

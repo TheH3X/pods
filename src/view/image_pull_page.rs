@@ -14,7 +14,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImagePullPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_pull_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_pull_page.ui")]
     pub(crate) struct ImagePullPage {
         #[property(get, set, construct_only, nullable)]
         pub(super) client: glib::WeakRef<model::Client>,

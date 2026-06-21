@@ -23,7 +23,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::PodRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/pod_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/pod_row.ui")]
     pub(crate) struct PodRow {
         pub(super) bindings: RefCell<Vec<glib::Binding>>,
         #[property(get, set, construct, nullable)]

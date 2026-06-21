@@ -9,7 +9,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, CompositeTemplate)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/random_name_entry_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/random_name_entry_row.ui")]
     pub(crate) struct RandomNameEntryRow {
         pub(super) names: RefCell<names::Generator<'static>>,
         #[template_child]

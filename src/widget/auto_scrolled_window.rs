@@ -19,7 +19,7 @@ mod imp {
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
     #[properties(wrapper_type = super::AutoScrolledWindow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/auto_scrolled_window.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/auto_scrolled_window.ui")]
     pub(crate) struct AutoScrolledWindow {
         pub(super) is_auto_scrolling: Cell<bool>,
         pub(super) prev_adj_upper: Cell<f64>,

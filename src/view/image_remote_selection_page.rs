@@ -23,7 +23,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ImageRemoteSelectionPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/image_remote_selection_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/image_remote_selection_page.ui")]
     pub(crate) struct ImageRemoteSelectionPage {
         #[property(get, set, nullable)]
         pub(super) client: glib::WeakRef<model::Client>,

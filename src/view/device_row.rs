@@ -16,7 +16,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::DeviceRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/device_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/device_row.ui")]
     pub(crate) struct DeviceRow {
         pub(super) bindings: RefCell<Vec<glib::Binding>>,
         #[property(get, set = Self::set_device, nullable)]

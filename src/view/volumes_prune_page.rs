@@ -17,7 +17,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::VolumesPrunePage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/volumes_prune_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/volumes_prune_page.ui")]
     pub(crate) struct VolumesPrunePage {
         #[property(get, set, construct_only, nullable)]
         pub(super) client: glib::WeakRef<model::Client>,

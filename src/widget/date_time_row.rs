@@ -23,7 +23,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::DateTimeRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/widget/date_time_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/widget/date_time_row.ui")]
     pub(crate) struct DateTimeRow {
         pub(super) desktop_settings: utils::DesktopSettings,
         pub(super) time_format: Cell<TimeFormat>,

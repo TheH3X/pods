@@ -24,7 +24,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::PodSelectionPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/pod_selection_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/pod_selection_page.ui")]
     pub(crate) struct PodSelectionPage {
         pub(super) filter: OnceCell<gtk::Filter>,
         #[property(get, set = Self::set_pod_list, nullable)]

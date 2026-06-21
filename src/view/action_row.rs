@@ -20,7 +20,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ActionRow)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/action_row.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/action_row.ui")]
     pub(crate) struct ActionRow {
         pub(super) notification_id: OnceCell<glib::GString>,
         pub(super) handler: RefCell<Option<glib::SignalHandlerId>>,

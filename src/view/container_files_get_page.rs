@@ -22,7 +22,7 @@ mod imp {
 
     #[derive(Debug, Default, Properties, CompositeTemplate)]
     #[properties(wrapper_type = super::ContainerFilesGetPage)]
-    #[template(resource = "/com/github/marhkb/Pods/ui/view/container_files_get_page.ui")]
+    #[template(resource = "/com/github/TheH3X/Stacks/ui/view/container_files_get_page.ui")]
     pub(crate) struct ContainerFilesGetPage {
         #[property(get, set = Self::set_container, construct, nullable)]
         pub(super) container: glib::WeakRef<model::Container>,
