@@ -1,10 +1,7 @@
-use glib::Properties;
-use glib::subclass::prelude::*;
-use gtk::glib;
-use gtk::gio;
-use std::cell::OnceCell;
+use std::path::PathBuf;
 
 use crate::model::StackList;
+use crate::config;
 
 mod imp {
     use super::*;
@@ -31,6 +28,11 @@ mod imp {
 
         fn set_property(&self, id: usize, value: &glib::Value, pspec: &glib::ParamSpec) {
             self.derived_set_property(id, value, pspec);
+            
+            // Auto-refresh when root path changes
+            if pspec.name() == "root-path" {
+                self.obj().refresh();
+            }
         }
 
         fn property(&self, id: usize, pspec: &glib::ParamSpec) -> glib::Value {
@@ -45,8 +47,24 @@ glib::wrapper! {
 
 impl StackManager {
     pub fn new(stack_list: &StackList) -> Self {
-        glib::Object::builder()
+        let obj = glib::Object::builder()
             .property("stack-list", stack_list)
-            .build()
+            .build::<Self>();
+            
+        // Load default from settings or default path
+        let default_path = glib::home_dir().join("opt").join("docker-stacks");
+        obj.set_root_path(Some(default_path.to_string_lossy().to_string()));
+        
+        obj
+    }
+
+    pub fn refresh(&self) {
+        if let Some(path_str) = self.root_path() {
+            let path = PathBuf::from(path_str);
+            let stacks = crate::compose::discovery::scan_root(&path).unwrap_or_default();
+            if let Some(list) = self.stack_list() {
+                list.update_from_scan(stacks);
+            }
+        }
     }
 }

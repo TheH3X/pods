@@ -41,6 +41,33 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
             self.store.set(gio::ListStore::new::<crate::model::Stack>());
+            
+            // Wire up container tracking
+            if let Some(client) = self.client.get().and_then(|w| w.upgrade()) {
+                let store = self.store.clone();
+                let container_list = client.container_list();
+                
+                container_list.connect_items_changed(move |list, _, _, _| {
+                    // Update live container links
+                    let n_stacks = store.n_items();
+                    for i in 0..n_stacks {
+                        if let Some(stack_obj) = store.item(i).and_then(|o| o.downcast::<crate::model::Stack>().ok()) {
+                            // Find matching containers in list
+                            let n_containers = list.n_items();
+                            for j in 0..n_containers {
+                                if let Some(container) = list.item(j).and_then(|o| o.downcast::<crate::model::Container>().ok()) {
+                                    if let (Some(stack_name), Some(svc_name)) = (container.stack_name(), container.compose_service()) {
+                                        if stack_name == stack_obj.name() {
+                                            // Real implementation would look up ComposeService in Stack
+                                            // and set the live container.
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
         }
     }
 
@@ -69,5 +96,16 @@ impl StackList {
         glib::Object::builder()
             .property("client", client)
             .build()
+    }
+    
+    pub fn update_from_scan(&self, stacks: Vec<crate::compose::models::Stack>) {
+        let store = self.imp().store.clone();
+        store.remove_all(); // Simple full replacement for now
+        
+        for dto in stacks {
+            let stack_obj = crate::model::Stack::new(&dto.name);
+            // In a real implementation we would populate services list here
+            store.append(&stack_obj);
+        }
     }
 }

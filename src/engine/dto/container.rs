@@ -25,6 +25,7 @@ pub(crate) struct ContainerSummary {
     pub(crate) image_id: String,
     pub(crate) image_name: Option<String>,
     pub(crate) is_infra: bool,
+    pub(crate) labels: HashMap<String, String>,
     pub(crate) mounts: Vec<engine::dto::Mount>,
     pub(crate) name: String,
     pub(crate) pod_id: Option<String>,
@@ -41,6 +42,7 @@ impl From<bollard::plugin::ContainerSummary> for ContainerSummary {
             image_id: value.image_id.unwrap_or_default(),
             image_name: value.image.filter(|name| !name.is_empty()),
             is_infra: false,
+            labels: value.labels.unwrap_or_default(),
             mounts: value
                 .mounts
                 .map(|mounts| mounts.into_iter().map(Into::into).collect())
@@ -83,6 +85,7 @@ impl From<podman_api::models::ListContainer> for ContainerSummary {
             image_id: value.image_id.unwrap_or_default(),
             image_name: value.image.filter(|name| !name.is_empty()),
             is_infra: value.is_infra.unwrap_or(false),
+            labels: value.labels.unwrap_or_default(),
             // mounts are missing in a podman summary
             mounts: Vec::new(),
             name: value
@@ -158,6 +161,7 @@ impl ContainerInspection {
                 image_id: inspection.image.unwrap_or_default(),
                 image_name: image_name.filter(|name| !name.is_empty()),
                 is_infra: false,
+                labels: inspection.config.and_then(|c| c.labels).unwrap_or_default(),
                 mounts: inspection
                     .mounts
                     .map(|mounts| mounts.into_iter().map(Into::into).collect())
@@ -233,6 +237,7 @@ impl From<podman_api::models::ContainerInspectResponseLibpod> for ContainerInspe
                 image_id: value.image.unwrap_or_default(),
                 image_name: value.image_name.filter(|name| !name.is_empty()),
                 is_infra: value.is_infra.unwrap_or(false),
+                labels: value.config.and_then(|c| c.labels).unwrap_or_default(),
                 mounts: value
                     .mounts
                     .map(|mounts| mounts.into_iter().map(Into::into).collect())
