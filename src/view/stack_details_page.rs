@@ -1,5 +1,6 @@
-use glib::Properties;
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 
@@ -255,12 +256,11 @@ mod imp {
                             log::info!("Starting stack: {}", stack.name());
                             let path_clone = path.clone();
                             crate::rt::Promise::new(async move {
-                                tokio::task::spawn_blocking(move || {
-                                    crate::compose::cli::run_compose_command(
-                                        std::path::Path::new(&path_clone),
-                                        &["up", "-d"]
-                                    )
-                                }).await.unwrap()
+                                crate::compose::cli::run_compose_command(
+                                    std::path::Path::new(&path_clone),
+                                    crate::compose::cli::ComposeAction::Up { detach: true, build: false },
+                                    None
+                                ).await
                             }).defer(move |res| {
                                 match res {
                                     Ok(_) => log::info!("Stack started successfully"),
@@ -281,12 +281,11 @@ mod imp {
                             log::info!("Stopping stack: {}", stack.name());
                             let path_clone = path.clone();
                             crate::rt::Promise::new(async move {
-                                tokio::task::spawn_blocking(move || {
-                                    crate::compose::cli::run_compose_command(
-                                        std::path::Path::new(&path_clone),
-                                        &["down"]
-                                    )
-                                }).await.unwrap()
+                                crate::compose::cli::run_compose_command(
+                                    std::path::Path::new(&path_clone),
+                                    crate::compose::cli::ComposeAction::Down { remove_volumes: false },
+                                    None
+                                ).await
                             }).defer(move |res| {
                                 match res {
                                     Ok(_) => log::info!("Stack stopped successfully"),
@@ -307,12 +306,11 @@ mod imp {
                             log::info!("Pulling images for stack: {}", stack.name());
                             let path_clone = path.clone();
                             crate::rt::Promise::new(async move {
-                                tokio::task::spawn_blocking(move || {
-                                    crate::compose::cli::run_compose_command(
-                                        std::path::Path::new(&path_clone),
-                                        &["pull"]
-                                    )
-                                }).await.unwrap()
+                                crate::compose::cli::run_compose_command(
+                                    std::path::Path::new(&path_clone),
+                                    crate::compose::cli::ComposeAction::Pull,
+                                    None
+                                ).await
                             }).defer(move |res| {
                                 match res {
                                     Ok(_) => log::info!("Stack pulled successfully"),
@@ -333,7 +331,7 @@ mod imp {
                         let nav_page = crate::view::StackEditorPage::new();
                         // Assume StackEditorPage has a way to bind the stack
                         nav_page.set_property("stack", &stack);
-                        crate::utils::navigation_view(&page.obj()).push(&nav_page);
+                        crate::utils::navigation_view(&*page.obj()).push(&nav_page);
                     }
                 }
             ));
@@ -366,7 +364,7 @@ mod imp {
                 }
 
                 // Bind services list
-                if let Some(service_list) = stack.service_list() {
+                let service_list = stack.service_list(); if true {
                     self.services_list_box.bind_model(Some(&service_list), |item| {
                         let service = item.downcast_ref::<crate::model::ComposeService>().unwrap();
                         glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
@@ -377,7 +375,7 @@ mod imp {
                 }
 
                 // Bind networks list
-                if let Some(network_list) = stack.network_list() {
+                let network_list = stack.network_list(); if true {
                     self.networks_list_box.bind_model(Some(&network_list), |item| {
                         let network = item.downcast_ref::<crate::model::DockerNetwork>().unwrap();
                         glib::Object::builder::<crate::view::NetworkRow>()
@@ -405,7 +403,8 @@ mod imp {
 
 glib::wrapper! {
     pub(crate) struct StackDetailsPage(ObjectSubclass<imp::StackDetailsPage>)
-        @extends adw::NavigationPage, gtk::Widget;
+        @extends adw::NavigationPage, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl StackDetailsPage {

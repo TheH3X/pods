@@ -1,5 +1,6 @@
-use glib::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
+use gtk::glib::Properties;
 use gtk::cairo;
 use gtk::prelude::*;
 use gtk::{gio, glib};
@@ -65,7 +66,8 @@ mod imp {
 
 glib::wrapper! {
     pub(crate) struct NetworkTopologyView(ObjectSubclass<imp::NetworkTopologyView>)
-        @extends gtk::DrawingArea, gtk::Widget;
+        @extends gtk::DrawingArea, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl NetworkTopologyView {
@@ -108,7 +110,7 @@ impl NetworkTopologyView {
         cr.set_source_rgba(0.3, 0.3, 0.3, 1.0);
         cr.set_line_width(2.0);
 
-        if let (Some(sl), Some(nl)) = (stack.service_list(), stack.network_list()) {
+        if let (sl, nl) = (stack.service_list(), stack.network_list()) {
             for i in 0..sl.n_items() {
                 let sy = height * ((i as f64 + 1.0) / (services as f64 + 1.0));
                 for j in 0..nl.n_items() {
@@ -123,7 +125,7 @@ impl NetworkTopologyView {
 
         // Draw Service Nodes
         cr.set_source_rgba(0.2, 0.6, 1.0, 1.0); // Blue for services
-        if let Some(sl) = stack.service_list() {
+        let sl = stack.service_list(); if true {
             for i in 0..services {
                 let sy = height * ((i as f64 + 1.0) / (services as f64 + 1.0));
                 
@@ -146,7 +148,7 @@ impl NetworkTopologyView {
 
         // Draw Network Nodes
         cr.set_source_rgba(0.2, 0.8, 0.2, 1.0); // Green for networks
-        if let Some(nl) = stack.network_list() {
+        let nl = stack.network_list(); if true {
             for j in 0..networks {
                 let ny = height * ((j as f64 + 1.0) / (networks as f64 + 1.0));
                 

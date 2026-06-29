@@ -2,8 +2,9 @@ use std::cell::OnceCell;
 use std::sync::OnceLock;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
+use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;
 use gtk::CompositeTemplate;

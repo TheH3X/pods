@@ -1,11 +1,12 @@
 use std::cell::OnceCell;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::account::UserInformationRequest;
 use gettextrs::gettext;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use gtk::CompositeTemplate;
 use gtk::gio;

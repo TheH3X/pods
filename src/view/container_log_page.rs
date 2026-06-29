@@ -11,13 +11,14 @@ use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::Choice;
 use ashpd::desktop::file_chooser::SaveFileRequest;
 use bytes::Bytes;
 use gettextrs::gettext;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;
 use gtk::CompositeTemplate;

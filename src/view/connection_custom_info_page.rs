@@ -1,5 +1,6 @@
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use gettextrs::gettext;
 use glib::clone;
 use gtk::CompositeTemplate;

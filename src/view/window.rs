@@ -2,7 +2,8 @@ use std::sync::OnceLock;
 
 use adw::prelude::*;
 use adw::subclass::prelude::AdwApplicationWindowImpl;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use gettextrs::gettext;
 use gtk::CompositeTemplate;
 use gtk::gdk;

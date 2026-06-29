@@ -1,5 +1,6 @@
-use glib::Properties;
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 
@@ -137,7 +138,8 @@ mod imp {
 
 glib::wrapper! {
     pub(crate) struct StackServiceRow(ObjectSubclass<imp::StackServiceRow>)
-        @extends gtk::ListBoxRow, gtk::Widget;
+        @extends gtk::ListBoxRow, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget, gtk::Actionable;
 }
 
 impl StackServiceRow {

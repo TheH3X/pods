@@ -2,7 +2,8 @@ use std::borrow::Cow;
 use std::cell::OnceCell;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::SaveFileRequest;
 use gettextrs::gettext;

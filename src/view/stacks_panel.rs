@@ -1,5 +1,8 @@
-use glib::Properties;
-use glib::subclass::prelude::*;
+use gtk::glib::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 
@@ -107,8 +110,8 @@ mod imp {
         pub(super) new_stack_button: gtk::TemplateChild<gtk::Button>,
         #[template_child]
         pub(super) refresh_button: gtk::TemplateChild<gtk::Button>,
-        #[property(get, set = Self::set_stack_list, nullable)]
-        pub(super) stack_list: glib::WeakRef<StackList>,
+        #[property(get, set)]
+        pub(super) stack_list: glib::WeakRef<crate::model::StackList>,
     }
 
     #[glib::object_subclass]
@@ -148,6 +151,7 @@ mod imp {
             self.open_folder_button.connect_clicked(glib::clone!(
                 #[weak]
                 obj,
+                move |_| {
                     log::info!("Open folder clicked — showing file chooser");
                     let dialog = gtk::FileDialog::builder()
                         .title("Select docker-stacks root directory")
@@ -158,8 +162,6 @@ mod imp {
                         obj.root().and_then(|r| r.downcast::<gtk::Window>().ok()).as_ref(),
                         gio::Cancellable::NONE,
                         glib::clone!(
-                            #[weak]
-                            obj,
                             move |result| {
                                 if let Ok(folder) = result {
                                     if let Some(path) = folder.path() {
@@ -171,26 +173,31 @@ mod imp {
                             }
                         ),
                     );
+                }
             ));
 
             // New stack button
             self.new_stack_button.connect_clicked(glib::clone!(
                 #[weak]
                 obj,
+                move |_| {
                     log::info!("New stack clicked — showing create dialog");
                     let nav_page = crate::view::StackEditorPage::new();
                     crate::utils::navigation_view(&obj).push(&nav_page);
+                }
             ));
 
             // Refresh button
             self.refresh_button.connect_clicked(glib::clone!(
                 #[weak]
                 obj,
+                move |_| {
                     log::info!("Refresh stacks");
                     if let Some(_list) = obj.stack_list() {
                         // list.refresh() would be called here.
                         // For MVP, we just log it since the backend poll isn't running.
                     }
+                }
             ));
         }
     }
@@ -200,10 +207,11 @@ mod imp {
 
     impl StacksPanel {
         fn set_stack_list(&self, value: Option<&StackList>) {
-            if self.obj().stack_list().as_ref() == value {
+            if self.stack_list.upgrade().as_ref() == value {
                 return;
             }
 
+            self.stack_list.set(value);
             if let Some(list) = value {
                 let has_items = list.n_items() > 0;
                 self.empty_page.set_visible(!has_items);
@@ -234,7 +242,8 @@ mod imp {
 
 glib::wrapper! {
     pub(crate) struct StacksPanel(ObjectSubclass<imp::StacksPanel>)
-        @extends gtk::Box, gtk::Widget;
+        @extends gtk::Box, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl StacksPanel {

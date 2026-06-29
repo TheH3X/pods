@@ -14,7 +14,7 @@ use futures::lock::Mutex;
 use futures::stream;
 use gettextrs::gettext;
 use gio::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use gtk::gio;
 use gtk::glib;

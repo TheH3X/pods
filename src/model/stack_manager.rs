@@ -1,7 +1,8 @@
 use std::path::PathBuf;
 
-use glib::Properties;
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::glib;
 use std::cell::OnceCell;
 

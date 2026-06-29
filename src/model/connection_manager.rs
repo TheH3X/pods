@@ -8,7 +8,7 @@ use futures::future;
 use gettextrs::gettext;
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use gtk::gdk;
 use gtk::gio;

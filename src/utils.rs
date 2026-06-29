@@ -6,8 +6,6 @@ use adw::prelude::*;
 use ashpd::desktop::file_chooser::OpenFileRequest;
 use ashpd::desktop::file_chooser::SaveFileRequest;
 use ashpd::desktop::file_chooser::SelectedFiles;
-use gettextrs::gettext;
-use gettextrs::ngettext;
 use gtk::gio;
 use gtk::glib;
 use gtk::glib::clone::Downgrade;
@@ -418,4 +416,36 @@ pub(crate) fn as_id(name: &str) -> Option<&str> {
 
 pub(crate) fn format_volume_name(name: &str) -> &str {
     as_id(name).map(format_id).unwrap_or(name)
+}
+
+#[macro_export]
+macro_rules! gettext {
+    ($msg:expr) => {
+        gettextrs::gettext($msg)
+    };
+    ($msg:expr, $($arg:expr),* $(,)?) => {
+        {
+            let mut s = gettextrs::gettext($msg);
+            $(
+                s = s.replacen("{}", &format!("{}", $arg), 1);
+            )*
+            s
+        }
+    };
+}
+
+#[macro_export]
+macro_rules! ngettext {
+    ($msg1:expr, $msg2:expr, $n:expr) => {
+        gettextrs::ngettext($msg1, $msg2, $n)
+    };
+    ($msg1:expr, $msg2:expr, $n:expr, $($arg:expr),* $(,)?) => {
+        {
+            let mut s = gettextrs::ngettext($msg1, $msg2, $n);
+            $(
+                s = s.replacen("{}", &format!("{}", $arg), 1);
+            )*
+            s
+        }
+    };
 }

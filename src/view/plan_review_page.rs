@@ -1,4 +1,8 @@
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use sourceview5::prelude::*;
@@ -6,7 +10,7 @@ use sourceview5::prelude::*;
 mod imp {
     use super::*;
 
-    #[derive(Debug, Default, gtk::CompositeTemplate)]
+    #[derive(Debug, Default, Properties, gtk::CompositeTemplate)]
     #[template(string = r#"
     <interface>
       <template class="StacksPlanReviewPage" parent="adw_navigation_page">
@@ -87,7 +91,7 @@ mod imp {
                 let buffer = sourceview5::Buffer::new(None);
 
                 // Set language to diff
-                if let Some(manager) = sourceview5::LanguageManager::default() {
+                let manager = sourceview5::LanguageManager::default(); if true {
                     if let Some(lang) = manager.language("diff") {
                         buffer.set_language(Some(&lang));
                     }
@@ -103,7 +107,8 @@ mod imp {
 
 glib::wrapper! {
     pub(crate) struct PlanReviewPage(ObjectSubclass<imp::PlanReviewPage>)
-        @extends adw::NavigationPage, gtk::Widget;
+        @extends adw::NavigationPage, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl PlanReviewPage {

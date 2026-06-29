@@ -4,9 +4,10 @@ use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 
 use gio::prelude::*;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
-use glib::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
 

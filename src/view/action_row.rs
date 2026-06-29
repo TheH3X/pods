@@ -2,10 +2,11 @@ use std::cell::OnceCell;
 use std::cell::RefCell;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use ashpd::desktop as ashpd;
 use gettextrs::gettext;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;
 use gtk::CompositeTemplate;

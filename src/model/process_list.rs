@@ -4,7 +4,7 @@ use std::sync::OnceLock;
 use futures::stream;
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use glib::subclass::Signal;
 use gtk::gio;

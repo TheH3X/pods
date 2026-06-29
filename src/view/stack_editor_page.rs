@@ -1,11 +1,15 @@
-use glib::subclass::prelude::*;
+use gtk::glib::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 
 mod imp {
     use super::*;
 
-    #[derive(Debug, Default, gtk::CompositeTemplate)]
+    #[derive(Debug, Default, Properties, gtk::CompositeTemplate)]
     #[template(string = r#"
     <interface>
       <template class="StacksStackEditorPage" parent="adw_navigation_page">
@@ -93,9 +97,11 @@ mod imp {
 
     impl StackEditorPage {
         fn set_stack(&self, value: Option<&crate::model::Stack>) {
-            if self.obj().stack().as_ref() == value {
+            if self.stack.upgrade().as_ref() == value {
                 return;
             }
+
+            self.stack.set(value.cloned().as_ref());
 
             if let Some(stack) = value {
                 stack
@@ -103,27 +109,25 @@ mod imp {
                     .sync_create()
                     .build();
 
-                if let Some(service_list) = stack.service_list() {
-                    self.services_list_box
-                        .bind_model(Some(&service_list), |item| {
-                            let service =
-                                item.downcast_ref::<crate::model::ComposeService>().unwrap();
-                            glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
-                                .property("service", service)
-                                .build()
-                                .upcast()
-                        });
-                }
+                let service_list = stack.service_list();
+                self.services_list_box
+                    .bind_model(Some(&service_list), |item| {
+                        let service =
+                            item.downcast_ref::<crate::model::ComposeService>().unwrap();
+                        glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
+                            .property("service", service)
+                            .build()
+                            .upcast()
+                    });
             }
-
-            self.stack.set(value);
         }
     }
 }
 
 glib::wrapper! {
     pub(crate) struct StackEditorPage(ObjectSubclass<imp::StackEditorPage>)
-        @extends adw::NavigationPage, gtk::Widget;
+        @extends adw::NavigationPage, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl StackEditorPage {

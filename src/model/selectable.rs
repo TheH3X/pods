@@ -1,7 +1,8 @@
 use std::sync::OnceLock;
 
-use glib::prelude::*;
-use glib::subclass::prelude::*;
+use gtk::glib::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::glib;
 
 mod imp {

@@ -2,9 +2,10 @@ use std::cell::Cell;
 use std::cell::OnceCell;
 use std::cell::RefCell;
 
-use glib::Properties;
-use glib::prelude::*;
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::prelude::\*;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::glib;
 
 use crate::engine;

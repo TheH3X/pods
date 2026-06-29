@@ -1,5 +1,7 @@
-use glib::Properties;
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gio::subclass::prelude::*;
+use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
 use gtk::prelude::*;

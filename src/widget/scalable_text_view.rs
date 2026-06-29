@@ -1,8 +1,9 @@
 use std::cell::Cell;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
+use gtk::glib::Properties;
 use gtk::glib;
 use sourceview5::subclass::view::ViewImpl;
 

@@ -1,7 +1,8 @@
 use std::cell::RefCell;
 
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use gtk::CompositeTemplate;
 use gtk::glib;
 

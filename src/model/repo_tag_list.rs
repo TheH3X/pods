@@ -4,7 +4,7 @@ use std::marker::PhantomData;
 
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use glib::Properties;
+use gtk::glib::Properties;
 use gtk::gio;
 use gtk::glib;
 use indexmap::map::IndexMap;

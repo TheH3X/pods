@@ -1,10 +1,11 @@
 use adw::prelude::*;
-use adw::subclass::prelude::*;
+use gtk::glib::subclass::prelude::\*;
+use adw::subclass::prelude::\*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::FileFilter;
 use ashpd::desktop::file_chooser::SaveFileRequest;
 use gettextrs::gettext;
-use glib::Properties;
+use gtk::glib::Properties;
 use glib::clone;
 use gtk::CompositeTemplate;
 use gtk::gio;

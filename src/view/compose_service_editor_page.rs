@@ -1,5 +1,6 @@
-use glib::Properties;
-use glib::subclass::prelude::*;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::\*;
+use gtk::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 
@@ -365,7 +366,8 @@ mod imp {
 
 glib::wrapper! {
     pub(crate) struct ComposeServiceEditorPage(ObjectSubclass<imp::ComposeServiceEditorPage>)
-        @extends adw::NavigationPage, gtk::Widget;
+        @extends adw::NavigationPage, gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl ComposeServiceEditorPage {

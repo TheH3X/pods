@@ -8,7 +8,7 @@ mod config;
 mod engine;
 mod model;
 mod rt;
-mod utils;
+#[macro_use] mod utils;
 mod view;
 mod widget;
 

@@ -94,7 +94,7 @@ pub fn scan_stack(stack_path: &Path) -> Result<Stack> {
                             services.push(svc);
                         }
                         for (net_name, mut net) in n.into_iter() {
-                            net.name = net_name;
+                            net.name = net_name.clone();
                             // Deduplicate networks
                             if !networks
                                 .iter()
