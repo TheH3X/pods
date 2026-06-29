@@ -1,6 +1,6 @@
 use glib::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{glib, gio};
+use gtk::{gio, glib};
 use sourceview5::prelude::*;
 
 mod imp {
@@ -80,19 +80,19 @@ mod imp {
 
     impl WidgetImpl for PlanReviewPage {}
     impl adw::subclass::navigation_page::NavigationPageImpl for PlanReviewPage {}
-    
+
     impl PlanReviewPage {
         fn set_diff(&self, value: Option<String>) {
             if let Some(ref text) = value {
                 let buffer = sourceview5::Buffer::new(None);
-                
+
                 // Set language to diff
                 if let Some(manager) = sourceview5::LanguageManager::default() {
                     if let Some(lang) = manager.language("diff") {
                         buffer.set_language(Some(&lang));
                     }
                 }
-                
+
                 buffer.set_text(text);
                 self.source_view.set_buffer(Some(&buffer));
             }

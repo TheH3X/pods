@@ -1,6 +1,6 @@
 use glib::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{glib, gio};
+use gtk::{gio, glib};
 
 mod imp {
     use super::*;
@@ -90,7 +90,7 @@ mod imp {
 
     impl WidgetImpl for StackEditorPage {}
     impl adw::subclass::navigation_page::NavigationPageImpl for StackEditorPage {}
-    
+
     impl StackEditorPage {
         fn set_stack(&self, value: Option<&crate::model::Stack>) {
             if self.obj().stack().as_ref() == value {
@@ -98,18 +98,21 @@ mod imp {
             }
 
             if let Some(stack) = value {
-                stack.bind_property("name", &*self.obj(), "title")
+                stack
+                    .bind_property("name", &*self.obj(), "title")
                     .sync_create()
                     .build();
-                
+
                 if let Some(service_list) = stack.service_list() {
-                    self.services_list_box.bind_model(Some(&service_list), |item| {
-                        let service = item.downcast_ref::<crate::model::ComposeService>().unwrap();
-                        glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
-                            .property("service", service)
-                            .build()
-                            .upcast()
-                    });
+                    self.services_list_box
+                        .bind_model(Some(&service_list), |item| {
+                            let service =
+                                item.downcast_ref::<crate::model::ComposeService>().unwrap();
+                            glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
+                                .property("service", service)
+                                .build()
+                                .upcast()
+                        });
                 }
             }
 

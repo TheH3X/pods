@@ -9,21 +9,21 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, Properties)]
-    #[properties(wrapper_type = super::ComposeServiceList)]
-    pub(crate) struct ComposeServiceList {
+    #[properties(wrapper_type = super::DockerNetworkList)]
+    pub(crate) struct DockerNetworkList {
         #[property(get, set, construct_only)]
         pub(super) stack: OnceCell<glib::WeakRef<crate::model::Stack>>,
         pub(super) store: gio::ListStore,
     }
 
     #[glib::object_subclass]
-    impl ObjectSubclass for ComposeServiceList {
-        const NAME: &'static str = "StacksComposeServiceList";
-        type Type = super::ComposeServiceList;
+    impl ObjectSubclass for DockerNetworkList {
+        const NAME: &'static str = "StacksDockerNetworkList";
+        type Type = super::DockerNetworkList;
         type Interfaces = (gio::ListModel,);
     }
 
-    impl ObjectImpl for ComposeServiceList {
+    impl ObjectImpl for DockerNetworkList {
         fn properties() -> &'static [glib::ParamSpec] {
             Self::derived_properties()
         }
@@ -41,9 +41,9 @@ mod imp {
         }
     }
 
-    impl ListModelImpl for ComposeServiceList {
+    impl ListModelImpl for DockerNetworkList {
         fn item_type(&self) -> glib::Type {
-            crate::model::ComposeService::static_type()
+            crate::model::DockerNetwork::static_type()
         }
 
         fn n_items(&self) -> u32 {
@@ -57,45 +57,30 @@ mod imp {
 }
 
 glib::wrapper! {
-    pub(crate) struct ComposeServiceList(ObjectSubclass<imp::ComposeServiceList>)
+    pub(crate) struct DockerNetworkList(ObjectSubclass<imp::DockerNetworkList>)
         @implements gio::ListModel;
 }
 
-impl ComposeServiceList {
+impl DockerNetworkList {
     pub fn new(stack: &crate::model::Stack) -> Self {
-        glib::Object::builder().property("stack", stack).build()
+        glib::Object::builder()
+            .property("stack", stack)
+            .build()
     }
 
-    /// Replace all services from DTOs.
-    pub fn update_from_dtos(&self, dtos: Vec<crate::compose::models::ComposeService>) {
+    pub fn update_from_dtos(&self, dtos: Vec<crate::compose::models::Network>) {
         let store = &self.imp().store;
         let old_len = store.n_items();
         store.remove_all();
 
         for dto in &dtos {
-            let svc = crate::model::ComposeService::from_dto(dto);
-            store.append(&svc);
+            let net = crate::model::DockerNetwork::from_dto(dto);
+            store.append(&net);
         }
 
         self.items_changed(0, old_len, store.n_items());
     }
 
-    /// Find a service by name.
-    pub fn find_service(&self, name: &str) -> Option<crate::model::ComposeService> {
-        let store = &self.imp().store;
-        for i in 0..store.n_items() {
-            if let Some(obj) = store.item(i) {
-                if let Ok(svc) = obj.downcast::<crate::model::ComposeService>() {
-                    if svc.name() == name {
-                        return Some(svc);
-                    }
-                }
-            }
-        }
-        None
-    }
-
-    /// Get the number of services.
     pub fn len(&self) -> u32 {
         self.imp().store.n_items()
     }

@@ -190,8 +190,14 @@ impl Container {
             .property("image-id", dto.image_id)
             .property("image-name", dto.image_name)
             .property("is-infra", dto.is_infra)
-            .property("stack-name", dto.labels.get("com.docker.compose.project").cloned())
-            .property("compose-service", dto.labels.get("com.docker.compose.service").cloned())
+            .property(
+                "stack-name",
+                dto.labels.get("com.docker.compose.project").cloned(),
+            )
+            .property(
+                "compose-service",
+                dto.labels.get("com.docker.compose.service").cloned(),
+            )
             .property("mounts", BoxedMounts::from(dto.mounts))
             .property("name", dto.name)
             .property("pod-id", dto.pod_id)

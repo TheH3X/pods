@@ -1,7 +1,11 @@
 use std::path::PathBuf;
 
+use glib::Properties;
+use glib::subclass::prelude::*;
+use gtk::glib;
+use std::cell::OnceCell;
+
 use crate::model::StackList;
-use crate::config;
 
 mod imp {
     use super::*;
@@ -11,7 +15,7 @@ mod imp {
     pub(crate) struct StackManager {
         #[property(get, set, construct_only)]
         pub(super) stack_list: OnceCell<StackList>,
-        #[property(get, set)]
+        #[property(get, set, nullable)]
         pub(super) root_path: std::cell::RefCell<Option<String>>,
     }
 
@@ -28,11 +32,6 @@ mod imp {
 
         fn set_property(&self, id: usize, value: &glib::Value, pspec: &glib::ParamSpec) {
             self.derived_set_property(id, value, pspec);
-            
-            // Auto-refresh when root path changes
-            if pspec.name() == "root-path" {
-                self.obj().refresh();
-            }
         }
 
         fn property(&self, id: usize, pspec: &glib::ParamSpec) -> glib::Value {
@@ -47,24 +46,48 @@ glib::wrapper! {
 
 impl StackManager {
     pub fn new(stack_list: &StackList) -> Self {
-        let obj = glib::Object::builder()
+        let obj: Self = glib::Object::builder()
             .property("stack-list", stack_list)
-            .build::<Self>();
-            
-        // Load default from settings or default path
+            .build();
+
+        // Try loading from default path
         let default_path = glib::home_dir().join("opt").join("docker-stacks");
-        obj.set_root_path(Some(default_path.to_string_lossy().to_string()));
-        
+        if default_path.exists() {
+            obj.set_root_path(Some(default_path.to_string_lossy().to_string()));
+            obj.refresh();
+        }
+
         obj
     }
 
+    /// Rescan the root directory and update the stack list.
     pub fn refresh(&self) {
         if let Some(path_str) = self.root_path() {
             let path = PathBuf::from(path_str);
-            let stacks = crate::compose::discovery::scan_root(&path).unwrap_or_default();
-            if let Some(list) = self.stack_list() {
-                list.update_from_scan(stacks);
+            match crate::compose::discovery::scan_root(&path) {
+                Ok(stacks) => {
+                    log::info!("Discovered {} stacks in {}", stacks.len(), path.display());
+                    if let Some(list) = self.stack_list() {
+                        list.update_from_scan(stacks);
+                    }
+                }
+                Err(e) => {
+                    log::error!("Failed to scan stacks directory: {}", e);
+                }
             }
         }
+    }
+
+    /// Set a new root path and trigger a refresh.
+    pub fn set_root_and_refresh(&self, path: &str) {
+        self.set_root_path(Some(path.to_string()));
+        self.refresh();
+    }
+
+    /// Check if a root path is set and valid.
+    pub fn has_valid_root(&self) -> bool {
+        self.root_path()
+            .map(|p| PathBuf::from(p).exists())
+            .unwrap_or(false)
     }
 }

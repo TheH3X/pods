@@ -1,7 +1,8 @@
 use glib::Properties;
 use glib::subclass::prelude::*;
-use gtk::glib;
 use gtk::gio;
+use gtk::glib;
+use gtk::prelude::*;
 use std::cell::OnceCell;
 
 use crate::model::Client;
@@ -40,34 +41,6 @@ mod imp {
 
         fn constructed(&self) {
             self.parent_constructed();
-            self.store.set(gio::ListStore::new::<crate::model::Stack>());
-            
-            // Wire up container tracking
-            if let Some(client) = self.client.get().and_then(|w| w.upgrade()) {
-                let store = self.store.clone();
-                let container_list = client.container_list();
-                
-                container_list.connect_items_changed(move |list, _, _, _| {
-                    // Update live container links
-                    let n_stacks = store.n_items();
-                    for i in 0..n_stacks {
-                        if let Some(stack_obj) = store.item(i).and_then(|o| o.downcast::<crate::model::Stack>().ok()) {
-                            // Find matching containers in list
-                            let n_containers = list.n_items();
-                            for j in 0..n_containers {
-                                if let Some(container) = list.item(j).and_then(|o| o.downcast::<crate::model::Container>().ok()) {
-                                    if let (Some(stack_name), Some(svc_name)) = (container.stack_name(), container.compose_service()) {
-                                        if stack_name == stack_obj.name() {
-                                            // Real implementation would look up ComposeService in Stack
-                                            // and set the live container.
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            }
         }
     }
 
@@ -93,24 +66,46 @@ glib::wrapper! {
 
 impl StackList {
     pub fn new(client: &Client) -> Self {
-        glib::Object::builder()
-            .property("client", client)
-            .build()
+        glib::Object::builder().property("client", client).build()
     }
-    
+
+    /// Replace all stacks from a scan result.
     pub fn update_from_scan(&self, stacks: Vec<crate::compose::models::Stack>) {
-        let store = self.imp().store.clone();
-        store.remove_all(); // Simple full replacement for now
-        
-        for dto in stacks {
-            let stack_obj = crate::model::Stack::new(&dto.name);
-            if let Some(path) = dto.root_path {
-                stack_obj.set_root_path(Some(path.to_string_lossy().to_string()));
-            }
-            if let Some(service_list) = stack_obj.service_list() {
-                service_list.update_from_dtos(dto.services);
-            }
+        let store = &self.imp().store;
+        let old_len = store.n_items();
+        store.remove_all();
+
+        for dto in &stacks {
+            let stack_obj = crate::model::Stack::from_dto(dto);
             store.append(&stack_obj);
         }
+
+        // Notify the ListModel about the change
+        self.items_changed(0, old_len, store.n_items());
+    }
+
+    /// Find a stack by name.
+    pub fn find_stack(&self, name: &str) -> Option<crate::model::Stack> {
+        let store = &self.imp().store;
+        for i in 0..store.n_items() {
+            if let Some(obj) = store.item(i) {
+                if let Ok(stack) = obj.downcast::<crate::model::Stack>() {
+                    if stack.name() == name {
+                        return Some(stack);
+                    }
+                }
+            }
+        }
+        None
+    }
+
+    /// Get the number of stacks.
+    pub fn len(&self) -> u32 {
+        self.imp().store.n_items()
+    }
+
+    /// Check if the list is empty.
+    pub fn is_empty(&self) -> bool {
+        self.len() == 0
     }
 }

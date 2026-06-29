@@ -1,0 +1,32 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: web-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./conf.d:/etc/nginx/conf.d:ro
+    networks:
+      - frontend
+      - backend
+
+  php:
+    image: php:8.2-fpm
+    container_name: web-php
+    restart: unless-stopped
+    volumes:
+      - ./html:/var/www/html
+    networks:
+      - backend
+    depends_on:
+      - nginx
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+    internal: true
