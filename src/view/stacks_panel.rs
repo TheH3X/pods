@@ -1,7 +1,6 @@
 use adw::subclass::prelude::*;
 use gtk::glib::Properties;
 use gtk::glib::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 

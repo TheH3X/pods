@@ -9,7 +9,6 @@ use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 use crate::utils;
@@ -512,8 +511,8 @@ impl ContainerDetailsPage {
     pub(crate) fn show_compose_source(&self) {
         // Find the service in the stack manager and open its editor
         if let Some(container) = self.container() {
-            if let Some(project) = container.stack_name() {
-                if let Some(service) = container.compose_service() {
+            if let Some(_project) = container.stack_name() {
+                if let Some(_service) = container.compose_service() {
                     // Navigate to service editor
                     // Note: full navigation logic might need StackManager access
                 }

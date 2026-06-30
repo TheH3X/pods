@@ -4,7 +4,6 @@ use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 use crate::utils;

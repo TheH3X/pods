@@ -11,7 +11,6 @@ use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
 use gtk::glib::clone;
-use gtk::glib::subclass::prelude::*;
 use sourceview5::prelude::*;
 
 use crate::engine;

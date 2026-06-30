@@ -8,7 +8,6 @@ use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
 use gtk::glib::clone;
-use gtk::glib::subclass::prelude::*;
 use gtk::graphene;
 use gtk::gsk;
 use gtk::prelude::ParamSpecBuilderExt;

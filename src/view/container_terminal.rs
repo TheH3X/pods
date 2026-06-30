@@ -18,7 +18,6 @@ use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
 use vte4::TerminalExt;
 use vte4::TerminalExtManual;
 

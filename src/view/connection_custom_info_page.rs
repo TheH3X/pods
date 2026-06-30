@@ -5,7 +5,6 @@ use glib::clone;
 use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
-use gtk::glib::subclass::prelude::*;
 use sourceview5::prelude::*;
 
 use crate::utils;

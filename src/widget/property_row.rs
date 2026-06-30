@@ -4,7 +4,6 @@ use adw::prelude::*;
 use adw::subclass::prelude::*;
 use gtk::CompositeTemplate;
 use gtk::glib;
-use gtk::glib::subclass::prelude::*;
 use gtk::pango;
 
 mod imp {

@@ -2,7 +2,6 @@ use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use gtk::prelude::*;
 
 mod imp {

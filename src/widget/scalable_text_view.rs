@@ -4,7 +4,6 @@ use adw::prelude::*;
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
 use sourceview5::subclass::view::ViewImpl;
 
 use crate::utils::PodsSettings;

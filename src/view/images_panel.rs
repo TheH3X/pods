@@ -13,7 +13,6 @@ use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
 
 use crate::config;
 use crate::model;
