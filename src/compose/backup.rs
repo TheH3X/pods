@@ -229,4 +229,3 @@ mod tests {
         assert!(snapshots.is_empty());
     }
 }
-

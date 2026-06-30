@@ -2,7 +2,6 @@ use std::sync::OnceLock;
 
 use adw::prelude::*;
 use adw::subclass::prelude::AdwApplicationWindowImpl;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
 use gtk::CompositeTemplate;
@@ -10,6 +9,7 @@ use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
 use gtk::glib::clone;
+use gtk::glib::subclass::prelude::*;
 
 use crate::application::Application;
 use crate::config;

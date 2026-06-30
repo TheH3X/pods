@@ -1,9 +1,9 @@
-use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 use gtk::prelude::*;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -72,9 +72,7 @@ glib::wrapper! {
 
 impl DockerNetworkList {
     pub fn new(stack: &crate::model::Stack) -> Self {
-        glib::Object::builder()
-            .property("stack", stack)
-            .build()
+        glib::Object::builder().property("stack", stack).build()
     }
 
     pub fn update_from_dtos(&self, dtos: Vec<crate::compose::models::Network>) {

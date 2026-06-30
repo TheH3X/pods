@@ -1,11 +1,11 @@
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
 use glib::clone;
 use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
+use gtk::glib::subclass::prelude::*;
 use sourceview5::prelude::*;
 
 use crate::utils;

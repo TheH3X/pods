@@ -11,20 +11,20 @@ use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::Choice;
 use ashpd::desktop::file_chooser::SaveFileRequest;
 use bytes::Bytes;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;
 use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 use sourceview5::prelude::*;
 
 use crate::engine;

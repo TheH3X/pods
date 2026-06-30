@@ -3,12 +3,12 @@ use std::cell::RefCell;
 use adw::prelude::*;
 use adw::subclass::prelude::ExpanderRowImpl;
 use adw::subclass::prelude::PreferencesRowImpl;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::closure;
 use gtk::CompositeTemplate;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 

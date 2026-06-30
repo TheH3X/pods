@@ -1,8 +1,8 @@
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::glib;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -13,7 +13,7 @@ mod imp {
     <interface>
       <template class="StacksStackServiceRow" parent="GtkListBoxRow">
         <child>
-          <object class="gtk_box">
+          <object class="GtkBox">
             <property name="orientation">horizontal</property>
             <property name="spacing">12</property>
             <property name="margin-top">8</property>
@@ -23,7 +23,7 @@ mod imp {
 
             <!-- Dirty indicator -->
             <child>
-              <object class="gtk_label" id="dirty_indicator">
+              <object class="GtkLabel" id="dirty_indicator">
                 <property name="label">●</property>
                 <property name="valign">center</property>
                 <property name="visible">false</property>
@@ -33,19 +33,19 @@ mod imp {
 
             <!-- Service info -->
             <child>
-              <object class="gtk_box">
+              <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <property name="hexpand">true</property>
                 <property name="spacing">2</property>
                 <child>
-                  <object class="gtk_label" id="name_label">
+                  <object class="GtkLabel" id="name_label">
                     <property name="halign">start</property>
                     <property name="css-classes">heading</property>
                     <property name="ellipsize">end</property>
                   </object>
                 </child>
                 <child>
-                  <object class="gtk_label" id="image_label">
+                  <object class="GtkLabel" id="image_label">
                     <property name="halign">start</property>
                     <property name="css-classes">dim-label caption</property>
                     <property name="ellipsize">end</property>
@@ -56,7 +56,7 @@ mod imp {
 
             <!-- Edit arrow -->
             <child>
-              <object class="gtk_image">
+              <object class="GtkImage">
                 <property name="icon-name">go-next-symbolic</property>
                 <property name="valign">center</property>
                 <property name="css-classes">dim-label</property>

@@ -1,9 +1,9 @@
-use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 use gtk::prelude::*;
+use gtk::subclass::prelude::*;
 
 use crate::model::Client;
 
@@ -104,6 +104,18 @@ impl StackList {
                     }
                 }
             }
+        }
+        None
+    }
+
+    /// Find a specific service across all stacks by project and service name.
+    pub fn find_service(
+        &self,
+        project: &str,
+        service: &str,
+    ) -> Option<crate::model::ComposeService> {
+        if let Some(stack) = self.find_stack(project) {
+            return stack.service_list().find_service(service);
         }
         None
     }

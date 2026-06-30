@@ -1,10 +1,10 @@
 use std::cell::RefCell;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gtk::CompositeTemplate;
 use gtk::glib;
+use gtk::glib::subclass::prelude::*;
 
 mod imp {
     use super::*;

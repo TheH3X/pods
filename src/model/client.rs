@@ -4,12 +4,12 @@ use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 
 use gio::prelude::*;
-use gtk::glib::Properties;
 use glib::clone;
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
+use gtk::subclass::prelude::*;
 
 use crate::engine;
 use crate::model;
@@ -384,11 +384,34 @@ impl Client {
                     }
                     obj.volume_list().refresh(|_| {});
 
+                    obj.reconcile_stacks_and_containers();
+
                     log::debug!("Sleeping for {SYNC_INTERVAL} seconds until next sync");
 
                     glib::ControlFlow::Continue
                 }
             ),
         );
+    }
+
+    fn reconcile_stacks_and_containers(&self) {
+        if let Some(stack_manager) = self.stack_manager() {
+            let stack_list = stack_manager.stack_list();
+            let container_list = self.container_list();
+
+            for container in container_list
+                .iter::<model::Container>()
+                .map(Result::unwrap)
+            {
+                if let Some(project) = container.stack_name() {
+                    if let Some(service) = container.compose_service() {
+                        if let Some(compose_svc) = stack_list.find_service(&project, &service) {
+                            compose_svc.set_live_container(Some(&container));
+                            compose_svc.update_live_status();
+                        }
+                    }
+                }
+            }
+        }
     }
 }

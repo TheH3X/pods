@@ -251,11 +251,18 @@ mod tests {
         apply_profile_labels(&mut labels, homepage, "jellyfin", "8096", "home.local");
         // Every label value with service_name template should be substituted
         for val in labels.values() {
-            assert!(!val.contains("{{service_name}}"), "Template not substituted: {}", val);
+            assert!(
+                !val.contains("{{service_name}}"),
+                "Template not substituted: {}",
+                val
+            );
         }
         for key in labels.keys() {
-            assert!(!key.contains("{{service_name}}"), "Template key not substituted: {}", key);
+            assert!(
+                !key.contains("{{service_name}}"),
+                "Template key not substituted: {}",
+                key
+            );
         }
     }
 }
-

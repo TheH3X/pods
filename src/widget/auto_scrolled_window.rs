@@ -3,13 +3,13 @@ use std::cell::RefCell;
 use std::sync::OnceLock;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::clone;
 use glib::subclass::Signal;
 use gtk::CompositeTemplate;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::utils;
 

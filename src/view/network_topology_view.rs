@@ -1,9 +1,9 @@
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
-use gtk::glib::Properties;
 use gtk::cairo;
-use gtk::prelude::*;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
+use gtk::prelude::*;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -37,7 +37,7 @@ mod imp {
 
         fn constructed(&self) {
             self.parent_constructed();
-            
+
             let obj = self.obj();
             obj.set_draw_func(glib::clone!(
                 #[weak]
@@ -99,7 +99,7 @@ impl NetworkTopologyView {
             return;
         }
 
-        // Extremely basic layout: 
+        // Extremely basic layout:
         // Services on the left column, Networks on the right column.
         let service_x = width * 0.25;
         let network_x = width * 0.75;
@@ -125,10 +125,11 @@ impl NetworkTopologyView {
 
         // Draw Service Nodes
         cr.set_source_rgba(0.2, 0.6, 1.0, 1.0); // Blue for services
-        let sl = stack.service_list(); if true {
+        let sl = stack.service_list();
+        if true {
             for i in 0..services {
                 let sy = height * ((i as f64 + 1.0) / (services as f64 + 1.0));
-                
+
                 cr.arc(service_x, sy, 20.0, 0.0, 2.0 * std::f64::consts::PI);
                 cr.fill().unwrap();
 
@@ -148,10 +149,11 @@ impl NetworkTopologyView {
 
         // Draw Network Nodes
         cr.set_source_rgba(0.2, 0.8, 0.2, 1.0); // Green for networks
-        let nl = stack.network_list(); if true {
+        let nl = stack.network_list();
+        if true {
             for j in 0..networks {
                 let ny = height * ((j as f64 + 1.0) / (networks as f64 + 1.0));
-                
+
                 // Draw rounded rect or circle for networks
                 cr.arc(network_x, ny, 15.0, 0.0, 2.0 * std::f64::consts::PI);
                 cr.fill().unwrap();

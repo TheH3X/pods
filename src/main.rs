@@ -1,7 +1,8 @@
 #![allow(clippy::format_push_string)]
 #![allow(deprecated)]
 
-#[macro_use] mod utils;
+#[macro_use]
+mod utils;
 mod application;
 mod compose;
 #[rustfmt::skip]

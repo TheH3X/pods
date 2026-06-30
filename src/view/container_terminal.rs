@@ -4,14 +4,12 @@ use std::marker::PhantomData;
 use std::sync::OnceLock;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use bytes::Bytes;
 use futures::AsyncWriteExt;
 use futures::StreamExt;
 use futures::future;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;
 use glib::subclass::Signal;
@@ -19,6 +17,8 @@ use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 use vte4::TerminalExt;
 use vte4::TerminalExtManual;
 

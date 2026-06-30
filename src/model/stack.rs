@@ -1,8 +1,8 @@
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::prelude::*;
 use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::glib;
 use std::cell::OnceCell;
 
 use crate::compose::models::StackLayout;
@@ -33,6 +33,7 @@ mod imp {
         pub(super) error_count: std::cell::Cell<u32>,
         #[property(get, set)]
         pub(super) is_dirty: std::cell::Cell<bool>,
+        pub(super) plan_state: std::cell::RefCell<Option<crate::compose::plan::PlanState>>,
     }
 
     #[glib::object_subclass]
@@ -62,16 +63,14 @@ glib::wrapper! {
 
 impl Stack {
     pub fn new(name: &str) -> Self {
-        let obj: Self = glib::Object::builder()
-            .property("name", name)
-            .build();
-            
+        let obj: Self = glib::Object::builder().property("name", name).build();
+
         let service_list = crate::model::ComposeServiceList::new(&obj);
         obj.imp().service_list.set(service_list).unwrap();
 
         let network_list = crate::model::DockerNetworkList::new(&obj);
         obj.imp().network_list.set(network_list).unwrap();
-        
+
         obj
     }
 
@@ -99,16 +98,52 @@ impl Stack {
         let errors = self.error_count();
 
         if errors > 0 {
-            format!("{errors} error(s)")
-        } else if running == total && total > 0 {
-            "All running".to_string()
-        } else if stopped == total && total > 0 {
-            "All stopped".to_string()
-        } else if total == 0 {
-            "Empty".to_string()
+            format!("{} error(s)", errors)
+        } else if running == total {
+            "Running".to_string()
+        } else if running > 0 {
+            format!("{} running, {} stopped", running, stopped)
         } else {
-            format!("{running}/{total} running")
+            "Stopped".to_string()
         }
+    }
+
+    /// Initialize the PlanState for this stack from disk.
+    pub fn init_plan_state(&self) {
+        if let Some(path_str) = self.root_path() {
+            let path = std::path::PathBuf::from(path_str);
+            if let Ok(dto) = crate::compose::discovery::scan_stack(&path) {
+                let plan = crate::compose::plan::PlanState::from_stack(&dto);
+                *self.imp().plan_state.borrow_mut() = Some(plan);
+                self.set_is_dirty(false);
+            } else {
+                log::error!("Failed to scan stack for PlanState initialization");
+            }
+        }
+    }
+
+    /// Execute a closure with mutable access to the PlanState.
+    /// Triggers is_dirty update.
+    pub fn with_plan_state<F, R>(&self, f: F) -> Option<R>
+    where
+        F: FnOnce(&mut crate::compose::plan::PlanState) -> R,
+    {
+        let mut borrow = self.imp().plan_state.borrow_mut();
+        if let Some(plan) = borrow.as_mut() {
+            let res = f(plan);
+            self.set_is_dirty(plan.is_dirty());
+            Some(res)
+        } else {
+            None
+        }
+    }
+
+    /// Execute a closure with read-only access to the PlanState.
+    pub fn read_plan_state<F, R>(&self, f: F) -> Option<R>
+    where
+        F: FnOnce(&crate::compose::plan::PlanState) -> R,
+    {
+        self.imp().plan_state.borrow().as_ref().map(f)
     }
 
     /// Update container status counts.

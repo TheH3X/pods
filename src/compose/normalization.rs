@@ -164,28 +164,48 @@ mod tests {
         let svc = make_service_with_volumes("web", &["/data/myapp:/app/data"]);
         let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
         assert!(!report.issues.is_empty());
-        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::AbsolutePathOutsideStack));
+        assert!(
+            report
+                .issues
+                .iter()
+                .any(|i| i.issue_type == IssueType::AbsolutePathOutsideStack)
+        );
     }
 
     #[test]
     fn test_system_path_flagged() {
         let svc = make_service_with_volumes("web", &["/etc/nginx:/etc/nginx:ro"]);
         let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
-        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::SystemPathReference));
+        assert!(
+            report
+                .issues
+                .iter()
+                .any(|i| i.issue_type == IssueType::SystemPathReference)
+        );
     }
 
     #[test]
     fn test_home_dir_reference_flagged() {
         let svc = make_service_with_volumes("web", &["~/data:/app/data"]);
         let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
-        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::HomeDirReference));
+        assert!(
+            report
+                .issues
+                .iter()
+                .any(|i| i.issue_type == IssueType::HomeDirReference)
+        );
     }
 
     #[test]
     fn test_migratable_to_appdata_flagged() {
         let svc = make_service_with_volumes("web", &["./data:/app/data"]);
         let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
-        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::MigratableToAppdata));
+        assert!(
+            report
+                .issues
+                .iter()
+                .any(|i| i.issue_type == IssueType::MigratableToAppdata)
+        );
     }
 
     #[test]
@@ -231,4 +251,3 @@ mod tests {
         assert_eq!(reports[0].service_name, "db");
     }
 }
-

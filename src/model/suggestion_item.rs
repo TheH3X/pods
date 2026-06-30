@@ -1,10 +1,10 @@
 use std::sync::OnceLock;
 
 use gio::prelude::*;
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::subclass::prelude::*;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;

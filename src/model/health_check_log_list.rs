@@ -3,9 +3,9 @@ use std::collections::VecDeque;
 
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use gtk::glib::Properties;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
 
 use crate::engine;
 use crate::model;

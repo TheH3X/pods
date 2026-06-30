@@ -161,7 +161,11 @@ impl ContainerInspection {
                 image_id: inspection.image.unwrap_or_default(),
                 image_name: image_name.filter(|name| !name.is_empty()),
                 is_infra: false,
-                labels: inspection.config.as_ref().and_then(|c| c.labels.clone()).unwrap_or_default(),
+                labels: inspection
+                    .config
+                    .as_ref()
+                    .and_then(|c| c.labels.clone())
+                    .unwrap_or_default(),
                 mounts: inspection
                     .mounts
                     .map(|mounts| mounts.into_iter().map(Into::into).collect())
@@ -237,7 +241,11 @@ impl From<podman_api::models::ContainerInspectResponseLibpod> for ContainerInspe
                 image_id: value.image.unwrap_or_default(),
                 image_name: value.image_name.filter(|name| !name.is_empty()),
                 is_infra: value.is_infra.unwrap_or(false),
-                labels: value.config.as_ref().and_then(|c| c.labels.clone()).unwrap_or_default(),
+                labels: value
+                    .config
+                    .as_ref()
+                    .and_then(|c| c.labels.clone())
+                    .unwrap_or_default(),
                 mounts: value
                     .mounts
                     .map(|mounts| mounts.into_iter().map(Into::into).collect())

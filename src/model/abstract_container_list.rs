@@ -3,10 +3,10 @@ use std::sync::OnceLock;
 use gio::prelude::*;
 use glib::clone;
 use glib::subclass::Signal;
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::subclass::prelude::*;
+use gtk::subclass::prelude::*;
 
 use crate::model;
 

@@ -2,12 +2,12 @@ use std::cell::RefCell;
 use std::marker::PhantomData;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use gtk::CompositeTemplate;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 

@@ -1,8 +1,8 @@
-use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
-use gtk::glib::Properties;
-use gtk::prelude::*;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
+use gtk::prelude::*;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -146,7 +146,8 @@ mod imp {
             }
 
             if let Some(network) = value {
-                network.bind_property("name", &*self.name_label, "label")
+                network
+                    .bind_property("name", &*self.name_label, "label")
                     .sync_create()
                     .build();
 
@@ -159,7 +160,8 @@ mod imp {
 
                 // Format subnet
                 if let Some(subnet) = network.subnet() {
-                    self.subnet_label.set_label(&format!("· Subnet: {}", subnet));
+                    self.subnet_label
+                        .set_label(&format!("· Subnet: {}", subnet));
                     self.subnet_label.set_visible(true);
                 }
 
@@ -169,10 +171,20 @@ mod imp {
                 }
 
                 // Connected services
-                network.bind_property("connected-services-display", &*self.connected_services_label, "label")
+                network
+                    .bind_property(
+                        "connected-services-display",
+                        &*self.connected_services_label,
+                        "label",
+                    )
                     .sync_create()
                     .build();
-                network.bind_property("connected-services-display", &*self.connected_services_label, "visible")
+                network
+                    .bind_property(
+                        "connected-services-display",
+                        &*self.connected_services_label,
+                        "visible",
+                    )
                     .transform_to(|_, text: String| Some(!text.is_empty()))
                     .sync_create()
                     .build();

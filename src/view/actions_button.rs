@@ -1,12 +1,12 @@
 use std::sync::OnceLock;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::closure;
 use gtk::CompositeTemplate;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 use crate::utils;

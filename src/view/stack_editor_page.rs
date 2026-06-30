@@ -1,9 +1,9 @@
-use gtk::glib::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
-use gtk::prelude::*;
 use gtk::glib;
 use gtk::glib::Properties;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
+use gtk::prelude::*;
 
 mod imp {
     use super::*;
@@ -14,12 +14,12 @@ mod imp {
     <interface>
       <template class="StacksStackEditorPage" parent="AdwNavigationPage">
         <child>
-          <object class="gtk_box">
+          <object class="GtkBox">
             <property name="orientation">vertical</property>
             <child>
-              <object class="adw_header_bar">
+              <object class="AdwHeaderBar">
                 <child type="end">
-                  <object class="gtk_button" id="review_plan_button">
+                  <object class="GtkButton" id="review_plan_button">
                     <property name="label">Review Plan</property>
                     <property name="css-classes">suggested-action</property>
                   </object>
@@ -27,18 +27,18 @@ mod imp {
               </object>
             </child>
             <child>
-              <object class="adw_preferences_page">
+              <object class="AdwPreferencesPage">
                 <child>
-                  <object class="adw_preferences_group">
+                  <object class="AdwPreferencesGroup">
                     <property name="title">Services</property>
                     <child>
-                      <object class="gtk_list_box" id="services_list_box">
+                      <object class="GtkListBox" id="services_list_box">
                         <property name="selection-mode">none</property>
                         <property name="css-classes">boxed-list</property>
                       </object>
                     </child>
                     <child>
-                      <object class="gtk_button" id="add_service_button">
+                      <object class="GtkButton" id="add_service_button">
                         <property name="label">Add Service</property>
                         <property name="margin-top">12</property>
                       </object>
@@ -112,8 +112,7 @@ mod imp {
                 let service_list = stack.service_list();
                 self.services_list_box
                     .bind_model(Some(&service_list), |item| {
-                        let service =
-                            item.downcast_ref::<crate::model::ComposeService>().unwrap();
+                        let service = item.downcast_ref::<crate::model::ComposeService>().unwrap();
                         glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
                             .property("service", service)
                             .build()

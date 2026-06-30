@@ -1,12 +1,12 @@
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use glib::closure;
 use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 use crate::utils;
@@ -292,7 +292,8 @@ mod imp {
             match self.stack.visible_child_name().as_deref() {
                 Some("search") => self.search_button.set_active(true),
                 Some("panels") => {
-                    let target_row = match self.panels_stack.visible_child_name().unwrap().as_str() {
+                    let target_row = match self.panels_stack.visible_child_name().unwrap().as_str()
+                    {
                         "containers" => &*self.containers_row,
                         "pods" => &*self.pods_row,
                         "stacks" => &*self.stacks_row,

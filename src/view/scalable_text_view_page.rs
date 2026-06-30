@@ -2,7 +2,6 @@ use std::borrow::Cow;
 use std::cell::OnceCell;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::SaveFileRequest;
@@ -12,6 +11,7 @@ use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
 use gtk::glib::clone;
+use gtk::glib::subclass::prelude::*;
 use sourceview5::prelude::*;
 
 use crate::engine;

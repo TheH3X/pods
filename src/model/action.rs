@@ -14,10 +14,10 @@ use futures::lock::Mutex;
 use futures::stream;
 use gettextrs::gettext;
 use gio::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::clone;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
 use tokio::io::AsyncWriteExt;
 use tokio::io::BufWriter;
 

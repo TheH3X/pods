@@ -4,10 +4,10 @@ use std::marker::PhantomData;
 
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::clone;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
 use indexmap::IndexMap;
 
 use crate::engine;

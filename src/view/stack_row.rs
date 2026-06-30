@@ -1,8 +1,8 @@
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::glib;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -13,7 +13,7 @@ mod imp {
     <interface>
       <template class="StacksStackRow" parent="GtkListBoxRow">
         <child>
-          <object class="gtk_box">
+          <object class="GtkBox">
             <property name="orientation">horizontal</property>
             <property name="spacing">12</property>
             <property name="margin-top">12</property>
@@ -23,7 +23,7 @@ mod imp {
 
             <!-- Stack icon -->
             <child>
-              <object class="gtk_image" id="stack_icon">
+              <object class="GtkImage" id="stack_icon">
                 <property name="icon-name">view-grid-symbolic</property>
                 <property name="pixel-size">24</property>
                 <property name="valign">center</property>
@@ -32,20 +32,20 @@ mod imp {
 
             <!-- Name + service count -->
             <child>
-              <object class="gtk_box">
+              <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <property name="hexpand">true</property>
                 <property name="spacing">2</property>
                 <property name="valign">center</property>
                 <child>
-                  <object class="gtk_label" id="name_label">
+                  <object class="GtkLabel" id="name_label">
                     <property name="halign">start</property>
                     <property name="css-classes">heading</property>
                     <property name="ellipsize">end</property>
                   </object>
                 </child>
                 <child>
-                  <object class="gtk_label" id="subtitle_label">
+                  <object class="GtkLabel" id="subtitle_label">
                     <property name="halign">start</property>
                     <property name="css-classes">dim-label caption</property>
                     <property name="ellipsize">end</property>
@@ -56,24 +56,24 @@ mod imp {
 
             <!-- Status badges -->
             <child>
-              <object class="gtk_box" id="status_box">
+              <object class="GtkBox" id="status_box">
                 <property name="orientation">horizontal</property>
                 <property name="spacing">4</property>
                 <property name="valign">center</property>
                 <child>
-                  <object class="gtk_label" id="running_badge">
+                  <object class="GtkLabel" id="running_badge">
                     <property name="css-classes">status-badge-small container-status-running</property>
                     <property name="visible">false</property>
                   </object>
                 </child>
                 <child>
-                  <object class="gtk_label" id="stopped_badge">
+                  <object class="GtkLabel" id="stopped_badge">
                     <property name="css-classes">status-badge-small container-status-not-running</property>
                     <property name="visible">false</property>
                   </object>
                 </child>
                 <child>
-                  <object class="gtk_label" id="error_badge">
+                  <object class="GtkLabel" id="error_badge">
                     <property name="css-classes">status-badge-small container-status-dead</property>
                     <property name="visible">false</property>
                   </object>
@@ -83,7 +83,7 @@ mod imp {
 
             <!-- Navigate arrow -->
             <child>
-              <object class="gtk_image">
+              <object class="GtkImage">
                 <property name="icon-name">go-next-symbolic</property>
                 <property name="valign">center</property>
                 <property name="css-classes">dim-label</property>

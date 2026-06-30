@@ -1,12 +1,12 @@
 use std::cell::RefCell;
 use std::sync::OnceLock;
 
+use glib::subclass::Signal;
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::prelude::*;
-use glib::subclass::Signal;
 use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::glib;
 
 mod imp {
     use super::*;

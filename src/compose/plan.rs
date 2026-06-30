@@ -281,7 +281,10 @@ mod tests {
     use crate::compose::models::ComposeService;
 
     fn make_stack_with_services(names: &[&str]) -> Stack {
-        let services = names.iter().map(|n| ComposeService::new(n, "nginx:latest")).collect();
+        let services = names
+            .iter()
+            .map(|n| ComposeService::new(n, "nginx:latest"))
+            .collect();
         Stack {
             name: "test".to_string(),
             root_path: std::path::PathBuf::from("/tmp/test"),
@@ -304,7 +307,10 @@ mod tests {
     fn test_add_service() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        plan.apply_edit(ServiceEdit::Add(
+            "cache".to_string(),
+            ComposeService::new("cache", "redis:7"),
+        ));
         assert!(plan.is_dirty());
         let summary = plan.change_summary();
         assert!(summary.added.contains(&"cache".to_string()));
@@ -339,7 +345,10 @@ mod tests {
     fn test_rename_service() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.apply_edit(ServiceEdit::Rename("web".to_string(), "frontend".to_string()));
+        plan.apply_edit(ServiceEdit::Rename(
+            "web".to_string(),
+            "frontend".to_string(),
+        ));
         assert!(!plan.working.services.contains_key("web"));
         assert!(plan.working.services.contains_key("frontend"));
         assert!(plan.is_dirty());
@@ -349,7 +358,10 @@ mod tests {
     fn test_duplicate_service() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.apply_edit(ServiceEdit::Duplicate("web".to_string(), "web2".to_string()));
+        plan.apply_edit(ServiceEdit::Duplicate(
+            "web".to_string(),
+            "web2".to_string(),
+        ));
         assert!(plan.working.services.contains_key("web"));
         assert!(plan.working.services.contains_key("web2"));
         // Duplicated service should have no container_name
@@ -360,7 +372,10 @@ mod tests {
     fn test_reset() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        plan.apply_edit(ServiceEdit::Add(
+            "cache".to_string(),
+            ComposeService::new("cache", "redis:7"),
+        ));
         assert!(plan.is_dirty());
         plan.reset();
         assert!(!plan.is_dirty());
@@ -371,7 +386,10 @@ mod tests {
     fn test_commit() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        plan.apply_edit(ServiceEdit::Add(
+            "cache".to_string(),
+            ComposeService::new("cache", "redis:7"),
+        ));
         plan.commit();
         // After commit, original reflects the new state
         assert!(plan.original.services.contains_key("cache"));
@@ -382,7 +400,10 @@ mod tests {
     fn test_generate_diff_includes_added_service() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        plan.apply_edit(ServiceEdit::Add(
+            "cache".to_string(),
+            ComposeService::new("cache", "redis:7"),
+        ));
         let diff = plan.generate_diff();
         assert!(diff.contains("+++ services/cache"));
         assert!(diff.contains("1 added"));
@@ -392,10 +413,12 @@ mod tests {
     fn test_add_remove_network() {
         let stack = make_stack_with_services(&["web"]);
         let mut plan = PlanState::from_stack(&stack);
-        plan.add_network("frontend".to_string(), crate::compose::models::Network::new("frontend"));
+        plan.add_network(
+            "frontend".to_string(),
+            crate::compose::models::Network::new("frontend"),
+        );
         assert!(plan.change_summary().networks_changed);
         plan.remove_network("frontend");
         assert!(!plan.change_summary().networks_changed);
     }
 }
-

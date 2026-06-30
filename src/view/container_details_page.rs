@@ -1,15 +1,15 @@
 use std::cell::RefCell;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;
 use gtk::CompositeTemplate;
 use gtk::gdk;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::model;
 use crate::utils;
@@ -57,6 +57,8 @@ mod imp {
         pub(super) stop_button: TemplateChild<gtk::Button>,
         #[template_child]
         pub(super) spinning_button: TemplateChild<gtk::Button>,
+        #[template_child]
+        pub(super) compose_source_row: TemplateChild<adw::ActionRow>,
         #[template_child]
         pub(super) volumes_group: TemplateChild<adw::PreferencesGroup>,
         #[template_child]
@@ -139,6 +141,13 @@ mod imp {
             klass.install_action(ACTION_SHOW_PROCESSES, None, |widget, _, _| {
                 widget.show_processes();
             });
+            klass.install_action(
+                "container-details-page.show-compose-source",
+                None,
+                |widget, _, _| {
+                    widget.show_compose_source();
+                },
+            );
 
             klass.add_binding_action(gdk::Key::F2, gdk::ModifierType::empty(), ACTION_RENAME);
             klass.add_binding_action(gdk::Key::K, gdk::ModifierType::CONTROL_MASK, ACTION_COMMIT);
@@ -244,6 +253,17 @@ mod imp {
                         }
                     ),
                 );
+
+            container_expr.watch(
+                Some(obj),
+                clone!(
+                    #[weak]
+                    obj,
+                    move || {
+                        obj.update_compose_source();
+                    }
+                ),
+            );
         }
 
         fn dispose(&self) {
@@ -472,6 +492,33 @@ impl ContainerDetailsPage {
                 );
             }
         });
+    }
+
+    pub(crate) fn update_compose_source(&self) {
+        let imp = self.imp();
+        if let Some(container) = self.container() {
+            if let Some(project) = container.stack_name() {
+                if let Some(service) = container.compose_service() {
+                    imp.compose_source_row
+                        .set_subtitle(&format!("{project} / {service}"));
+                    imp.compose_source_row.set_visible(true);
+                    return;
+                }
+            }
+        }
+        imp.compose_source_row.set_visible(false);
+    }
+
+    pub(crate) fn show_compose_source(&self) {
+        // Find the service in the stack manager and open its editor
+        if let Some(container) = self.container() {
+            if let Some(project) = container.stack_name() {
+                if let Some(service) = container.compose_service() {
+                    // Navigate to service editor
+                    // Note: full navigation logic might need StackManager access
+                }
+            }
+        }
     }
 
     pub(crate) fn show_tty(&self) {

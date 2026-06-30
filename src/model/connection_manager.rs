@@ -7,11 +7,11 @@ use std::path::PathBuf;
 use futures::future;
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::clone;
 use gtk::gdk;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
 use indexmap::IndexMap;
 use tokio::io::AsyncWriteExt;
 

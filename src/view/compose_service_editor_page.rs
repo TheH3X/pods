@@ -1,9 +1,9 @@
+use adw::prelude::*;
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::glib;
-use adw::prelude::*;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -305,12 +305,13 @@ mod imp {
                             log::info!("Auto-populating metadata for image: {}", image);
                             // In real environment, this triggers async ImageMetadata::fetch
                             // then populates ports/volumes based on the metadata.
-                            
+
                             // Mocking the result for demonstration
                             let row = crate::view::ComposePortRow::new();
                             page.ports_list_box.append(&row);
-                            
-                            let v_row = crate::view::ComposeVolumeRow::with_spec("./appdata", "/data");
+
+                            let v_row =
+                                crate::view::ComposeVolumeRow::with_spec("./appdata", "/data");
                             page.volumes_list_box.append(&v_row);
                         }
                     }

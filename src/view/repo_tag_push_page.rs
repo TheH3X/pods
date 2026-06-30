@@ -1,13 +1,13 @@
 use std::collections::HashMap;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use glib::clone;
 use gtk::CompositeTemplate;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 use serde::Deserialize;
 use serde::Serialize;
 

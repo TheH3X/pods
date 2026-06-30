@@ -1,8 +1,8 @@
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::subclass::prelude::*;
-use gtk::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::glib;
+use gtk::subclass::prelude::*;
 
 mod imp {
     use super::*;
@@ -13,18 +13,18 @@ mod imp {
     <interface>
       <template class="StacksStackDetailsPage" parent="AdwNavigationPage">
         <child>
-          <object class="gtk_box">
+          <object class="GtkBox">
             <property name="orientation">vertical</property>
 
             <!-- Header bar with action buttons -->
             <child>
-              <object class="adw_header_bar">
+              <object class="AdwHeaderBar">
                 <child type="end">
-                  <object class="gtk_box">
+                  <object class="GtkBox">
                     <property name="orientation">horizontal</property>
                     <property name="spacing">6</property>
                     <child>
-                      <object class="gtk_button" id="edit_button">
+                      <object class="GtkButton" id="edit_button">
                         <property name="icon-name">document-edit-symbolic</property>
                         <property name="tooltip-text">Edit Stack</property>
                       </object>
@@ -35,14 +35,14 @@ mod imp {
             </child>
 
             <child>
-              <object class="gtk_scrolled_window">
+              <object class="GtkScrolledWindow">
                 <property name="hscrollbar-policy">never</property>
                 <property name="vexpand">true</property>
                 <child>
-                  <object class="adw_clamp">
+                  <object class="AdwClamp">
                     <property name="maximum-size">800</property>
                     <child>
-                      <object class="gtk_box">
+                      <object class="GtkBox">
                         <property name="orientation">vertical</property>
                         <property name="spacing">24</property>
                         <property name="margin-top">24</property>
@@ -52,17 +52,17 @@ mod imp {
 
                         <!-- Stack info header -->
                         <child>
-                          <object class="gtk_box">
+                          <object class="GtkBox">
                             <property name="orientation">vertical</property>
                             <property name="spacing">8</property>
                             <child>
-                              <object class="gtk_label" id="stack_name_label">
+                              <object class="GtkLabel" id="stack_name_label">
                                 <property name="halign">start</property>
                                 <property name="css-classes">title-1</property>
                               </object>
                             </child>
                             <child>
-                              <object class="gtk_label" id="stack_path_label">
+                              <object class="GtkLabel" id="stack_path_label">
                                 <property name="halign">start</property>
                                 <property name="css-classes">dim-label</property>
                                 <property name="ellipsize">middle</property>
@@ -73,24 +73,24 @@ mod imp {
 
                         <!-- Stack actions row -->
                         <child>
-                          <object class="gtk_box">
+                          <object class="GtkBox">
                             <property name="orientation">horizontal</property>
                             <property name="spacing">12</property>
                             <property name="halign">start</property>
                             <child>
-                              <object class="gtk_button" id="compose_up_button">
+                              <object class="GtkButton" id="compose_up_button">
                                 <property name="css-classes">suggested-action pill</property>
                                 <child>
-                                  <object class="gtk_box">
+                                  <object class="GtkBox">
                                     <property name="orientation">horizontal</property>
                                     <property name="spacing">6</property>
                                     <child>
-                                      <object class="gtk_image">
+                                      <object class="GtkImage">
                                         <property name="icon-name">media-playback-start-symbolic</property>
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="gtk_label">
+                                      <object class="GtkLabel">
                                         <property name="label">Start</property>
                                       </object>
                                     </child>
@@ -99,19 +99,19 @@ mod imp {
                               </object>
                             </child>
                             <child>
-                              <object class="gtk_button" id="compose_down_button">
+                              <object class="GtkButton" id="compose_down_button">
                                 <property name="css-classes">destructive-action pill</property>
                                 <child>
-                                  <object class="gtk_box">
+                                  <object class="GtkBox">
                                     <property name="orientation">horizontal</property>
                                     <property name="spacing">6</property>
                                     <child>
-                                      <object class="gtk_image">
+                                      <object class="GtkImage">
                                         <property name="icon-name">media-playback-stop-symbolic</property>
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="gtk_label">
+                                      <object class="GtkLabel">
                                         <property name="label">Stop</property>
                                       </object>
                                     </child>
@@ -120,19 +120,19 @@ mod imp {
                               </object>
                             </child>
                             <child>
-                              <object class="gtk_button" id="compose_pull_button">
+                              <object class="GtkButton" id="compose_pull_button">
                                 <property name="css-classes">pill</property>
                                 <child>
-                                  <object class="gtk_box">
+                                  <object class="GtkBox">
                                     <property name="orientation">horizontal</property>
                                     <property name="spacing">6</property>
                                     <child>
-                                      <object class="gtk_image">
+                                      <object class="GtkImage">
                                         <property name="icon-name">folder-download-symbolic</property>
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="gtk_label">
+                                      <object class="GtkLabel">
                                         <property name="label">Pull</property>
                                       </object>
                                     </child>
@@ -145,10 +145,10 @@ mod imp {
 
                         <!-- Services group -->
                         <child>
-                          <object class="adw_preferences_group">
+                          <object class="AdwPreferencesGroup">
                             <property name="title">Services</property>
                             <child>
-                              <object class="gtk_list_box" id="services_list_box">
+                              <object class="GtkListBox" id="services_list_box">
                                 <property name="selection-mode">none</property>
                                 <property name="css-classes">boxed-list</property>
                               </object>
@@ -158,10 +158,10 @@ mod imp {
 
                         <!-- Networks group -->
                         <child>
-                          <object class="adw_preferences_group" id="networks_group">
+                          <object class="AdwPreferencesGroup" id="networks_group">
                             <property name="title">Networks</property>
                             <child>
-                              <object class="gtk_list_box" id="networks_list_box">
+                              <object class="GtkListBox" id="networks_list_box">
                                 <property name="selection-mode">none</property>
                                 <property name="css-classes">boxed-list</property>
                               </object>
@@ -171,7 +171,7 @@ mod imp {
 
                         <!-- Topology group -->
                         <child>
-                          <object class="adw_preferences_group" id="topology_group">
+                          <object class="AdwPreferencesGroup" id="topology_group">
                             <property name="title">Topology</property>
                             <child>
                               <object class="StacksNetworkTopologyView" id="topology_view">
@@ -258,14 +258,17 @@ mod imp {
                             crate::rt::Promise::new(async move {
                                 crate::compose::cli::run_compose_command(
                                     std::path::Path::new(&path_clone),
-                                    crate::compose::cli::ComposeAction::Up { detach: true, build: false },
-                                    None
-                                ).await
-                            }).defer(move |res| {
-                                match res {
-                                    Ok(_) => log::info!("Stack started successfully"),
-                                    Err(e) => log::error!("Failed to start stack: {}", e),
-                                }
+                                    crate::compose::cli::ComposeAction::Up {
+                                        detach: true,
+                                        build: false,
+                                    },
+                                    None,
+                                )
+                                .await
+                            })
+                            .defer(move |res| match res {
+                                Ok(_) => log::info!("Stack started successfully"),
+                                Err(e) => log::error!("Failed to start stack: {}", e),
                             });
                         }
                     }
@@ -283,14 +286,16 @@ mod imp {
                             crate::rt::Promise::new(async move {
                                 crate::compose::cli::run_compose_command(
                                     std::path::Path::new(&path_clone),
-                                    crate::compose::cli::ComposeAction::Down { remove_volumes: false },
-                                    None
-                                ).await
-                            }).defer(move |res| {
-                                match res {
-                                    Ok(_) => log::info!("Stack stopped successfully"),
-                                    Err(e) => log::error!("Failed to stop stack: {}", e),
-                                }
+                                    crate::compose::cli::ComposeAction::Down {
+                                        remove_volumes: false,
+                                    },
+                                    None,
+                                )
+                                .await
+                            })
+                            .defer(move |res| match res {
+                                Ok(_) => log::info!("Stack stopped successfully"),
+                                Err(e) => log::error!("Failed to stop stack: {}", e),
                             });
                         }
                     }
@@ -309,13 +314,13 @@ mod imp {
                                 crate::compose::cli::run_compose_command(
                                     std::path::Path::new(&path_clone),
                                     crate::compose::cli::ComposeAction::Pull,
-                                    None
-                                ).await
-                            }).defer(move |res| {
-                                match res {
-                                    Ok(_) => log::info!("Stack pulled successfully"),
-                                    Err(e) => log::error!("Failed to pull stack: {}", e),
-                                }
+                                    None,
+                                )
+                                .await
+                            })
+                            .defer(move |res| match res {
+                                Ok(_) => log::info!("Stack pulled successfully"),
+                                Err(e) => log::error!("Failed to pull stack: {}", e),
                             });
                         }
                     }
@@ -364,28 +369,39 @@ mod imp {
                 }
 
                 // Bind services list
-                let service_list = stack.service_list(); if true {
-                    self.services_list_box.bind_model(Some(&service_list), |item| {
-                        let service = item.downcast_ref::<crate::model::ComposeService>().unwrap();
-                        glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
-                            .property("service", service)
-                            .build()
-                            .upcast()
-                    });
+                let service_list = stack.service_list();
+                if true {
+                    self.services_list_box
+                        .bind_model(Some(&service_list), |item| {
+                            let service =
+                                item.downcast_ref::<crate::model::ComposeService>().unwrap();
+                            glib::Object::builder::<crate::view::ComposeServiceSummaryRow>()
+                                .property("service", service)
+                                .build()
+                                .upcast()
+                        });
                 }
 
                 // Bind networks list
-                let network_list = stack.network_list(); if true {
-                    self.networks_list_box.bind_model(Some(&network_list), |item| {
-                        let network = item.downcast_ref::<crate::model::DockerNetwork>().unwrap();
-                        glib::Object::builder::<crate::view::NetworkRow>()
-                            .property("network", network)
-                            .build()
-                            .upcast()
-                    });
-                    
+                let network_list = stack.network_list();
+                if true {
+                    self.networks_list_box
+                        .bind_model(Some(&network_list), |item| {
+                            let network =
+                                item.downcast_ref::<crate::model::DockerNetwork>().unwrap();
+                            glib::Object::builder::<crate::view::NetworkRow>()
+                                .property("network", network)
+                                .build()
+                                .upcast()
+                        });
+
                     // Show/hide networks group based on emptiness
-                    let group = self.networks_list_box.parent().unwrap().downcast::<adw::PreferencesGroup>().unwrap();
+                    let group = self
+                        .networks_list_box
+                        .parent()
+                        .unwrap()
+                        .downcast::<adw::PreferencesGroup>()
+                        .unwrap();
                     group.set_visible(network_list.len() > 0);
                     network_list.connect_items_changed(move |model, _, _, _| {
                         group.set_visible(model.n_items() > 0);

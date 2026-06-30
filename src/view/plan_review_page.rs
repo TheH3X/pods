@@ -1,8 +1,8 @@
+use adw::subclass::prelude::*;
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::subclass::prelude::*;
-use adw::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::glib;
 use sourceview5::prelude::*;
 
 mod imp {
@@ -90,7 +90,8 @@ mod imp {
                 let buffer = sourceview5::Buffer::new(None);
 
                 // Set language to diff
-                let manager = sourceview5::LanguageManager::default(); if true {
+                let manager = sourceview5::LanguageManager::default();
+                if true {
                     if let Some(lang) = manager.language("diff") {
                         buffer.set_language(Some(&lang));
                     }

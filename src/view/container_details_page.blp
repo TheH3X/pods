@@ -178,6 +178,18 @@ template $PdsContainerDetailsPage: Widget {
           Adw.PreferencesGroup {
             title: _("Utilities");
 
+            Adw.ActionRow compose_source_row {
+              title: _("Compose Source");
+              activatable: true;
+              action-name: "container-details-page.show-compose-source";
+              icon-name: "view-grid-symbolic";
+              visible: false;
+
+              Image {
+                icon-name: "go-next-symbolic";
+              }
+            }
+
             Adw.ActionRow {
               title: _("Inspection");
               subtitle: _("View all container properties in a structured text form");

@@ -1,11 +1,11 @@
 use std::cell::OnceCell;
 
+use gtk::gio;
+use gtk::glib;
 use gtk::glib::Properties;
 use gtk::glib::prelude::*;
 use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::gio;
-use gtk::glib;
 
 use crate::engine;
 use crate::model;

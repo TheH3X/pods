@@ -4,11 +4,11 @@ use std::sync::OnceLock;
 use futures::stream;
 use gio::prelude::*;
 use gio::subclass::prelude::*;
-use gtk::glib::Properties;
 use glib::clone;
 use glib::subclass::Signal;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
 use indexmap::map::IndexMap;
 
 use crate::engine;

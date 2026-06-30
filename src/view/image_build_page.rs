@@ -1,16 +1,16 @@
 use std::cell::OnceCell;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::OpenFileRequest;
 use gettextrs::gettext;
-use gtk::glib::Properties;
 use glib::clone;
 use gtk::CompositeTemplate;
 use gtk::gio;
 use gtk::glib;
+use gtk::glib::Properties;
+use gtk::glib::subclass::prelude::*;
 
 use crate::engine;
 use crate::model;

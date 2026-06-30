@@ -1,9 +1,9 @@
+use adw::subclass::prelude::*;
+use gtk::glib::Properties;
 use gtk::glib::prelude::*;
 use gtk::glib::subclass::prelude::*;
-use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use gtk::glib::Properties;
 
 use crate::model::StackList;
 
@@ -19,24 +19,24 @@ mod imp {
 
         <!-- Empty state / Open folder prompt -->
         <child>
-          <object class="adw_status_page" id="empty_page">
+          <object class="AdwStatusPage" id="empty_page">
             <property name="icon-name">view-grid-symbolic</property>
             <property name="title">No Stacks Found</property>
             <property name="description">Open a docker-stacks directory to get started</property>
             <property name="vexpand">true</property>
             <child>
-              <object class="gtk_box">
+              <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <property name="spacing">12</property>
                 <property name="halign">center</property>
                 <child>
-                  <object class="gtk_button" id="open_folder_button">
+                  <object class="GtkButton" id="open_folder_button">
                     <property name="label">Open Folder…</property>
                     <property name="css-classes">suggested-action pill</property>
                   </object>
                 </child>
                 <child>
-                  <object class="gtk_button" id="new_stack_button">
+                  <object class="GtkButton" id="new_stack_button">
                     <property name="label">New Stack</property>
                     <property name="css-classes">pill</property>
                   </object>
@@ -48,11 +48,11 @@ mod imp {
 
         <!-- Stack list view -->
         <child>
-          <object class="gtk_box" id="list_container">
+          <object class="GtkBox" id="list_container">
             <property name="orientation">vertical</property>
             <property name="visible">false</property>
             <child>
-              <object class="gtk_box">
+              <object class="GtkBox">
                 <property name="orientation">horizontal</property>
                 <property name="spacing">6</property>
                 <property name="margin-start">12</property>
@@ -60,13 +60,13 @@ mod imp {
                 <property name="margin-top">6</property>
                 <property name="margin-bottom">6</property>
                 <child>
-                  <object class="gtk_search_entry" id="search_entry">
+                  <object class="GtkSearchEntry" id="search_entry">
                     <property name="hexpand">true</property>
                     <property name="placeholder-text">Search stacks…</property>
                   </object>
                 </child>
                 <child>
-                  <object class="gtk_button" id="refresh_button">
+                  <object class="GtkButton" id="refresh_button">
                     <property name="icon-name">view-refresh-symbolic</property>
                     <property name="tooltip-text">Refresh</property>
                   </object>
@@ -74,11 +74,11 @@ mod imp {
               </object>
             </child>
             <child>
-              <object class="gtk_scrolled_window">
+              <object class="GtkScrolledWindow">
                 <property name="hscrollbar-policy">never</property>
                 <property name="vexpand">true</property>
                 <child>
-                  <object class="gtk_list_box" id="list_box">
+                  <object class="GtkListBox" id="list_box">
                     <property name="selection-mode">none</property>
                     <property name="css-classes">boxed-list</property>
                     <property name="margin-start">12</property>
@@ -161,7 +161,9 @@ mod imp {
                         .build();
 
                     dialog.select_folder(
-                        obj.root().and_then(|r| r.downcast::<gtk::Window>().ok()).as_ref(),
+                        obj.root()
+                            .and_then(|r| r.downcast::<gtk::Window>().ok())
+                            .as_ref(),
                         gio::Cancellable::NONE,
                         glib::clone!(
                             #[weak]
