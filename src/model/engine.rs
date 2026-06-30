@@ -2,14 +2,13 @@ use std::cell::OnceCell;
 use std::ops::Deref;
 
 use gtk::glib::Properties;
-use gtk::glib::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib;
 
 use crate::engine;
 use crate::model;
-use crate::monad_boxed_type;
 
 monad_boxed_type!(pub(crate) BoxedEngine(engine::Engine) impls Debug);
 

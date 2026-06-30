@@ -1,4 +1,3 @@
-use anyhow::{Context, Result};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
@@ -92,7 +91,7 @@ impl ImageMetadata {
     /// Generate bind mount suggestions from the image's declared volumes.
     ///
     /// Maps each declared volume to `./appdata/<volume_path>`.
-    pub fn volume_suggestions(&self, service_name: &str) -> Vec<(String, String)> {
+    pub fn volume_suggestions(&self, _service_name: &str) -> Vec<(String, String)> {
         self.declared_volumes
             .iter()
             .map(|vol| {

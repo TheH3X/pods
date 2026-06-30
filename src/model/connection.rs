@@ -3,8 +3,8 @@ use std::cell::OnceCell;
 use std::marker::PhantomData;
 
 use gtk::glib::Properties;
-use gtk::glib::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::gdk;
 use gtk::glib;

@@ -1,6 +1,7 @@
 #![allow(clippy::format_push_string)]
 #![allow(deprecated)]
 
+#[macro_use] mod utils;
 mod application;
 mod compose;
 #[rustfmt::skip]
@@ -8,7 +9,6 @@ mod config;
 mod engine;
 mod model;
 mod rt;
-#[macro_use] mod utils;
 mod view;
 mod widget;
 

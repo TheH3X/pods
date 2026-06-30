@@ -17,7 +17,6 @@ template $PdsClientView: Widget {
 
       setters {
         navigation_split_view.collapsed: false;
-        sidebar.mode: sidebar;
       }
     }
 
@@ -70,7 +69,7 @@ template $PdsClientView: Widget {
                 }
 
                 title-widget: Adw.WindowTitle {
-                  title: C_("app name", "Pods");
+                  title: C_("app name", "Stacks");
                   subtitle: bind template.client as <$Client>.connection as <$Connection>.name;
                 };
 
@@ -89,16 +88,31 @@ template $PdsClientView: Widget {
               ScrolledWindow {
                 hscrollbar-policy: never;
 
-                Adw.Sidebar sidebar {
-                  activated => $on_sidebar_row_activated() swapped;
-                  mode: page;
+                ListBox sidebar {
+                  styles [
+                    "navigation-sidebar",
+                  ]
+                  row-activated => $on_sidebar_row_activated();
+                  selection-mode: browse;
 
-                  Adw.SidebarSection {
-                    Adw.SidebarItem {
-                      icon-name: "package-x-generic-symbolic";
-                      title: _("Containers");
+                  ListBoxRow containers_row {
+                    Box {
+                      orientation: horizontal;
+                      spacing: 12;
+                      margin-start: 12;
+                      margin-end: 12;
+                      margin-top: 8;
+                      margin-bottom: 8;
 
-                      suffix: Box {
+                      Image {
+                        icon-name: "package-x-generic-symbolic";
+                      }
+                      Label {
+                        label: _("Containers");
+                        hexpand: true;
+                        halign: start;
+                      }
+                      Box {
                         spacing: 6;
                         valign: center;
 
@@ -131,19 +145,34 @@ template $PdsClientView: Widget {
                           label: bind template.client as <$Client>.container-list as <$ContainerList>.dead;
                           visible: bind template.client as <$Client>.container-list as <$ContainerList>.dead;
                         }
-                      };
+                      }
                     }
+                  }
 
-                    Adw.SidebarItem {
-                      icon-name: "pods-symbolic";
-                      title: _("Pods");
-                      visible: bind template
-                        .client as <$Client>
-                        .engine as <$Engine>
-                        .capabilities as <$EngineCapabilities>
-                        .pods;
+                  ListBoxRow pods_row {
+                    visible: bind template
+                      .client as <$Client>
+                      .engine as <$Engine>
+                      .capabilities as <$EngineCapabilities>
+                      .pods;
 
-                      suffix: Box {
+                    Box {
+                      orientation: horizontal;
+                      spacing: 12;
+                      margin-start: 12;
+                      margin-end: 12;
+                      margin-top: 8;
+                      margin-bottom: 8;
+
+                      Image {
+                        icon-name: "pods-symbolic";
+                      }
+                      Label {
+                        label: _("Pods");
+                        hexpand: true;
+                        halign: start;
+                      }
+                      Box {
                         spacing: 6;
                         valign: center;
 
@@ -176,19 +205,48 @@ template $PdsClientView: Widget {
                           label: bind template.client as <$Client>.pod-list as <$PodList>.degraded;
                           visible: bind template.client as <$Client>.pod-list as <$PodList>.degraded;
                         }
-                      };
+                      }
                     }
+                  }
 
-                    Adw.SidebarItem {
-                      icon-name: "view-grid-symbolic";
-                      title: _("Stacks");
+                  ListBoxRow stacks_row {
+                    Box {
+                      orientation: horizontal;
+                      spacing: 12;
+                      margin-start: 12;
+                      margin-end: 12;
+                      margin-top: 8;
+                      margin-bottom: 8;
+
+                      Image {
+                        icon-name: "view-grid-symbolic";
+                      }
+                      Label {
+                        label: _("Stacks");
+                        hexpand: true;
+                        halign: start;
+                      }
                     }
+                  }
 
-                    Adw.SidebarItem {
-                      icon-name: "image-x-generic-symbolic";
-                      title: _("Images");
+                  ListBoxRow images_row {
+                    Box {
+                      orientation: horizontal;
+                      spacing: 12;
+                      margin-start: 12;
+                      margin-end: 12;
+                      margin-top: 8;
+                      margin-bottom: 8;
 
-                      suffix: Box {
+                      Image {
+                        icon-name: "image-x-generic-symbolic";
+                      }
+                      Label {
+                        label: _("Images");
+                        hexpand: true;
+                        halign: start;
+                      }
+                      Box {
                         spacing: 6;
                         valign: center;
 
@@ -211,14 +269,28 @@ template $PdsClientView: Widget {
                           label: bind template.client as <$Client>.image-list as <$ImageList>.intermediates;
                           visible: bind template.client as <$Client>.image-list as <$ImageList>.intermediates;
                         }
-                      };
+                      }
                     }
+                  }
 
-                    Adw.SidebarItem {
-                      icon-name: "drive-harddisk-symbolic";
-                      title: _("Volumes");
+                  ListBoxRow volumes_row {
+                    Box {
+                      orientation: horizontal;
+                      spacing: 12;
+                      margin-start: 12;
+                      margin-end: 12;
+                      margin-top: 8;
+                      margin-bottom: 8;
 
-                      suffix: Box {
+                      Image {
+                        icon-name: "drive-harddisk-symbolic";
+                      }
+                      Label {
+                        label: _("Volumes");
+                        hexpand: true;
+                        halign: start;
+                      }
+                      Box {
                         spacing: 6;
                         valign: center;
 
@@ -241,16 +313,28 @@ template $PdsClientView: Widget {
                           label: bind template.client as <$Client>.volume-list as <$VolumeList>.unused;
                           visible: bind template.client as <$Client>.volume-list as <$VolumeList>.unused;
                         }
-                      };
+                      }
                     }
                   }
 
-                  Adw.SidebarSection {
-                    Adw.SidebarItem {
-                      icon-name: "about-symbolic";
-                      title: bind template.client as <$Client>.engine as <$Engine>.typ;
+                  ListBoxRow info_row {
+                    Box {
+                      orientation: horizontal;
+                      spacing: 12;
+                      margin-start: 12;
+                      margin-end: 12;
+                      margin-top: 8;
+                      margin-bottom: 8;
 
-                      suffix: Stack version_stack {
+                      Image {
+                        icon-name: "about-symbolic";
+                      }
+                      Label {
+                        label: bind template.client as <$Client>.engine as <$Engine>.typ;
+                        hexpand: true;
+                        halign: start;
+                      }
+                      Stack version_stack {
                         styles [
                           "status-badge-small",
                           "version",
@@ -271,7 +355,7 @@ template $PdsClientView: Widget {
 
                           child: Label version_label {};
                         }
-                      };
+                      }
                     }
                   }
                 }
@@ -342,6 +426,7 @@ template $PdsClientView: Widget {
                     name: "stacks";
 
                     child: $StacksStacksPanel stacks_panel {
+                      stack-manager: bind template.client as <$Client>.stack-manager;
                       stack-list: bind template.client as <$Client>.stack-manager as <$StackManager>.stack-list;
                     };
                   }

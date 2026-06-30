@@ -7,10 +7,10 @@ use std::sync::OnceLock;
 use futures::Future;
 use gtk::glib::Properties;
 use glib::clone;
-use gtk::glib::prelude::\*;
+use gtk::glib::prelude::*;
 use glib::property::PropertySet;
 use glib::subclass::Signal;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib;
 

@@ -1,6 +1,6 @@
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use gettextrs::gettext;
 use gtk::glib::Properties;
 use glib::closure;
@@ -35,7 +35,19 @@ mod imp {
         #[template_child]
         pub(super) search_button: TemplateChild<gtk::ToggleButton>,
         #[template_child]
-        pub(super) sidebar: TemplateChild<adw::Sidebar>,
+        pub(super) sidebar: TemplateChild<gtk::ListBox>,
+        #[template_child]
+        pub(super) containers_row: TemplateChild<gtk::ListBoxRow>,
+        #[template_child]
+        pub(super) pods_row: TemplateChild<gtk::ListBoxRow>,
+        #[template_child]
+        pub(super) stacks_row: TemplateChild<gtk::ListBoxRow>,
+        #[template_child]
+        pub(super) images_row: TemplateChild<gtk::ListBoxRow>,
+        #[template_child]
+        pub(super) volumes_row: TemplateChild<gtk::ListBoxRow>,
+        #[template_child]
+        pub(super) info_row: TemplateChild<gtk::ListBoxRow>,
         #[template_child]
         pub(super) version_stack: TemplateChild<gtk::Stack>,
         #[template_child]
@@ -196,7 +208,7 @@ mod imp {
         fn on_navigation_split_view_notify_show_content(&self) {
             if self.navigation_split_view.is_collapsed() {
                 self.search_button.set_active(false);
-                self.sidebar.set_selected(gtk::INVALID_LIST_POSITION);
+                self.sidebar.select_row(None::<&gtk::ListBoxRow>);
                 self.exit_selection_mode();
             }
         }
@@ -213,7 +225,7 @@ mod imp {
         fn on_search_button_toggled(&self) {
             if self.search_button.is_active() {
                 self.stack.set_visible_child_name("search");
-                self.sidebar.set_selected(gtk::INVALID_LIST_POSITION);
+                self.sidebar.select_row(None::<&gtk::ListBoxRow>);
                 self.navigation_split_view.set_show_content(true);
             } else if !self.navigation_split_view.is_collapsed() {
                 self.stack.set_visible_child_name("panels");
@@ -223,23 +235,32 @@ mod imp {
         }
 
         #[template_callback]
-        fn on_sidebar_row_activated(&self, index: u32) {
-            self.panels_stack.set_visible_child_name(match index {
-                0 => "containers",
-                1 => "pods",
-                2 => "stacks",
-                3 => "images",
-                4 => "volumes",
-                5 => "info",
-                _ => unreachable!(),
-            });
+        fn on_sidebar_row_activated(&self, row: Option<&gtk::ListBoxRow>) {
+            if let Some(row) = row {
+                self.panels_stack
+                    .set_visible_child_name(if row == &*self.containers_row {
+                        "containers"
+                    } else if row == &*self.pods_row {
+                        "pods"
+                    } else if row == &*self.stacks_row {
+                        "stacks"
+                    } else if row == &*self.images_row {
+                        "images"
+                    } else if row == &*self.volumes_row {
+                        "volumes"
+                    } else if row == &*self.info_row {
+                        "info"
+                    } else {
+                        unreachable!()
+                    });
 
-            self.stack.set_visible_child_name("panels");
-            self.panels_navigation_view.pop_to_tag("home");
-            self.search_navigation_view.pop_to_tag("home");
-            self.navigation_split_view.set_show_content(true);
+                self.stack.set_visible_child_name("panels");
+                self.panels_navigation_view.pop_to_tag("home");
+                self.search_navigation_view.pop_to_tag("home");
+                self.navigation_split_view.set_show_content(true);
 
-            self.search_button.set_active(false);
+                self.search_button.set_active(false);
+            }
         }
 
         #[template_callback]
@@ -270,17 +291,18 @@ mod imp {
         fn restore_sidebar(&self) {
             match self.stack.visible_child_name().as_deref() {
                 Some("search") => self.search_button.set_active(true),
-                Some("panels") => self.sidebar.set_selected(
-                    match self.panels_stack.visible_child_name().unwrap().as_str() {
-                        "containers" => 0,
-                        "pods" => 1,
-                        "stacks" => 2,
-                        "images" => 3,
-                        "volumes" => 4,
-                        "info" => 5,
+                Some("panels") => {
+                    let target_row = match self.panels_stack.visible_child_name().unwrap().as_str() {
+                        "containers" => &*self.containers_row,
+                        "pods" => &*self.pods_row,
+                        "stacks" => &*self.stacks_row,
+                        "images" => &*self.images_row,
+                        "volumes" => &*self.volumes_row,
+                        "info" => &*self.info_row,
                         _ => unreachable!(),
-                    },
-                ),
+                    };
+                    self.sidebar.select_row(Some(target_row));
+                }
                 _ => {}
             }
         }

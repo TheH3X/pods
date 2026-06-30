@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    external: true

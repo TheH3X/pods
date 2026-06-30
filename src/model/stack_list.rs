@@ -1,24 +1,31 @@
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::\*;
-use gio::subclass::prelude::*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
 use gtk::prelude::*;
-use std::cell::OnceCell;
 
 use crate::model::Client;
 
 mod imp {
     use super::*;
 
-    #[derive(Debug, Default, Properties)]
+    #[derive(Debug, Properties)]
     #[properties(wrapper_type = super::StackList)]
     pub(crate) struct StackList {
-        #[property(get, set, construct_only)]
-        pub(super) client: OnceCell<glib::WeakRef<Client>>,
+        #[property(get, set, construct_only, nullable)]
+        pub(super) client: glib::WeakRef<Client>,
         // The list model
         pub(super) store: gio::ListStore,
+    }
+
+    impl Default for StackList {
+        fn default() -> Self {
+            Self {
+                client: glib::WeakRef::new(),
+                store: gio::ListStore::new::<crate::model::Stack>(),
+            }
+        }
     }
 
     #[glib::object_subclass]

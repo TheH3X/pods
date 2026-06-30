@@ -4,7 +4,7 @@ use std::fs;
 use std::path::{Path, PathBuf};
 
 use super::backup;
-use super::models::{ComposeService, Network, Stack, StackLayout};
+use super::models::{ComposeService, Network, StackLayout};
 use super::plan::PlanState;
 use super::yaml_io::{self, ComposeFile};
 

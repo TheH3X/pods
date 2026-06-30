@@ -1,4 +1,3 @@
-use anyhow::Result;
 use std::path::Path;
 
 use super::models::ComposeService;
@@ -125,13 +124,13 @@ pub fn suggest_appdata_moves(
 }
 
 /// Rewrite a volume spec to use the appdata convention.
-pub fn rewrite_to_appdata(volume_spec: &str, service_name: &str) -> Option<String> {
+pub fn rewrite_to_appdata(volume_spec: &str, _service_name: &str) -> Option<String> {
     let parts: Vec<&str> = volume_spec.splitn(3, ':').collect();
     if parts.len() < 2 {
         return None;
     }
 
-    let host_path = parts[0];
+    let _host_path = parts[0];
     let container_path = parts[1];
     let options = parts.get(2).copied();
 
@@ -147,3 +146,89 @@ pub fn rewrite_to_appdata(volume_spec: &str, service_name: &str) -> Option<Strin
 
     Some(new_spec)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::compose::models::ComposeService;
+    use std::path::Path;
+
+    fn make_service_with_volumes(name: &str, volumes: &[&str]) -> ComposeService {
+        let mut svc = ComposeService::new(name, "nginx:latest");
+        svc.volumes = volumes.iter().map(|v| v.to_string()).collect();
+        svc
+    }
+
+    #[test]
+    fn test_absolute_path_outside_stack_flagged() {
+        let svc = make_service_with_volumes("web", &["/data/myapp:/app/data"]);
+        let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
+        assert!(!report.issues.is_empty());
+        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::AbsolutePathOutsideStack));
+    }
+
+    #[test]
+    fn test_system_path_flagged() {
+        let svc = make_service_with_volumes("web", &["/etc/nginx:/etc/nginx:ro"]);
+        let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
+        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::SystemPathReference));
+    }
+
+    #[test]
+    fn test_home_dir_reference_flagged() {
+        let svc = make_service_with_volumes("web", &["~/data:/app/data"]);
+        let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
+        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::HomeDirReference));
+    }
+
+    #[test]
+    fn test_migratable_to_appdata_flagged() {
+        let svc = make_service_with_volumes("web", &["./data:/app/data"]);
+        let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
+        assert!(report.issues.iter().any(|i| i.issue_type == IssueType::MigratableToAppdata));
+    }
+
+    #[test]
+    fn test_appdata_mount_clean() {
+        let svc = make_service_with_volumes("web", &["./appdata/nginx:/app/data"]);
+        let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
+        // ./appdata/ is the canonical location — no portability issues
+        assert!(report.issues.is_empty());
+    }
+
+    #[test]
+    fn test_no_volumes_no_issues() {
+        let svc = ComposeService::new("web", "nginx:latest");
+        let report = check_bind_portability(&svc, Path::new("/stacks/mystack"));
+        assert!(report.issues.is_empty());
+    }
+
+    #[test]
+    fn test_rewrite_to_appdata_basic() {
+        let result = rewrite_to_appdata("./data:/var/lib/data", "myservice");
+        assert!(result.is_some());
+        let spec = result.unwrap();
+        assert!(spec.starts_with("./appdata/var/lib/data:"));
+    }
+
+    #[test]
+    fn test_rewrite_to_appdata_with_options() {
+        let result = rewrite_to_appdata("./data:/var/lib/data:ro", "myservice");
+        assert!(result.is_some());
+        let spec = result.unwrap();
+        assert!(spec.ends_with(":ro"));
+    }
+
+    #[test]
+    fn test_suggest_appdata_moves_filters_clean() {
+        let services = vec![
+            make_service_with_volumes("web", &["./appdata/nginx:/app"]),
+            make_service_with_volumes("db", &["/etc/pgdata:/var/lib/postgresql/data"]),
+        ];
+        let reports = suggest_appdata_moves(&services, Path::new("/stacks/mystack"));
+        // Only db has an issue
+        assert_eq!(reports.len(), 1);
+        assert_eq!(reports[0].service_name, "db");
+    }
+}
+

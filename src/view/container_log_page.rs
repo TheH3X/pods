@@ -11,8 +11,8 @@ use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::Choice;
 use ashpd::desktop::file_chooser::SaveFileRequest;

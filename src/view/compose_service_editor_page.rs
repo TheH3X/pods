@@ -1,8 +1,9 @@
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{gio, glib};
+use gtk::glib;
+use adw::prelude::*;
 
 mod imp {
     use super::*;
@@ -299,7 +300,7 @@ mod imp {
                 self,
                 move |_| {
                     if let Some(service) = page.obj().service() {
-                        let image = service.image().unwrap_or_default();
+                        let image = service.image();
                         if !image.is_empty() {
                             log::info!("Auto-populating metadata for image: {}", image);
                             // In real environment, this triggers async ImageMetadata::fetch

@@ -1,6 +1,6 @@
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::file_chooser::FileFilter;
 use ashpd::desktop::file_chooser::SaveFileRequest;

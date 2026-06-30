@@ -1,15 +1,15 @@
-use gtk::glib::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
-use gtk::subclass::prelude::*;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{gio, glib};
+use gtk::glib;
+use gtk::glib::Properties;
 
 mod imp {
     use super::*;
 
     #[derive(Debug, Default, Properties, gtk::CompositeTemplate)]
+    #[properties(wrapper_type = super::StackEditorPage)]
     #[template(string = r#"
     <interface>
       <template class="StacksStackEditorPage" parent="adw_navigation_page">

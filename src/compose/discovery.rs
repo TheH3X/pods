@@ -1,6 +1,6 @@
-use super::models::{ComposeService, Stack, StackLayout};
+use super::models::{Stack, StackLayout};
 use super::yaml_io;
-use anyhow::{Context, Result};
+use anyhow::Result;
 use std::fs;
 use std::path::{Path, PathBuf};
 
@@ -316,4 +316,32 @@ mod tests {
             assert_eq!(stack.name, "web");
         }
     }
+
+    /// Verifies that when both a root-level compose file AND service subdirectories exist,
+    /// the layout is detected as FLAT (root compose file takes priority over subdirs).
+    #[test]
+    fn test_detect_mixed_layout() {
+        let mixed_path = fixtures_dir().join("mixed_stack");
+        if mixed_path.exists() {
+            // mixed_stack has docker-compose.yml at root AND a web/ subdir with compose.yml
+            // Current policy: root-level compose → FLAT takes priority
+            assert_eq!(detect_layout(&mixed_path), StackLayout::Flat);
+        }
+    }
+
+    /// Verifies that a mixed stack scanned as FLAT reads only the root compose file.
+    #[test]
+    fn test_scan_mixed_stack() {
+        let mixed_path = fixtures_dir().join("mixed_stack");
+        if mixed_path.exists() {
+            let stack = scan_stack(&mixed_path).unwrap();
+            assert_eq!(stack.name, "mixed_stack");
+            assert_eq!(stack.layout, StackLayout::Flat);
+            // Only the root compose file's service (proxy) should be read
+            assert!(stack.services.iter().any(|s| s.name == "proxy"));
+            // The web/ subdir service should NOT appear (flat layout only reads root file)
+            assert!(!stack.services.iter().any(|s| s.name == "nginx"));
+        }
+    }
 }
+

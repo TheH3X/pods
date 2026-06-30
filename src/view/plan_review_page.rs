@@ -1,16 +1,15 @@
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
-use gtk::subclass::prelude::*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{gio, glib};
+use gtk::glib;
 use sourceview5::prelude::*;
 
 mod imp {
     use super::*;
 
     #[derive(Debug, Default, Properties, gtk::CompositeTemplate)]
+    #[properties(wrapper_type = super::PlanReviewPage)]
     #[template(string = r#"
     <interface>
       <template class="StacksPlanReviewPage" parent="adw_navigation_page">

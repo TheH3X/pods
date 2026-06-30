@@ -1,9 +1,6 @@
 use indexmap::IndexMap;
-use serde_json::Value;
-use std::collections::HashMap;
 
-use super::models::{ComposeService, Network, Stack, StackLayout};
-use super::yaml_io;
+use super::models::{ComposeService, Network, Stack};
 
 /// Represents an in-memory editing session for a stack.
 /// Tracks changes against the on-disk state and produces diffs.
@@ -277,3 +274,128 @@ impl PlanState {
         self.working.services.get_mut(name)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::compose::models::ComposeService;
+
+    fn make_stack_with_services(names: &[&str]) -> Stack {
+        let services = names.iter().map(|n| ComposeService::new(n, "nginx:latest")).collect();
+        Stack {
+            name: "test".to_string(),
+            root_path: std::path::PathBuf::from("/tmp/test"),
+            layout: StackLayout::Flat,
+            services,
+            networks: vec![],
+        }
+    }
+
+    #[test]
+    fn test_plan_state_from_stack() {
+        let stack = make_stack_with_services(&["web", "db"]);
+        let plan = PlanState::from_stack(&stack);
+        assert!(plan.original.services.contains_key("web"));
+        assert!(plan.original.services.contains_key("db"));
+        assert!(!plan.is_dirty());
+    }
+
+    #[test]
+    fn test_add_service() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        assert!(plan.is_dirty());
+        let summary = plan.change_summary();
+        assert!(summary.added.contains(&"cache".to_string()));
+        assert!(summary.removed.is_empty());
+        assert!(summary.modified.is_empty());
+    }
+
+    #[test]
+    fn test_remove_service() {
+        let stack = make_stack_with_services(&["web", "db"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Remove("db".to_string()));
+        assert!(plan.is_dirty());
+        let summary = plan.change_summary();
+        assert!(summary.removed.contains(&"db".to_string()));
+        assert!(summary.added.is_empty());
+    }
+
+    #[test]
+    fn test_modify_service() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        let mut modified = ComposeService::new("web", "nginx:1.25");
+        modified.name = "web".to_string();
+        plan.apply_edit(ServiceEdit::Modify("web".to_string(), modified));
+        assert!(plan.is_dirty());
+        let summary = plan.change_summary();
+        assert!(summary.modified.contains(&"web".to_string()));
+    }
+
+    #[test]
+    fn test_rename_service() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Rename("web".to_string(), "frontend".to_string()));
+        assert!(!plan.working.services.contains_key("web"));
+        assert!(plan.working.services.contains_key("frontend"));
+        assert!(plan.is_dirty());
+    }
+
+    #[test]
+    fn test_duplicate_service() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Duplicate("web".to_string(), "web2".to_string()));
+        assert!(plan.working.services.contains_key("web"));
+        assert!(plan.working.services.contains_key("web2"));
+        // Duplicated service should have no container_name
+        assert!(plan.working.services["web2"].container_name.is_none());
+    }
+
+    #[test]
+    fn test_reset() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        assert!(plan.is_dirty());
+        plan.reset();
+        assert!(!plan.is_dirty());
+        assert!(!plan.working.services.contains_key("cache"));
+    }
+
+    #[test]
+    fn test_commit() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        plan.commit();
+        // After commit, original reflects the new state
+        assert!(plan.original.services.contains_key("cache"));
+        assert!(!plan.is_dirty());
+    }
+
+    #[test]
+    fn test_generate_diff_includes_added_service() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.apply_edit(ServiceEdit::Add("cache".to_string(), ComposeService::new("cache", "redis:7")));
+        let diff = plan.generate_diff();
+        assert!(diff.contains("+++ services/cache"));
+        assert!(diff.contains("1 added"));
+    }
+
+    #[test]
+    fn test_add_remove_network() {
+        let stack = make_stack_with_services(&["web"]);
+        let mut plan = PlanState::from_stack(&stack);
+        plan.add_network("frontend".to_string(), crate::compose::models::Network::new("frontend"));
+        assert!(plan.change_summary().networks_changed);
+        plan.remove_network("frontend");
+        assert!(!plan.change_summary().networks_changed);
+    }
+}
+

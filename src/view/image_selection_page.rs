@@ -3,8 +3,8 @@ use std::cmp::Ordering;
 use std::sync::OnceLock;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use gtk::glib::Properties;
 use glib::clone;
 use glib::closure;

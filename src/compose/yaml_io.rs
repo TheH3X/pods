@@ -2,9 +2,9 @@ use indexmap::IndexMap;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::Path;
 
-use super::models::{ComposeService, Network, Stack, StackLayout};
+use super::models::{ComposeService, Network};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ComposeFile {

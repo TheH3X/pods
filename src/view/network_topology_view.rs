@@ -1,9 +1,9 @@
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib::Properties;
 use gtk::cairo;
 use gtk::prelude::*;
-use gtk::{gio, glib};
+use gtk::glib;
 
 mod imp {
     use super::*;
@@ -85,8 +85,8 @@ impl NetworkTopologyView {
             None => return,
         };
 
-        let services = stack.service_list().map(|l| l.n_items()).unwrap_or(0);
-        let networks = stack.network_list().map(|l| l.n_items()).unwrap_or(0);
+        let services = stack.service_list().n_items();
+        let networks = stack.network_list().n_items();
 
         if services == 0 && networks == 0 {
             // Draw empty state

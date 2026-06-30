@@ -4,8 +4,8 @@ use std::collections::HashMap;
 use std::rc::Rc;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use bytes::Bytes;
 use futures::StreamExt;
 use gettextrs::gettext;

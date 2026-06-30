@@ -1,8 +1,7 @@
 use gtk::glib::Properties;
-use gtk::glib::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::gio;
 use gtk::glib;
 use std::cell::OnceCell;
 
@@ -86,13 +85,8 @@ impl Stack {
         }));
         obj.set_service_count(dto.services.len() as u32);
 
-        if let Some(service_list) = obj.service_list() {
-            service_list.update_from_dtos(dto.services.clone());
-        }
-
-        if let Some(network_list) = obj.network_list() {
-            network_list.update_from_dtos(dto.networks.clone());
-        }
+        obj.service_list().update_from_dtos(dto.services.clone());
+        obj.network_list().update_from_dtos(dto.networks.clone());
 
         obj
     }

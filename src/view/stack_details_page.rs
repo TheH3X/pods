@@ -1,8 +1,8 @@
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{gio, glib};
+use gtk::glib;
 
 mod imp {
     use super::*;

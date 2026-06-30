@@ -2,8 +2,8 @@ use std::cell::Cell;
 use std::cell::OnceCell;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use gettextrs::gettext;
 use gtk::glib::Properties;
 use glib::clone;

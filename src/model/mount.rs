@@ -4,9 +4,9 @@ use std::fmt;
 use std::sync::OnceLock;
 
 use gtk::glib::Properties;
-use gtk::glib::prelude::\*;
+use gtk::glib::prelude::*;
 use glib::subclass::Signal;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib;
 

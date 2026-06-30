@@ -1,10 +1,9 @@
-use gtk::glib::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
-use gtk::subclass::prelude::*;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use gtk::glib::Properties;
 
 use crate::model::StackList;
 
@@ -110,8 +109,12 @@ mod imp {
         pub(super) new_stack_button: gtk::TemplateChild<gtk::Button>,
         #[template_child]
         pub(super) refresh_button: gtk::TemplateChild<gtk::Button>,
-        #[property(get, set)]
-        pub(super) stack_list: glib::WeakRef<crate::model::StackList>,
+        /// Bound from client.stack_manager — used for folder selection & refresh.
+        #[property(get, set, nullable)]
+        pub(super) stack_manager: glib::WeakRef<crate::model::StackManager>,
+        /// Derived from stack_manager.stack_list — used for list binding.
+        #[property(get, set = Self::set_stack_list, nullable)]
+        pub(super) stack_list: glib::WeakRef<StackList>,
     }
 
     #[glib::object_subclass]
@@ -147,27 +150,30 @@ mod imp {
 
             let obj = self.obj().clone();
 
-            // Open folder button
+            // ── Open folder button ──────────────────────────────────────────
             self.open_folder_button.connect_clicked(glib::clone!(
                 #[weak]
                 obj,
                 move |_| {
-                    log::info!("Open folder clicked — showing file chooser");
                     let dialog = gtk::FileDialog::builder()
                         .title("Select docker-stacks root directory")
                         .modal(true)
                         .build();
-                    
+
                     dialog.select_folder(
                         obj.root().and_then(|r| r.downcast::<gtk::Window>().ok()).as_ref(),
                         gio::Cancellable::NONE,
                         glib::clone!(
+                            #[weak]
+                            obj,
                             move |result| {
                                 if let Ok(folder) = result {
                                     if let Some(path) = folder.path() {
-                                        log::info!("Selected stacks root: {:?}", path);
-                                        // In a real app we'd save this to GSettings
-                                        // and then trigger StackManager to scan the root.
+                                        let path_str = path.to_string_lossy().to_string();
+                                        log::info!("Selected stacks root: {}", path_str);
+                                        if let Some(mgr) = obj.stack_manager() {
+                                            mgr.set_root_and_refresh(&path_str);
+                                        }
                                     }
                                 }
                             }
@@ -176,26 +182,38 @@ mod imp {
                 }
             ));
 
-            // New stack button
+            // ── New stack button ────────────────────────────────────────────
             self.new_stack_button.connect_clicked(glib::clone!(
                 #[weak]
                 obj,
                 move |_| {
-                    log::info!("New stack clicked — showing create dialog");
                     let nav_page = crate::view::StackEditorPage::new();
                     crate::utils::navigation_view(&obj).push(&nav_page);
                 }
             ));
 
-            // Refresh button
+            // ── Refresh button ──────────────────────────────────────────────
             self.refresh_button.connect_clicked(glib::clone!(
                 #[weak]
                 obj,
                 move |_| {
-                    log::info!("Refresh stacks");
-                    if let Some(_list) = obj.stack_list() {
-                        // list.refresh() would be called here.
-                        // For MVP, we just log it since the backend poll isn't running.
+                    log::info!("Refreshing stacks");
+                    if let Some(mgr) = obj.stack_manager() {
+                        mgr.refresh();
+                    }
+                }
+            ));
+
+            // ── Row activation → navigate to StackDetailsPage ───────────────
+            self.list_box.connect_row_activated(glib::clone!(
+                #[weak]
+                obj,
+                move |_, row| {
+                    let stack_row = row.downcast_ref::<crate::view::StackRow>().unwrap();
+                    if let Some(stack) = stack_row.stack() {
+                        let details = crate::view::StackDetailsPage::new();
+                        details.set_stack(Some(&stack));
+                        crate::utils::navigation_view(&obj).push(&details);
                     }
                 }
             ));
@@ -212,6 +230,7 @@ mod imp {
             }
 
             self.stack_list.set(value);
+
             if let Some(list) = value {
                 let has_items = list.n_items() > 0;
                 self.empty_page.set_visible(!has_items);
@@ -233,9 +252,11 @@ mod imp {
                     empty_page.set_visible(!has_items);
                     list_container.set_visible(has_items);
                 });
+            } else {
+                // No list — show empty state
+                self.empty_page.set_visible(true);
+                self.list_container.set_visible(false);
             }
-
-            self.stack_list.set(value);
         }
     }
 }

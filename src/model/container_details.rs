@@ -2,14 +2,13 @@ use std::cell::Cell;
 use std::cell::OnceCell;
 
 use gtk::glib::Properties;
-use gtk::glib::prelude::\*;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::prelude::*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib;
 
 use crate::engine;
 use crate::model;
-use crate::monad_boxed_type;
 
 monad_boxed_type!(pub(crate) BoxedHealthConfig(engine::dto::HealthConfig) impls Debug is nullable);
 

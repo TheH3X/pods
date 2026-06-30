@@ -1,0 +1,15 @@
+# Mixed layout: root-level compose file AND service subdirectories
+# Discovery must handle this ambiguous case gracefully
+services:
+  proxy:
+    image: traefik:v3
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "8080:8080"
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    driver: bridge

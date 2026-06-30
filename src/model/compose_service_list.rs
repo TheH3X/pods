@@ -1,21 +1,28 @@
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::\*;
-use gio::subclass::prelude::*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;
 use gtk::prelude::*;
-use std::cell::OnceCell;
 
 mod imp {
     use super::*;
 
-    #[derive(Debug, Default, Properties)]
+    #[derive(Debug, Properties)]
     #[properties(wrapper_type = super::ComposeServiceList)]
     pub(crate) struct ComposeServiceList {
-        #[property(get, set, construct_only)]
-        pub(super) stack: OnceCell<glib::WeakRef<crate::model::Stack>>,
+        #[property(get, set, construct_only, nullable)]
+        pub(super) stack: glib::WeakRef<crate::model::Stack>,
         pub(super) store: gio::ListStore,
+    }
+
+    impl Default for ComposeServiceList {
+        fn default() -> Self {
+            Self {
+                stack: glib::WeakRef::new(),
+                store: gio::ListStore::new::<crate::model::ComposeService>(),
+            }
+        }
     }
 
     #[glib::object_subclass]

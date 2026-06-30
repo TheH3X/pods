@@ -6,7 +6,7 @@ use std::sync::atomic::Ordering;
 use gio::prelude::*;
 use gtk::glib::Properties;
 use glib::clone;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::gio;
 use gtk::glib;

@@ -1,9 +1,10 @@
 use std::path::PathBuf;
 
 use gtk::glib::Properties;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib;
+use gtk::glib::prelude::*;
 use std::cell::OnceCell;
 
 use crate::model::StackList;
@@ -68,9 +69,7 @@ impl StackManager {
             match crate::compose::discovery::scan_root(&path) {
                 Ok(stacks) => {
                     log::info!("Discovered {} stacks in {}", stacks.len(), path.display());
-                    if let Some(list) = self.stack_list() {
-                        list.update_from_scan(stacks);
-                    }
+                    self.stack_list().update_from_scan(stacks);
                 }
                 Err(e) => {
                     log::error!("Failed to scan stacks directory: {}", e);

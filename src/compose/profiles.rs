@@ -179,3 +179,83 @@ fn render_template(template: &str, service_name: &str, port: &str, domain: &str)
         .replace("{{port}}", port)
         .replace("{{domain}}", domain)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_load_profiles_returns_all() {
+        let profiles = load_profiles();
+        assert!(profiles.len() >= 4); // Homepage, Homarr, Organizr, Traefik HTTP, Traefik HTTPS
+        assert!(profiles.iter().any(|p| p.name == "Homepage"));
+        assert!(profiles.iter().any(|p| p.name == "Traefik HTTP"));
+        assert!(profiles.iter().any(|p| p.name == "Traefik HTTPS"));
+    }
+
+    #[test]
+    fn test_render_template_substitutes_all_vars() {
+        let result = render_template(
+            "{{service_name}}.{{domain}}:{{port}}",
+            "myapp",
+            "8080",
+            "example.com",
+        );
+        assert_eq!(result, "myapp.example.com:8080");
+    }
+
+    #[test]
+    fn test_apply_homepage_labels() {
+        let mut labels = IndexMap::new();
+        apply_homepage_labels(&mut labels, "grafana", "3000");
+        assert!(labels.contains_key("homepage.name"));
+        assert_eq!(labels["homepage.name"], "grafana");
+        assert!(labels.contains_key("homepage.href"));
+        assert!(labels["homepage.href"].contains("grafana"));
+    }
+
+    #[test]
+    fn test_apply_traefik_labels_http() {
+        let mut labels = IndexMap::new();
+        apply_traefik_labels(&mut labels, "myapp", "8080", "example.com", false);
+        assert!(labels.contains_key("traefik.enable"));
+        assert_eq!(labels["traefik.enable"], "true");
+        // HTTP should use "web" entrypoint, not "websecure"
+        let entrypoints_key = labels
+            .keys()
+            .find(|k| k.contains("entrypoints"))
+            .unwrap()
+            .clone();
+        assert_eq!(labels[&entrypoints_key], "web");
+    }
+
+    #[test]
+    fn test_apply_traefik_labels_https() {
+        let mut labels = IndexMap::new();
+        apply_traefik_labels(&mut labels, "myapp", "443", "example.com", true);
+        let entrypoints_key = labels
+            .keys()
+            .find(|k| k.contains("entrypoints"))
+            .unwrap()
+            .clone();
+        assert_eq!(labels[&entrypoints_key], "websecure");
+        // HTTPS should include TLS config
+        assert!(labels.keys().any(|k| k.contains(".tls")));
+    }
+
+    #[test]
+    fn test_profile_labels_contains_service_name() {
+        let profiles = load_profiles();
+        let homepage = profiles.iter().find(|p| p.name == "Homepage").unwrap();
+        let mut labels = IndexMap::new();
+        apply_profile_labels(&mut labels, homepage, "jellyfin", "8096", "home.local");
+        // Every label value with service_name template should be substituted
+        for val in labels.values() {
+            assert!(!val.contains("{{service_name}}"), "Template not substituted: {}", val);
+        }
+        for key in labels.keys() {
+            assert!(!key.contains("{{service_name}}"), "Template key not substituted: {}", key);
+        }
+    }
+}
+

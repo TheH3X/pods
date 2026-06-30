@@ -5,7 +5,6 @@ use std::marker::PhantomData;
 use std::path::PathBuf;
 
 use futures::future;
-use gettextrs::gettext;
 use gio::prelude::*;
 use gio::subclass::prelude::*;
 use gtk::glib::Properties;

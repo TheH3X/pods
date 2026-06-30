@@ -153,3 +153,80 @@ pub fn restore_snapshot(stack_path: &Path, snapshot_path: &Path) -> Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::fs;
+    use tempfile::TempDir;
+
+    fn create_flat_stack(dir: &Path) {
+        fs::write(
+            dir.join("docker-compose.yml"),
+            "services:\n  web:\n    image: nginx\n",
+        )
+        .unwrap();
+    }
+
+    #[test]
+    fn test_create_snapshot_produces_backup_dir() {
+        let tmp = TempDir::new().unwrap();
+        create_flat_stack(tmp.path());
+
+        let snapshot = create_snapshot(tmp.path()).unwrap();
+        assert!(snapshot.exists());
+        assert!(snapshot.is_dir());
+        // The snapshot dir must be inside .stacks-backups/
+        assert!(snapshot.parent().unwrap().ends_with(BACKUP_DIR));
+    }
+
+    #[test]
+    fn test_create_snapshot_copies_compose_file() {
+        let tmp = TempDir::new().unwrap();
+        create_flat_stack(tmp.path());
+
+        let snapshot = create_snapshot(tmp.path()).unwrap();
+        assert!(snapshot.join("docker-compose.yml").exists());
+    }
+
+    #[test]
+    fn test_list_snapshots_newest_first() {
+        let tmp = TempDir::new().unwrap();
+        create_flat_stack(tmp.path());
+
+        // Create two snapshots (the timestamp has second precision so we sleep)
+        let s1 = create_snapshot(tmp.path()).unwrap();
+        std::thread::sleep(std::time::Duration::from_secs(1));
+        let s2 = create_snapshot(tmp.path()).unwrap();
+
+        let snapshots = list_snapshots(tmp.path()).unwrap();
+        assert_eq!(snapshots.len(), 2);
+        // Newest first → s2 before s1
+        assert_eq!(snapshots[0], s2);
+        assert_eq!(snapshots[1], s1);
+    }
+
+    #[test]
+    fn test_prune_keeps_max_snapshots() {
+        let tmp = TempDir::new().unwrap();
+        create_flat_stack(tmp.path());
+
+        // Create 3 snapshots, but keep only 2
+        for _ in 0..3 {
+            create_snapshot(tmp.path()).unwrap();
+            std::thread::sleep(std::time::Duration::from_secs(1));
+        }
+
+        prune_old_snapshots(tmp.path(), 2).unwrap();
+        let remaining = list_snapshots(tmp.path()).unwrap();
+        assert_eq!(remaining.len(), 2);
+    }
+
+    #[test]
+    fn test_list_snapshots_empty_when_no_backups() {
+        let tmp = TempDir::new().unwrap();
+        let snapshots = list_snapshots(tmp.path()).unwrap();
+        assert!(snapshots.is_empty());
+    }
+}
+

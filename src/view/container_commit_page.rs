@@ -1,8 +1,8 @@
 use std::cell::OnceCell;
 
 use adw::prelude::*;
-use gtk::glib::subclass::prelude::\*;
-use adw::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
+use adw::subclass::prelude::*;
 use ashpd::WindowIdentifier;
 use ashpd::desktop::account::UserInformationRequest;
 use gettextrs::gettext;

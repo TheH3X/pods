@@ -1,7 +1,6 @@
 use anyhow::{Context, Result};
 use std::path::Path;
 use std::process::Stdio;
-use tokio::io::{AsyncBufReadExt, BufReader};
 use tokio::process::Command;
 
 /// Result of running a compose command.

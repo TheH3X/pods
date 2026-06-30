@@ -6,15 +6,14 @@ use std::sync::OnceLock;
 use futures::Future;
 use gtk::glib::Properties;
 use glib::clone;
-use gtk::glib::prelude::\*;
+use gtk::glib::prelude::*;
 use glib::subclass::Signal;
-use gtk::glib::subclass::prelude::\*;
+use gtk::glib::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::glib;
 
 use crate::engine;
 use crate::model;
-use crate::monad_boxed_type;
 use crate::rt;
 
 monad_boxed_type!(pub(crate) BoxedMounts(Vec<engine::dto::Mount>) impls Debug, PartialEq is nullable);
