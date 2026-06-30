@@ -11,7 +11,7 @@ mod imp {
     #[properties(wrapper_type = super::StackServiceRow)]
     #[template(string = r#"
     <interface>
-      <template class="StacksStackServiceRow" parent="gtk_list_box_row">
+      <template class="StacksStackServiceRow" parent="GtkListBoxRow">
         <child>
           <object class="gtk_box">
             <property name="orientation">horizontal</property>

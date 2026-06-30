@@ -27,7 +27,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for ComposeServiceList {
-        const NAME: &'static str = "StacksComposeServiceList";
+        const NAME: &'static str = "ComposeServiceList";
         type Type = super::ComposeServiceList;
         type Interfaces = (gio::ListModel,);
     }

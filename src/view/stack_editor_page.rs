@@ -12,7 +12,7 @@ mod imp {
     #[properties(wrapper_type = super::StackEditorPage)]
     #[template(string = r#"
     <interface>
-      <template class="StacksStackEditorPage" parent="adw_navigation_page">
+      <template class="StacksStackEditorPage" parent="AdwNavigationPage">
         <child>
           <object class="gtk_box">
             <property name="orientation">vertical</property>

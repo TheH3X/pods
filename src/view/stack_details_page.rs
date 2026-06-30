@@ -11,7 +11,7 @@ mod imp {
     #[properties(wrapper_type = super::StackDetailsPage)]
     #[template(string = r#"
     <interface>
-      <template class="StacksStackDetailsPage" parent="adw_navigation_page">
+      <template class="StacksStackDetailsPage" parent="AdwNavigationPage">
         <child>
           <object class="gtk_box">
             <property name="orientation">vertical</property>

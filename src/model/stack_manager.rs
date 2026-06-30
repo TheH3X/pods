@@ -23,7 +23,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for StackManager {
-        const NAME: &'static str = "StacksStackManager";
+        const NAME: &'static str = "StackManager";
         type Type = super::StackManager;
     }
 

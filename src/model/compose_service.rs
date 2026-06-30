@@ -34,7 +34,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for ComposeService {
-        const NAME: &'static str = "StacksComposeService";
+        const NAME: &'static str = "ComposeService";
         type Type = super::ComposeService;
     }
 

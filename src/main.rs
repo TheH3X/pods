@@ -189,6 +189,13 @@ fn setup_cli(app: Application) -> Application {
 fn init() {
     model::Connection::static_type();
     model::EngineCapabilities::static_type();
+    model::StackManager::static_type();
+    model::Stack::static_type();
+    model::StackList::static_type();
+    model::ComposeService::static_type();
+    model::ComposeServiceList::static_type();
+    model::DockerNetwork::static_type();
+    model::DockerNetworkList::static_type();
 
     view::ActionPage::static_type();
     view::ActionRow::static_type();

@@ -37,7 +37,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for Stack {
-        const NAME: &'static str = "StacksStack";
+        const NAME: &'static str = "Stack";
         type Type = super::Stack;
     }
 

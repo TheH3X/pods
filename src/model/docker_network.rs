@@ -24,7 +24,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for DockerNetwork {
-        const NAME: &'static str = "StacksDockerNetwork";
+        const NAME: &'static str = "DockerNetwork";
         type Type = super::DockerNetwork;
     }
 

@@ -14,7 +14,7 @@ mod imp {
     #[properties(wrapper_type = super::StacksPanel)]
     #[template(string = r#"
     <interface>
-      <template class="StacksStacksPanel" parent="gtk_box">
+      <template class="StacksStacksPanel" parent="GtkBox">
         <property name="orientation">vertical</property>
 
         <!-- Empty state / Open folder prompt -->

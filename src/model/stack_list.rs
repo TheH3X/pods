@@ -30,7 +30,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for StackList {
-        const NAME: &'static str = "StacksStackList";
+        const NAME: &'static str = "StackList";
         type Type = super::StackList;
         type Interfaces = (gio::ListModel,);
     }

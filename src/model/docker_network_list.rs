@@ -27,7 +27,7 @@ mod imp {
 
     #[glib::object_subclass]
     impl ObjectSubclass for DockerNetworkList {
-        const NAME: &'static str = "StacksDockerNetworkList";
+        const NAME: &'static str = "DockerNetworkList";
         type Type = super::DockerNetworkList;
         type Interfaces = (gio::ListModel,);
     }

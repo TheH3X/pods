@@ -9,7 +9,7 @@ mod imp {
     #[derive(Debug, Default, gtk::CompositeTemplate)]
     #[template(string = r#"
     <interface>
-      <template class="StacksComposeVolumeRow" parent="gtk_list_box_row">
+      <template class="StacksComposeVolumeRow" parent="GtkListBoxRow">
         <child>
           <object class="gtk_box">
             <property name="orientation">horizontal</property>
